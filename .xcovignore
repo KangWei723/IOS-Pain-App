@@ -1,0 +1,18 @@
+# Api files
+- LSTSessionApi.swift
+- LSTComponentsApi.swift
+- LSTNotificationsApi.swift
+
+# Managers
+- LSTRequestManager.m
+- LSTCookiesManager.m
+
+# Utils
+- LSTStateMachine.swift
+
+# Exclude all files ending by "View.swift"
+- .*View.swift
+
+# Exclude all dependencies
+- Pods
+- Carthage/Checkouts

@@ -17,6 +17,9 @@
 		A936075328F0906E007F4BFB /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = A936074D28F0906E007F4BFB /* fastlane */; };
 		A936075428F0906E007F4BFB /* amplify-conf-loader.sh in Resources */ = {isa = PBXBuildFile; fileRef = A936074E28F0906E007F4BFB /* amplify-conf-loader.sh */; };
 		A936075528F0906E007F4BFB /* sonar-project.properties in Resources */ = {isa = PBXBuildFile; fileRef = A936074F28F0906E007F4BFB /* sonar-project.properties */; };
+		A936075928F13605007F4BFB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A936075628F13605007F4BFB /* .swiftlint.yml */; };
+		A936075A28F13605007F4BFB /* .xcovignore in Resources */ = {isa = PBXBuildFile; fileRef = A936075728F13605007F4BFB /* .xcovignore */; };
+		A936075B28F13605007F4BFB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A936075828F13605007F4BFB /* .gitignore */; };
 		A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264228ED38E8004AD743 /* Pain_AppApp.swift */; };
 		A97F264728ED38EC004AD743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97F264628ED38EC004AD743 /* Assets.xcassets */; };
 		A97F264A28ED38EC004AD743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97F264928ED38EC004AD743 /* Preview Assets.xcassets */; };
@@ -60,6 +63,9 @@
 		A936074D28F0906E007F4BFB /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 		A936074E28F0906E007F4BFB /* amplify-conf-loader.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "amplify-conf-loader.sh"; sourceTree = "<group>"; };
 		A936074F28F0906E007F4BFB /* sonar-project.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sonar-project.properties"; sourceTree = "<group>"; };
+		A936075628F13605007F4BFB /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A936075728F13605007F4BFB /* .xcovignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .xcovignore; sourceTree = "<group>"; };
+		A936075828F13605007F4BFB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A97F263F28ED38E8004AD743 /* Pain App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pain App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97F264228ED38E8004AD743 /* Pain_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppApp.swift; sourceTree = "<group>"; };
 		A97F264428ED38E8004AD743 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +134,9 @@
 		A936074928F09057007F4BFB /* Repo Files */ = {
 			isa = PBXGroup;
 			children = (
+				A936075828F13605007F4BFB /* .gitignore */,
+				A936075628F13605007F4BFB /* .swiftlint.yml */,
+				A936075728F13605007F4BFB /* .xcovignore */,
 				A936074E28F0906E007F4BFB /* amplify-conf-loader.sh */,
 				A936074D28F0906E007F4BFB /* fastlane */,
 				A936074C28F0906E007F4BFB /* Gemfile */,
@@ -334,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A936075128F0906E007F4BFB /* Gemfile.lock in Resources */,
+				A936075A28F13605007F4BFB /* .xcovignore in Resources */,
 				A936074728EFFF71007F4BFB /* awsconfiguration.json in Resources */,
 				A97F264A28ED38EC004AD743 /* Preview Assets.xcassets in Resources */,
 				A936075028F0906E007F4BFB /* README.md in Resources */,
@@ -343,6 +353,8 @@
 				A936075428F0906E007F4BFB /* amplify-conf-loader.sh in Resources */,
 				A936075528F0906E007F4BFB /* sonar-project.properties in Resources */,
 				A97F264728ED38EC004AD743 /* Assets.xcassets in Resources */,
+				A936075B28F13605007F4BFB /* .gitignore in Resources */,
+				A936075928F13605007F4BFB /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
