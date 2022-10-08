@@ -32,5 +32,10 @@ final class Pain_AppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testAppDelegateAmplifyConfigure() throws {
+        let appDelegate = AppDelegate()
+        XCTAssertTrue(appDelegate.application(UIApplication.shared))
+    }
 
 }
