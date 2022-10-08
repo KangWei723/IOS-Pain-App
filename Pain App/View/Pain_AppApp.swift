@@ -7,26 +7,28 @@
 
 import SwiftUI
 import Amplify
-
-class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-        do {
-            try Amplify.configure()
-            print("Amplify configured")
-        } catch {
-            print("An error occurred setting up Amplify: \(error)")
-        }
-        return true
-    }
-}
+import AmplifyPlugins
 
 @main
 struct Pain_AppApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
+    init() {
+        configureAmplify()
+    }
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+        }
+    }
+    
+    private func configureAmplify() {
+        do {
+            try Amplify.add(plugin: AWSCognitoAuthPlugin())
+            try Amplify.configure()
+            print("Amplify configured sucessfully")
+        } catch {
+            print("An error occured setting up Amplify: \(error)")
         }
     }
 }

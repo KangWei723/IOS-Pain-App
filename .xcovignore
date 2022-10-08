@@ -16,4 +16,3 @@
 # Exclude all dependencies
 - Pods
 - Carthage/Checkouts
-- *.framework

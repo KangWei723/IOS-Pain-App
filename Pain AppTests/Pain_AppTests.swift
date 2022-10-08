@@ -33,9 +33,8 @@ final class Pain_AppTests: XCTestCase {
         }
     }
     
-    func testAppDelegateAmplifyConfigure() throws {
-        let appDelegate = AppDelegate()
-        XCTAssertTrue(appDelegate.application(UIApplication.shared))
+    func testAppAmplifyConfigure() throws {
+        XCTAssertNil(Pain_AppApp())
     }
 
 }

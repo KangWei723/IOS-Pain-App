@@ -10,6 +10,11 @@
       "StackName": "amplify-painapp-dev-23000",
       "StackId": "arn:aws:cloudformation:us-east-2:351005374048:stack/amplify-painapp-dev-23000/7aefa890-4609-11ed-ae6a-0250dcf75976",
       "AmplifyAppId": "dn7dpyl2syq1a"
+    },
+    "categories": {
+      "auth": {
+        "painapp0df5b708": {}
+      }
     }
   }
 }
