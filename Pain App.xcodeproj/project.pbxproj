@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		77CA69F27004B58CA0EBDEF5 /* Pods_Pain_App_Pain_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */; };
-		A92E415928EFF12C007AB82D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
 		A936074628EFFF71007F4BFB /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074428EFFF71007F4BFB /* amplifyconfiguration.json */; };
 		A936074728EFFF71007F4BFB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074528EFFF71007F4BFB /* awsconfiguration.json */; };
 		A936075028F0906E007F4BFB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A936074A28F0906E007F4BFB /* README.md */; };
@@ -20,6 +19,8 @@
 		A936075928F13605007F4BFB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A936075628F13605007F4BFB /* .swiftlint.yml */; };
 		A936075A28F13605007F4BFB /* .xcovignore in Resources */ = {isa = PBXBuildFile; fileRef = A936075728F13605007F4BFB /* .xcovignore */; };
 		A936075B28F13605007F4BFB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A936075828F13605007F4BFB /* .gitignore */; };
+		A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076228F21492007F4BFB /* ColorHexHelper.swift */; };
+		A936076428F23A58007F4BFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
 		A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264228ED38E8004AD743 /* Pain_AppApp.swift */; };
 		A97F264728ED38EC004AD743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97F264628ED38EC004AD743 /* Assets.xcassets */; };
 		A97F264A28ED38EC004AD743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97F264928ED38EC004AD743 /* Preview Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		A936075628F13605007F4BFB /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A936075728F13605007F4BFB /* .xcovignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .xcovignore; sourceTree = "<group>"; };
 		A936075828F13605007F4BFB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A936076228F21492007F4BFB /* ColorHexHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexHelper.swift; sourceTree = "<group>"; };
 		A97F263F28ED38E8004AD743 /* Pain App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pain App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97F264228ED38E8004AD743 /* Pain_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppApp.swift; sourceTree = "<group>"; };
 		A97F264428ED38E8004AD743 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			children = (
 				A97F264428ED38E8004AD743 /* ContentView.swift */,
 				A97F264228ED38E8004AD743 /* Pain_AppApp.swift */,
+				A936076228F21492007F4BFB /* ColorHexHelper.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -500,8 +503,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A92E415928EFF12C007AB82D /* ContentView.swift in Sources */,
+				A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */,
 				A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */,
+				A936076428F23A58007F4BFB /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
