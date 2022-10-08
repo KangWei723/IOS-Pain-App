@@ -32,9 +32,4 @@ final class Pain_AppTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
-    func testAppAmplifyConfigure() throws {
-        XCTAssertNil(Pain_AppApp())
-    }
-
 }
