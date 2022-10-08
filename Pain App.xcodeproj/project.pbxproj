@@ -15,6 +15,10 @@
 		A97F265428ED38ED004AD743 /* Pain_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265328ED38ED004AD743 /* Pain_AppTests.swift */; };
 		A97F265E28ED38ED004AD743 /* Pain_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */; };
 		A97F266028ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */; };
+		EA05206C28F21E9B00380CD5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05206B28F21E9B00380CD5 /* HomeView.swift */; };
+		EA05207028F2260400380CD5 /* NewEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05206F28F2260400380CD5 /* NewEntryView.swift */; };
+		EA05207228F2261700380CD5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05207128F2261700380CD5 /* ProfileView.swift */; };
+		EA05207428F2262C00380CD5 /* PastRecordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05207328F2262C00380CD5 /* PastRecordsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		A97F265928ED38ED004AD743 /* Pain AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pain AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITests.swift; sourceTree = "<group>"; };
 		A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EA05206B28F21E9B00380CD5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EA05206F28F2260400380CD5 /* NewEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntryView.swift; sourceTree = "<group>"; };
+		EA05207128F2261700380CD5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		EA05207328F2262C00380CD5 /* PastRecordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRecordsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +94,10 @@
 				A97F264428ED38E8004AD743 /* ContentView.swift */,
 				A97F264228ED38E8004AD743 /* Pain_AppApp.swift */,
 				A936076228F21492007F4BFB /* ColorHexHelper.swift */,
+				EA05206B28F21E9B00380CD5 /* HomeView.swift */,
+				EA05206F28F2260400380CD5 /* NewEntryView.swift */,
+				EA05207128F2261700380CD5 /* ProfileView.swift */,
+				EA05207328F2262C00380CD5 /* PastRecordsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,8 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA05207028F2260400380CD5 /* NewEntryView.swift in Sources */,
 				A97F264528ED38E8004AD743 /* ContentView.swift in Sources */,
+				EA05206C28F21E9B00380CD5 /* HomeView.swift in Sources */,
 				A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */,
+				EA05207428F2262C00380CD5 /* PastRecordsView.swift in Sources */,
+				EA05207228F2261700380CD5 /* ProfileView.swift in Sources */,
 				A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
