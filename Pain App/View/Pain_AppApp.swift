@@ -12,13 +12,25 @@ import AmplifyPlugins
 @main
 struct Pain_AppApp: App {
     
+    @ObservedObject var loginController = LoginController()
+    
     init() {
         configureAmplify()
+        loginController.getCurrentUser()
     }
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            switch loginController.loginState {
+            case .login:
+                LoginView()
+                    .environmentObject(loginController)
+            case .signUp:
+                LoginView()
+                    .environmentObject(loginController)
+            case .session:
+                ContentView()
+            }
         }
     }
     
