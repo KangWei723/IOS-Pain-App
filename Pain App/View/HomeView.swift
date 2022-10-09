@@ -11,7 +11,7 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             (Color.init(hex: "#A8DADC"))
-            Image(systemName: "house.fill").foregroundColor(Color.black).font(.system(size:100))
+            Text("Home!").font(.title)
         }
     }
 }

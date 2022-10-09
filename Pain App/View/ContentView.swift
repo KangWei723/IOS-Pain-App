@@ -18,29 +18,6 @@ struct ContentView: View {
         }
         .background(Color.init(hex: "#A8DADC"))
         .padding()
-        
-        TabView {
-            HomeView().tabItem() {
-                Image(systemName: "house.fill")
-                Text("Home")
-               
-            }
-            NewEntryView().tabItem() {
-                Image(systemName: "plus.circle.fill")
-                Text("New Entry")
-               
-            }
-            PastRecordsView().tabItem() {
-                Image(systemName: "newspaper.fill")
-                Text("Past Records")
-               
-            }
-            ProfileView().tabItem() {
-                Image(systemName: "person.crop.circle.fill")
-                Text("Profile")
-               
-            }
-        }
       
     }
 }
