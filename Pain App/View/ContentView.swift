@@ -18,11 +18,13 @@ struct ContentView: View {
         }
         .background(Color.init(hex: "#A8DADC"))
         .padding()
+      
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+       
     }
 }
