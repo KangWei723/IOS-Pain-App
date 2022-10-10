@@ -7,13 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77CA69F27004B58CA0EBDEF5 /* Pods_Pain_App_Pain_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */; };
+		A936074628EFFF71007F4BFB /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074428EFFF71007F4BFB /* amplifyconfiguration.json */; };
+		A936074728EFFF71007F4BFB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074528EFFF71007F4BFB /* awsconfiguration.json */; };
+		A936075028F0906E007F4BFB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A936074A28F0906E007F4BFB /* README.md */; };
+		A936075128F0906E007F4BFB /* Gemfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = A936074B28F0906E007F4BFB /* Gemfile.lock */; };
+		A936075228F0906E007F4BFB /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = A936074C28F0906E007F4BFB /* Gemfile */; };
+		A936075328F0906E007F4BFB /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = A936074D28F0906E007F4BFB /* fastlane */; };
+		A936075428F0906E007F4BFB /* amplify-conf-loader.sh in Resources */ = {isa = PBXBuildFile; fileRef = A936074E28F0906E007F4BFB /* amplify-conf-loader.sh */; };
+		A936075528F0906E007F4BFB /* sonar-project.properties in Resources */ = {isa = PBXBuildFile; fileRef = A936074F28F0906E007F4BFB /* sonar-project.properties */; };
+		A936075928F13605007F4BFB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A936075628F13605007F4BFB /* .swiftlint.yml */; };
+		A936075A28F13605007F4BFB /* .xcovignore in Resources */ = {isa = PBXBuildFile; fileRef = A936075728F13605007F4BFB /* .xcovignore */; };
+		A936075B28F13605007F4BFB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A936075828F13605007F4BFB /* .gitignore */; };
+		A936075D28F1FC4C007F4BFB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936075C28F1FC4C007F4BFB /* LoginView.swift */; };
+		A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076228F21492007F4BFB /* ColorHexHelper.swift */; };
+		A936076428F23A58007F4BFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
+		A936076628F2A088007F4BFB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
 		A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264228ED38E8004AD743 /* Pain_AppApp.swift */; };
-		A97F264528ED38E8004AD743 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
 		A97F264728ED38EC004AD743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97F264628ED38EC004AD743 /* Assets.xcassets */; };
 		A97F264A28ED38EC004AD743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97F264928ED38EC004AD743 /* Preview Assets.xcassets */; };
 		A97F265428ED38ED004AD743 /* Pain_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265328ED38ED004AD743 /* Pain_AppTests.swift */; };
 		A97F265E28ED38ED004AD743 /* Pain_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */; };
 		A97F266028ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */; };
+		A9BE352728F40DAF002F6E7B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
+		A9BE352828F40DB0002F6E7B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
+		A9BE352928F40DBC002F6E7B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936075C28F1FC4C007F4BFB /* LoginView.swift */; };
+		A9BE352A28F40DBE002F6E7B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936075C28F1FC4C007F4BFB /* LoginView.swift */; };
+		A9FE546E28F3ED7000010DF5 /* amplify in Resources */ = {isa = PBXBuildFile; fileRef = A9FE546D28F3ED7000010DF5 /* amplify */; };
+		BEC12C2FA8583C91F483DF33 /* Pods_Pain_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B80C822AC4E950EF9E79BC0 /* Pods_Pain_AppTests.framework */; };
+		E393ED2F6407FEB98DB2C43D /* Pods_Pain_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E00E89535EEB431DE051A1 /* Pods_Pain_App.framework */; };
+		EA05206C28F21E9B00380CD5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05206B28F21E9B00380CD5 /* HomeView.swift */; };
+		EA05207628F2547F00380CD5 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05207528F2547F00380CD5 /* NavigationBar.swift */; };
+		EA05207728F25EA200380CD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
+		EA05207828F25EA300380CD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
+		EA05207A28F25EA700380CD5 /* Pain_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264228ED38E8004AD743 /* Pain_AppApp.swift */; };
+		EA05207B28F25EAA00380CD5 /* ColorHexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076228F21492007F4BFB /* ColorHexHelper.swift */; };
+		EA05207C28F25EAB00380CD5 /* ColorHexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076228F21492007F4BFB /* ColorHexHelper.swift */; };
+		EA05207D28F25EAE00380CD5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05206B28F21E9B00380CD5 /* HomeView.swift */; };
+		EA05207E28F25EAE00380CD5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05206B28F21E9B00380CD5 /* HomeView.swift */; };
+		EA05208328F25EBF00380CD5 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05207528F2547F00380CD5 /* NavigationBar.swift */; };
+		EA05208428F25EC000380CD5 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05207528F2547F00380CD5 /* NavigationBar.swift */; };
+		EA05208728F25EF000380CD5 /* Pain_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264228ED38E8004AD743 /* Pain_AppApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +68,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		100B82892060603C0D13B15D /* Pods-Pain App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App.debug.xcconfig"; path = "Target Support Files/Pods-Pain App/Pods-Pain App.debug.xcconfig"; sourceTree = "<group>"; };
+		49951BF0F08E326A0D43D3BC /* Pods-Pain AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain AppTests.release.xcconfig"; path = "Target Support Files/Pods-Pain AppTests/Pods-Pain AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B80C822AC4E950EF9E79BC0 /* Pods_Pain_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pain_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		671FA55BDC801B38F5D21D3F /* Pods-Pain App-Pain AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App-Pain AppUITests.release.xcconfig"; path = "Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		82E00E89535EEB431DE051A1 /* Pods_Pain_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pain_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		831F205E734B993F002C0FD1 /* Pods-Pain AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Pain AppTests/Pods-Pain AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		89D7643FCDE6CF643D2BF448 /* Pods-Pain App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App.release.xcconfig"; path = "Target Support Files/Pods-Pain App/Pods-Pain App.release.xcconfig"; sourceTree = "<group>"; };
+		A936074428EFFF71007F4BFB /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		A936074528EFFF71007F4BFB /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		A936074A28F0906E007F4BFB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A936074B28F0906E007F4BFB /* Gemfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Gemfile.lock; sourceTree = "<group>"; };
+		A936074C28F0906E007F4BFB /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Gemfile; sourceTree = "<group>"; };
+		A936074D28F0906E007F4BFB /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
+		A936074E28F0906E007F4BFB /* amplify-conf-loader.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "amplify-conf-loader.sh"; sourceTree = "<group>"; };
+		A936074F28F0906E007F4BFB /* sonar-project.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sonar-project.properties"; sourceTree = "<group>"; };
+		A936075628F13605007F4BFB /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A936075728F13605007F4BFB /* .xcovignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .xcovignore; sourceTree = "<group>"; };
+		A936075828F13605007F4BFB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		A936075C28F1FC4C007F4BFB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A936076228F21492007F4BFB /* ColorHexHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexHelper.swift; sourceTree = "<group>"; };
+		A936076528F2A087007F4BFB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A97F263F28ED38E8004AD743 /* Pain App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pain App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97F264228ED38E8004AD743 /* Pain_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppApp.swift; sourceTree = "<group>"; };
 		A97F264428ED38E8004AD743 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +99,11 @@
 		A97F265928ED38ED004AD743 /* Pain AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pain AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITests.swift; sourceTree = "<group>"; };
 		A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A9FE546D28F3ED7000010DF5 /* amplify */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amplify; sourceTree = SOURCE_ROOT; };
+		E7F1AE4A47C10B737B2F162C /* Pods-Pain App-Pain AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App-Pain AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EA05206B28F21E9B00380CD5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EA05207528F2547F00380CD5 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pain_App_Pain_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E393ED2F6407FEB98DB2C43D /* Pods_Pain_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEC12C2FA8583C91F483DF33 /* Pods_Pain_AppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,19 +127,90 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77CA69F27004B58CA0EBDEF5 /* Pods_Pain_App_Pain_AppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F34292379B5231A7C32E0C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				100B82892060603C0D13B15D /* Pods-Pain App.debug.xcconfig */,
+				89D7643FCDE6CF643D2BF448 /* Pods-Pain App.release.xcconfig */,
+				E7F1AE4A47C10B737B2F162C /* Pods-Pain App-Pain AppUITests.debug.xcconfig */,
+				671FA55BDC801B38F5D21D3F /* Pods-Pain App-Pain AppUITests.release.xcconfig */,
+				831F205E734B993F002C0FD1 /* Pods-Pain AppTests.debug.xcconfig */,
+				49951BF0F08E326A0D43D3BC /* Pods-Pain AppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		57FD36E0BEC6E6174F1143EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82E00E89535EEB431DE051A1 /* Pods_Pain_App.framework */,
+				F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */,
+				5B80C822AC4E950EF9E79BC0 /* Pods_Pain_AppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A936074928F09057007F4BFB /* Repo Files */ = {
+			isa = PBXGroup;
+			children = (
+				A936075828F13605007F4BFB /* .gitignore */,
+				A936075628F13605007F4BFB /* .swiftlint.yml */,
+				A936075728F13605007F4BFB /* .xcovignore */,
+				A936074E28F0906E007F4BFB /* amplify-conf-loader.sh */,
+				A936074D28F0906E007F4BFB /* fastlane */,
+				A936074C28F0906E007F4BFB /* Gemfile */,
+				A936074B28F0906E007F4BFB /* Gemfile.lock */,
+				A936074A28F0906E007F4BFB /* README.md */,
+				A936074F28F0906E007F4BFB /* sonar-project.properties */,
+			);
+			name = "Repo Files";
+			sourceTree = "<group>";
+		};
+		A947489A28EFD37F006D7075 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A947489C28EFD39B006D7075 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A97F264428ED38E8004AD743 /* ContentView.swift */,
+				A97F264228ED38E8004AD743 /* Pain_AppApp.swift */,
+				A936076228F21492007F4BFB /* ColorHexHelper.swift */,
+				A936075C28F1FC4C007F4BFB /* LoginView.swift */,
+				EA05206B28F21E9B00380CD5 /* HomeView.swift */,
+				EA05207528F2547F00380CD5 /* NavigationBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A947489D28EFD3A4006D7075 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A936076528F2A087007F4BFB /* LoginController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		A97F263628ED38E8004AD743 = {
 			isa = PBXGroup;
 			children = (
+				A936074928F09057007F4BFB /* Repo Files */,
 				A97F264128ED38E8004AD743 /* Pain App */,
 				A97F265228ED38ED004AD743 /* Pain AppTests */,
 				A97F265C28ED38ED004AD743 /* Pain AppUITests */,
 				A97F264028ED38E8004AD743 /* Products */,
+				1F34292379B5231A7C32E0C2 /* Pods */,
+				57FD36E0BEC6E6174F1143EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +227,12 @@
 		A97F264128ED38E8004AD743 /* Pain App */ = {
 			isa = PBXGroup;
 			children = (
-				A97F264228ED38E8004AD743 /* Pain_AppApp.swift */,
-				A97F264428ED38E8004AD743 /* ContentView.swift */,
+				A9FE546C28F3ED6000010DF5 /* Amplify */,
+				A936074428EFFF71007F4BFB /* amplifyconfiguration.json */,
+				A936074528EFFF71007F4BFB /* awsconfiguration.json */,
+				A947489D28EFD3A4006D7075 /* Controller */,
+				A947489C28EFD39B006D7075 /* View */,
+				A947489A28EFD37F006D7075 /* Model */,
 				A97F264628ED38EC004AD743 /* Assets.xcassets */,
 				A97F264828ED38EC004AD743 /* Preview Content */,
 			);
@@ -127,6 +264,14 @@
 			path = "Pain AppUITests";
 			sourceTree = "<group>";
 		};
+		A9FE546C28F3ED6000010DF5 /* Amplify */ = {
+			isa = PBXGroup;
+			children = (
+				A9FE546D28F3ED7000010DF5 /* amplify */,
+			);
+			name = Amplify;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,10 +279,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A97F266328ED38ED004AD743 /* Build configuration list for PBXNativeTarget "Pain App" */;
 			buildPhases = (
+				0E1125091FA631DFADD2D993 /* [CP] Check Pods Manifest.lock */,
 				A97F263B28ED38E8004AD743 /* Sources */,
 				A97F263C28ED38E8004AD743 /* Frameworks */,
 				A97F263D28ED38E8004AD743 /* Resources */,
 				A9DFB62D28ED3EC700414664 /* ShellScript */,
+				A9FF2532402CD0AD2C0E6786 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +299,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A97F266628ED38ED004AD743 /* Build configuration list for PBXNativeTarget "Pain AppTests" */;
 			buildPhases = (
+				9B243D02828B3B41D473CB68 /* [CP] Check Pods Manifest.lock */,
 				A97F264B28ED38ED004AD743 /* Sources */,
 				A97F264C28ED38ED004AD743 /* Frameworks */,
 				A97F264D28ED38ED004AD743 /* Resources */,
@@ -170,9 +318,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A97F266928ED38ED004AD743 /* Build configuration list for PBXNativeTarget "Pain AppUITests" */;
 			buildPhases = (
+				ED22B4AF8F4A09935592A064 /* [CP] Check Pods Manifest.lock */,
 				A97F265528ED38ED004AD743 /* Sources */,
 				A97F265628ED38ED004AD743 /* Frameworks */,
 				A97F265728ED38ED004AD743 /* Resources */,
+				DAB2D79F91B3E94923A54D9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,8 +382,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A936075128F0906E007F4BFB /* Gemfile.lock in Resources */,
+				A936075A28F13605007F4BFB /* .xcovignore in Resources */,
+				A936074728EFFF71007F4BFB /* awsconfiguration.json in Resources */,
 				A97F264A28ED38EC004AD743 /* Preview Assets.xcassets in Resources */,
+				A936075028F0906E007F4BFB /* README.md in Resources */,
+				A936074628EFFF71007F4BFB /* amplifyconfiguration.json in Resources */,
+				A936075228F0906E007F4BFB /* Gemfile in Resources */,
+				A936075328F0906E007F4BFB /* fastlane in Resources */,
+				A936075428F0906E007F4BFB /* amplify-conf-loader.sh in Resources */,
+				A936075528F0906E007F4BFB /* sonar-project.properties in Resources */,
 				A97F264728ED38EC004AD743 /* Assets.xcassets in Resources */,
+				A936075B28F13605007F4BFB /* .gitignore in Resources */,
+				A936075928F13605007F4BFB /* .swiftlint.yml in Resources */,
+				A9FE546E28F3ED7000010DF5 /* amplify in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +416,53 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0E1125091FA631DFADD2D993 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pain App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B243D02828B3B41D473CB68 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pain AppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A9DFB62D28ED3EC700414664 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -271,6 +478,62 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint --config .swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
+		A9FF2532402CD0AD2C0E6786 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pain App/Pods-Pain App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pain App/Pods-Pain App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pain App/Pods-Pain App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAB2D79F91B3E94923A54D9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED22B4AF8F4A09935592A064 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pain App-Pain AppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -278,8 +541,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A97F264528ED38E8004AD743 /* ContentView.swift in Sources */,
+				EA05206C28F21E9B00380CD5 /* HomeView.swift in Sources */,
+				EA05207628F2547F00380CD5 /* NavigationBar.swift in Sources */,
+				A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */,
 				A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */,
+				A936076428F23A58007F4BFB /* ContentView.swift in Sources */,
+				A936075D28F1FC4C007F4BFB /* LoginView.swift in Sources */,
+				A936076628F2A088007F4BFB /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +555,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA05207728F25EA200380CD5 /* ContentView.swift in Sources */,
 				A97F265428ED38ED004AD743 /* Pain_AppTests.swift in Sources */,
+				EA05208328F25EBF00380CD5 /* NavigationBar.swift in Sources */,
+				EA05207D28F25EAE00380CD5 /* HomeView.swift in Sources */,
+				EA05208728F25EF000380CD5 /* Pain_AppApp.swift in Sources */,
+				EA05207B28F25EAA00380CD5 /* ColorHexHelper.swift in Sources */,
+				A9BE352928F40DBC002F6E7B /* LoginView.swift in Sources */,
+				A9BE352728F40DAF002F6E7B /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +571,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97F266028ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift in Sources */,
+				EA05207A28F25EA700380CD5 /* Pain_AppApp.swift in Sources */,
 				A97F265E28ED38ED004AD743 /* Pain_AppUITests.swift in Sources */,
+				A9BE352A28F40DBE002F6E7B /* LoginView.swift in Sources */,
+				EA05208428F25EC000380CD5 /* NavigationBar.swift in Sources */,
+				EA05207E28F25EAE00380CD5 /* HomeView.swift in Sources */,
+				A9BE352828F40DB0002F6E7B /* LoginController.swift in Sources */,
+				EA05207828F25EA300380CD5 /* ContentView.swift in Sources */,
+				EA05207C28F25EAB00380CD5 /* ColorHexHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +614,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -350,6 +632,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -366,7 +649,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -392,7 +675,7 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -411,6 +694,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -420,7 +704,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -432,6 +716,7 @@
 		};
 		A97F266428ED38ED004AD743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 100B82892060603C0D13B15D /* Pods-Pain App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -444,6 +729,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = a;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +747,7 @@
 		};
 		A97F266528ED38ED004AD743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89D7643FCDE6CF643D2BF448 /* Pods-Pain App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -473,6 +760,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = a;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -490,6 +778,7 @@
 		};
 		A97F266728ED38ED004AD743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 831F205E734B993F002C0FD1 /* Pods-Pain AppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +799,7 @@
 		};
 		A97F266828ED38ED004AD743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49951BF0F08E326A0D43D3BC /* Pods-Pain AppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -530,6 +820,7 @@
 		};
 		A97F266A28ED38ED004AD743 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7F1AE4A47C10B737B2F162C /* Pods-Pain App-Pain AppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -548,6 +839,7 @@
 		};
 		A97F266B28ED38ED004AD743 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671FA55BDC801B38F5D21D3F /* Pods-Pain App-Pain AppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

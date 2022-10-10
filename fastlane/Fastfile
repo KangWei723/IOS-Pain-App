@@ -48,7 +48,9 @@ platform :ios do
       scheme: scheme,
       configuration: "Debug",
       html_report: true,
-      minimum_coverage_percentage: 75.0
+      minimum_coverage_percentage: 75.0,
+      ignore_file_path: "../.xcovignore",
+      include_targets: "Pain App.app"
     )
 
     #Run slather to generate code coverage

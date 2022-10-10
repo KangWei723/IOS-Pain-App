@@ -1,5 +1,6 @@
 disabled_rules:
 - trailing_whitespace
+- identifier_name
 opt_in_rules:
 - empty_count
 - empty_string
@@ -11,6 +12,7 @@ excluded:
 - Carthage
 - Pods
 - SwiftLint/Common/3rdPartyLib
+- amplify
 line_length:
     warning: 150
     error: 200
