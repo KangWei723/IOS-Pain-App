@@ -20,6 +20,10 @@
 		A936075A28F13605007F4BFB /* .xcovignore in Resources */ = {isa = PBXBuildFile; fileRef = A936075728F13605007F4BFB /* .xcovignore */; };
 		A936075B28F13605007F4BFB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A936075828F13605007F4BFB /* .gitignore */; };
 		A936075D28F1FC4C007F4BFB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936075C28F1FC4C007F4BFB /* LoginView.swift */; };
+		106DE1F328F22EF700B270F9 /* PatientView_HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106DE1F228F22EF700B270F9 /* PatientView_HomePage.swift */; };
+		106DE1F528F2905200B270F9 /* PatientView_PastRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106DE1F428F2905200B270F9 /* PatientView_PastRecords.swift */; };
+		106DE1F728F2951800B270F9 /* PatientView_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106DE1F628F2951800B270F9 /* PatientView_Profile.swift */; };
+		109A8D7728F48F2700D80717 /* PatientView_Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A8D7628F48F2700D80717 /* PatientView_Security.swift */; };
 		A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076228F21492007F4BFB /* ColorHexHelper.swift */; };
 		A936076428F23A58007F4BFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
 		A936076628F2A088007F4BFB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
@@ -87,6 +91,10 @@
 		A936075728F13605007F4BFB /* .xcovignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .xcovignore; sourceTree = "<group>"; };
 		A936075828F13605007F4BFB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		A936075C28F1FC4C007F4BFB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		106DE1F228F22EF700B270F9 /* PatientView_HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView_HomePage.swift; sourceTree = "<group>"; };
+		106DE1F428F2905200B270F9 /* PatientView_PastRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView_PastRecords.swift; sourceTree = "<group>"; };
+		106DE1F628F2951800B270F9 /* PatientView_Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView_Profile.swift; sourceTree = "<group>"; };
+		109A8D7628F48F2700D80717 /* PatientView_Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView_Security.swift; sourceTree = "<group>"; };
 		A936076228F21492007F4BFB /* ColorHexHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHexHelper.swift; sourceTree = "<group>"; };
 		A936076528F2A087007F4BFB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A97F263F28ED38E8004AD743 /* Pain App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pain App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +197,10 @@
 				A936075C28F1FC4C007F4BFB /* LoginView.swift */,
 				EA05206B28F21E9B00380CD5 /* HomeView.swift */,
 				EA05207528F2547F00380CD5 /* NavigationBar.swift */,
+				106DE1F228F22EF700B270F9 /* PatientView_HomePage.swift */,
+				106DE1F428F2905200B270F9 /* PatientView_PastRecords.swift */,
+				106DE1F628F2951800B270F9 /* PatientView_Profile.swift */,
+				109A8D7628F48F2700D80717 /* PatientView_Security.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -544,10 +556,14 @@
 				EA05206C28F21E9B00380CD5 /* HomeView.swift in Sources */,
 				EA05207628F2547F00380CD5 /* NavigationBar.swift in Sources */,
 				A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */,
+				106DE1F328F22EF700B270F9 /* PatientView_HomePage.swift in Sources */,
+				106DE1F528F2905200B270F9 /* PatientView_PastRecords.swift in Sources */,
+				106DE1F728F2951800B270F9 /* PatientView_Profile.swift in Sources */,
 				A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */,
 				A936076428F23A58007F4BFB /* ContentView.swift in Sources */,
 				A936075D28F1FC4C007F4BFB /* LoginView.swift in Sources */,
 				A936076628F2A088007F4BFB /* LoginController.swift in Sources */,
+				109A8D7728F48F2700D80717 /* PatientView_Security.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

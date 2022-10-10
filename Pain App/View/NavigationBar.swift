@@ -10,7 +10,7 @@ import SwiftUI
 struct NavigationBar: View {
     var body: some View {
         TabView {
-            HomeView().tabItem {
+            PatientView_HomePage().tabItem {
                 Label("Home", systemImage: "house.fill")
                
             }
