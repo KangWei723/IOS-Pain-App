@@ -37,6 +37,7 @@ struct Pain_AppApp: App {
             case .session(user: _):
                 ContentView()
                     .environmentObject(loginController)
+                NavigationBar()
             }
         }
     }
