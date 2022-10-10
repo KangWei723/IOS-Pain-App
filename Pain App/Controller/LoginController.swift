@@ -10,48 +10,68 @@ import Combine
 import Foundation
 
 enum LoginState {
-    case signUp
     case login
     case session(user: AuthUser)
 }
 
 final class LoginController: ObservableObject {
     @Published var loginState: LoginState = .login
+    var storage = Set<AnyCancellable>()
     
-    func getCurrentUser() {
+    func getCurrentAuthUser() {
         if let user = Amplify.Auth.getCurrentUser() {
-            loginState = .session(user: user)
+          DispatchQueue.main.async {
+              print("Signed In")
+              self.loginState = .session(user: user)
+          }
         } else {
-            loginState = .login
+            DispatchQueue.main.async {
+              self.loginState = .login
+          }
         }
-    }
+      }
     
-    func showSignUp() {
-        loginState = .signUp
-    }
-    
-    func showLogin() {
-        loginState = .login
-    }
-    
-    func signUp(email: String, password: String) -> AnyCancellable {
+    func signUp(username: String, password: String, email: String) {
         let userAttributes = [AuthUserAttribute(.email, value: email)]
         let options = AuthSignUpRequest.Options(userAttributes: userAttributes)
-        let sink = Amplify.Auth.signUp(username: email, password: password, options: options)
+        Amplify.Auth.signUp(username: username, password: password, options: options)
             .resultPublisher
+            .receive(on: DispatchQueue.main)
             .sink {
-                if case let .failure(authError) = $0 {
-                    print("An error occured while registering a user \(authError)")
+                if case .failure(let error) = $0 {
+                  print("Sign in error: \(error)")
                 }
-            }
-            receiveValue: { signUpResult in
-                if case let .confirmUser(deliveryDetails, _) = signUpResult.nextStep {
-                        print("Delivery details \(String(describing: deliveryDetails))")
-                } else {
-                    print("SignUp Complete")
+            } receiveValue: { _ in
+                print("Signed Up")
+                self.signIn(email: username, password: password)
+            }.store(in: &self.storage)
+    }
+    
+    func signIn(email: String, password: String) {
+        Amplify.Auth.signIn(username: email, password: password)
+          .resultPublisher
+          .receive(on: DispatchQueue.main)
+          .sink {
+              if case .failure(let error) = $0 {
+                print("Sign in error: \(error)")
+              }
+          } receiveValue: { _ in
+              self.getCurrentAuthUser()
+          }.store(in: &self.storage)
+      }
+    
+    func signOutLocally() {
+        Amplify.Auth.signOut()
+            .resultPublisher
+            .receive(on: DispatchQueue.main)
+            .sink {
+                if case .failure(let error) = $0 {
+                  print("Sign out error: \(error)")
                 }
-            }
-        return sink
+            } receiveValue: { _ in
+                self.getCurrentAuthUser()
+                print("Signed Out")
+            }.store(in: &self.storage)
     }
     
 }

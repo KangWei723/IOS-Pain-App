@@ -29,6 +29,7 @@
 		A97F265428ED38ED004AD743 /* Pain_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265328ED38ED004AD743 /* Pain_AppTests.swift */; };
 		A97F265E28ED38ED004AD743 /* Pain_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */; };
 		A97F266028ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */; };
+		A9FE546E28F3ED7000010DF5 /* amplify in Resources */ = {isa = PBXBuildFile; fileRef = A9FE546D28F3ED7000010DF5 /* amplify */; };
 		BEC12C2FA8583C91F483DF33 /* Pods_Pain_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B80C822AC4E950EF9E79BC0 /* Pods_Pain_AppTests.framework */; };
 		E393ED2F6407FEB98DB2C43D /* Pods_Pain_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E00E89535EEB431DE051A1 /* Pods_Pain_App.framework */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		A97F265928ED38ED004AD743 /* Pain AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pain AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITests.swift; sourceTree = "<group>"; };
 		A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A9FE546D28F3ED7000010DF5 /* amplify */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amplify; sourceTree = SOURCE_ROOT; };
 		E7F1AE4A47C10B737B2F162C /* Pods-Pain App-Pain AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App-Pain AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pain_App_Pain_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -205,6 +207,7 @@
 		A97F264128ED38E8004AD743 /* Pain App */ = {
 			isa = PBXGroup;
 			children = (
+				A9FE546C28F3ED6000010DF5 /* Amplify */,
 				A936074428EFFF71007F4BFB /* amplifyconfiguration.json */,
 				A936074528EFFF71007F4BFB /* awsconfiguration.json */,
 				A947489D28EFD3A4006D7075 /* Controller */,
@@ -239,6 +242,14 @@
 				A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */,
 			);
 			path = "Pain AppUITests";
+			sourceTree = "<group>";
+		};
+		A9FE546C28F3ED6000010DF5 /* Amplify */ = {
+			isa = PBXGroup;
+			children = (
+				A9FE546D28F3ED7000010DF5 /* amplify */,
+			);
+			name = Amplify;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +375,7 @@
 				A97F264728ED38EC004AD743 /* Assets.xcassets in Resources */,
 				A936075B28F13605007F4BFB /* .gitignore in Resources */,
 				A936075928F13605007F4BFB /* .swiftlint.yml in Resources */,
+				A9FE546E28F3ED7000010DF5 /* amplify in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,7 +613,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -656,7 +668,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

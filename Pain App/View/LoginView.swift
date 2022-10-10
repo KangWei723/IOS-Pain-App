@@ -4,7 +4,8 @@
 //
 //  Created by Shrey Patel on 10/8/22.
 //
-
+import Amplify
+import AmplifyPlugins
 import SwiftUI
 
 extension UISegmentedControl {
@@ -18,6 +19,8 @@ struct SuperCustomTextFieldStyle: TextFieldStyle {
     func _body(configuration: TextField<_Label>) -> some View {
         configuration
             .padding(20)
+            .foregroundStyle(Color.black)
+            .foregroundColor(.black)
     }
 }
 
@@ -33,6 +36,7 @@ struct LoginView: View {
     @State private var rememberMe: Bool = false
     @State private var fname: String = ""
     @State private var lname: String = ""
+    
     @EnvironmentObject var loginController: LoginController
     
     init() {
@@ -85,17 +89,21 @@ struct LoginView: View {
                                         .font(.system(size: 30))
                                         .padding()
                                         .frame(height: geoProxy2.size.height * 0.05)
+                                        .foregroundColor(.black)
                                     
                                     Picker("Selector", selection: $selectedPicker) {
                                         ForEach(PickerState.allCases) { state in
                                             Text(state.rawValue.capitalized)
                                                 .padding()
+                                                .foregroundColor(.black)
+                                                .foregroundStyle(Color.black)
                                         }
                                     }
                                     .pickerStyle(.segmented)
-                                    .frame(width: geoProxy2.size.width * 0.5, height: 65)
+                                    .frame(width: geoProxy2.size.width * 0.5, height: geoProxy2.size.height * 0.08)
                                     .padding()
                                     .shadow(color: .gray, radius: 6, x: 0, y: 0)
+                                    .accentColor(.black)
                                     
                                     if selectedPicker == .signup {
                                         TextField("First Name", text: $fname)
@@ -103,20 +111,24 @@ struct LoginView: View {
                                             .font(.system(size: 28))
                                             .textFieldStyle(SuperCustomTextFieldStyle())
                                             .background(Color.init(hex: "F1FAEE"))
-                                            .frame(width: geoProxy2.size.width * 0.65)
+                                            .frame(width: geoProxy2.size.width * 0.65, height: geoProxy2.size.height * 0.08)
                                             .cornerRadius(10)
                                             .shadow(color: .gray, radius: 6, x: 0, y: 0)
                                             .padding(.top, 10)
+                                            .accentColor(.black)
+                                            .foregroundStyle(Color.black)
                                         
                                         TextField("Last Name", text: $lname)
                                             .foregroundColor(.black)
                                             .font(.system(size: 28))
                                             .textFieldStyle(SuperCustomTextFieldStyle())
                                             .background(Color.init(hex: "F1FAEE"))
-                                            .frame(width: geoProxy2.size.width * 0.65)
+                                            .frame(width: geoProxy2.size.width * 0.65, height: geoProxy2.size.height * 0.08)
                                             .cornerRadius(10)
                                             .shadow(color: .gray, radius: 6, x: 0, y: 0)
                                             .padding(.top, 30)
+                                            .accentColor(.black)
+                                            .foregroundStyle(Color.black)
                                     }
                                     
                                     TextField("Email", text: $email)
@@ -124,20 +136,24 @@ struct LoginView: View {
                                         .font(.system(size: 28))
                                         .textFieldStyle(SuperCustomTextFieldStyle())
                                         .background(Color.init(hex: "F1FAEE"))
-                                        .frame(width: geoProxy2.size.width * 0.65)
+                                        .frame(width: geoProxy2.size.width * 0.65, height: geoProxy2.size.height * 0.08)
                                         .cornerRadius(10)
                                         .shadow(color: .gray, radius: 6, x: 0, y: 0)
                                         .padding(.top, (selectedPicker == .signup) ? 30 : 70)
+                                        .accentColor(.black)
+                                        .foregroundStyle(Color.black)
                                     
                                     SecureField("Password", text: $password)
                                         .foregroundColor(.black)
                                         .font(.system(size: 28))
                                         .textFieldStyle(SuperCustomTextFieldStyle())
                                         .background(Color.init(hex: "F1FAEE"))
-                                        .frame(width: geoProxy2.size.width * 0.65)
+                                        .frame(width: geoProxy2.size.width * 0.65, height: geoProxy2.size.height * 0.08)
                                         .cornerRadius(10)
                                         .shadow(color: .gray, radius: 6, x: 0, y: 0)
                                         .padding(.top, (selectedPicker == .signup) ? 30 : 70)
+                                        .accentColor(.black)
+                                        .foregroundStyle(Color.black)
                                     
                                     if selectedPicker == .login {
                                         HStack {
@@ -152,7 +168,9 @@ struct LoginView: View {
                                                 }
                                             }
                                             Spacer()
-                                            Button(action: {}) {
+                                            Button {
+                                                
+                                            } label: {
                                                Text("Forgot Password?")
                                                     .foregroundColor(.black)
                                                     .underline()
@@ -166,24 +184,32 @@ struct LoginView: View {
                                             .font(.system(size: 28))
                                             .textFieldStyle(SuperCustomTextFieldStyle())
                                             .background(Color.init(hex: "F1FAEE"))
-                                            .frame(width: geoProxy2.size.width * 0.65)
+                                            .frame(width: geoProxy2.size.width * 0.65, height: geoProxy2.size.height * 0.08)
                                             .cornerRadius(10)
                                             .shadow(color: .gray, radius: 6, x: 0, y: 0)
                                             .padding(.top, 30)
+                                            .accentColor(.black)
+                                            .foregroundStyle(Color.black)
                                     }
                                     
-                                    Button(action: {loginController.signUp(email: email, password: password)}) {
+                                    Button {
+                                        if selectedPicker == .signup {
+                                            loginController.signUp(username: self.email, password: self.password, email: self.email)
+                                        } else {
+                                            loginController.signIn(email: self.email, password: self.password)
+                                        }
+                                    } label: {
                                         Text((selectedPicker == .login ) ? "Login" : "Sign Up")
                                             .foregroundColor(.white)
                                             .font(.system(size: 28))
                                             .padding(20)
                                     }
-                                    .frame(width: geoProxy2.size.width * 0.65)
+                                    .frame(width: geoProxy2.size.width * 0.65, height: geoProxy2.size.height * 0.08)
                                     .background(Color.init(hex: "457B9D"))
                                     .cornerRadius(10)
                                     .padding(.top, 30)
                                 }
-                                .padding(.top, geoProxy2.size.height * 0.12)
+                                .padding(.top, geoProxy2.size.height * ((selectedPicker == .login) ? 0.12 : 0.06))
                                 Spacer()
                             }
                         }
@@ -192,6 +218,10 @@ struct LoginView: View {
         }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .ignoresSafeArea()
+            .background(.white)
+            .foregroundColor(.black)
+            .foregroundStyle(Color.black)
+            .accentColor(.black)
     }
 }
 

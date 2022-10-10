@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var loginController: LoginController
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -15,6 +17,12 @@ struct ContentView: View {
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
             Spacer()
+            Button {
+                loginController.signOutLocally()
+            } label: {
+                Text("Sign Out")
+            }
+            .padding()
         }
         .background(Color.init(hex: "#A8DADC"))
         .padding()
@@ -23,6 +31,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(LoginController())
     }
 }

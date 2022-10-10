@@ -15,8 +15,16 @@ struct Pain_AppApp: App {
     @ObservedObject var loginController = LoginController()
     
     init() {
-        configureAmplify()
-        loginController.getCurrentUser()
+        var isRunningForPreviews: Bool {
+            ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] != nil
+        }
+
+        if !isRunningForPreviews {
+            // Do not invoke Amplify.configure()
+            configureAmplify()
+            loginController.getCurrentAuthUser()
+            return
+        }
     }
     
     var body: some Scene {
@@ -24,12 +32,11 @@ struct Pain_AppApp: App {
             switch loginController.loginState {
             case .login:
                 LoginView()
+                    .preferredColorScheme(.light)
                     .environmentObject(loginController)
-            case .signUp:
-                LoginView()
-                    .environmentObject(loginController)
-            case .session:
+            case .session(user: _):
                 ContentView()
+                    .environmentObject(loginController)
             }
         }
     }
