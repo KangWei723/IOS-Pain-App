@@ -18,11 +18,11 @@ struct NavigationBar: View {
                 Label("New Entry", systemImage: "plus.circle.fill")
                
             }
-            tabItem {
+            PatientView_PastRecords().tabItem {
                Label("Past Records", systemImage: "newspaper.fill")
                
             }
-            tabItem {
+            PatientView_Profile().tabItem {
                 Label("Profile", systemImage: "person.crop.circle.fill")
                
             }

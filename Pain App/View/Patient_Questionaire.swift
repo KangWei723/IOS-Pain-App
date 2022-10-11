@@ -15,6 +15,7 @@ struct Patient_Questionaire: View {
     @State private var state: String = ""
     @State private var pnumber: String = ""
     @State private var country: String = ""
+    @EnvironmentObject var loginController: LoginController
     
     var body: some View {
         GeometryReader { geoProxy in
@@ -148,7 +149,7 @@ struct Patient_Questionaire: View {
                 Spacer()
                 // The button that will send them to the next view
                 Button {
-                
+                    loginController.signIn(email: loginController.email, password: loginController.password)
                 } label: {
                     Text("Complete Registration")
                         .font(.largeTitle)
@@ -173,5 +174,6 @@ struct Patient_Questionaire: View {
 struct Patient_Questionaire_Previews: PreviewProvider {
     static var previews: some View {
         Patient_Questionaire()
+            .environmentObject(LoginController())
     }
 }

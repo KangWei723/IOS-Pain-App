@@ -17,6 +17,8 @@ struct PatientView_Profile: View {
     @State private var city: String = ""
     @State private var country: String = ""
     @State private var phNumber: String = ""
+    @EnvironmentObject var mainViewController: MainViewController
+    @EnvironmentObject var loginController: LoginController
     
     var body: some View {
         VStack {
@@ -25,15 +27,19 @@ struct PatientView_Profile: View {
                     .frame(width: 1400, height: 150, alignment: .leading)
                     .foregroundColor(Color(hex: "#A8DADC"))
                     .overlay(Text("\t\tProfile").font(.title), alignment: .leading)
-                    .overlay(Button(action: {}, label: {
-                        Text("Back")
-                            .foregroundColor(Color.black)
-                            .frame(width: 130, height: 40)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 15))
-                            .offset(x: 550, y: 40)
-                    }))
+                    .overlay(Button(action: {
+                            mainViewController.viewState = .patientHome
+                        }, label: {
+                            Text("Back")
+                                .foregroundColor(Color.black)
+                        })
+                        .frame(width: 130, height: 40)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .offset(x: 550, y: 40)
+                    )
                     .offset(x: 10, y: -30)
+                    .ignoresSafeArea()
                 
                 Rectangle()
                     .frame(width: 300, height: 900)
@@ -41,26 +47,26 @@ struct PatientView_Profile: View {
                     .offset(x: -550, y: -39)
                 
                 Button(action: {
-                    
+                    mainViewController.viewState = .patientProfile
                 }, label: {
                     Text("Edit Profile")
                         .foregroundColor(Color.black)
-                        .frame(width: 190, height: 80)
-                        .background(Color(hex: "#A8DADC"))
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .offset(x: -540, y: -900)
                 })
+                .frame(width: 190, height: 80)
+                .background(Color(hex: "#A8DADC"))
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .offset(x: -540, y: -900)
                 
                 Button(action: {
-                    
+                    mainViewController.viewState = .patientSecurity
                 }, label: {
                     Text("Security")
                         .foregroundColor(Color.black)
-                        .frame(width: 190, height: 80)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .offset(x: -540, y: -870)
                 })
+                .frame(width: 190, height: 80)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .offset(x: -540, y: -870)
                 
                 Text("Personal Infomation")
                     .font(.title)
@@ -93,15 +99,6 @@ struct PatientView_Profile: View {
                     .offset(x: -262, y: -1030)
                 
                 TextField("07/30/2000", text: $dateOfBirth)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(width: 500, height: 10)
-                    .offset(x: 80, y: -1060)
-                
-                Text("Sex:")
-                    .font(.title2)
-                    .offset(x: -303, y: -1030)
-                
-                TextField("Male", text: $sex)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(width: 500, height: 10)
                     .offset(x: 80, y: -1060)
@@ -171,30 +168,33 @@ struct PatientView_Profile: View {
                 }, label: {
                     Text("Save Changes")
                         .foregroundColor(Color.black)
-                        .frame(width: 190, height: 80)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .offset(x: -540, y: -1100)
                 })
+                .frame(width: 190, height: 80)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .offset(x: -540, y: -1100)
                 
                 Button(action: {
-                    
+                    loginController.signOutLocally()
                 }, label: {
                     Text("Sign Out")
                         .foregroundColor(Color.black)
-                        .frame(width: 190, height: 80)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .offset(x: -540, y: -1080)
                 })
+                .frame(width: 190, height: 80)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .offset(x: -540, y: -1080)
             }
             
-        }.offset(x: 0, y: 540)
+        }.offset(x: 0, y: 520)
+            .ignoresSafeArea()
     }
 }
 
 struct PatientView_Profile_Previews: PreviewProvider {
     static var previews: some View {
         PatientView_Profile()
+            .environmentObject(MainViewController())
+            .environmentObject(LoginController())
     }
 }
