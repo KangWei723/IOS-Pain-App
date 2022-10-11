@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PatientView_HomePage: View {
+    @EnvironmentObject var mainViewController: MainViewController
+    
     var body: some View {
             // Header
         VStack {
@@ -17,14 +19,18 @@ struct PatientView_HomePage: View {
                     .offset(x: 10, y: 300)
                 
                 // Profile Button
-                Button(action: {}, label: {
+                Button(action: {
+                    withAnimation(.default, {
+                        mainViewController.viewState = .patientProfile
+                    })
+                }, label: {
                     Text("Profile")
                         .foregroundColor(Color.black)
-                        .frame(width: 130, height: 40)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .offset(x: 550, y: 220)
                 })
+                .frame(width: 130, height: 40)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .offset(x: 550, y: 220)
                 
                 // Left tab background
                 Rectangle()
@@ -33,28 +39,29 @@ struct PatientView_HomePage: View {
                     .offset(x: -550, y: 245)
                 
                 // Active Record button
-                Button(action: {}, label: {
+                Button(action: {
+                    mainViewController.viewState = .patientHome
+                }, label: {
                     Text("Active\n Record")
                         .foregroundColor(Color.black)
-                        .frame(width: 190, height: 80)
-                        .background(Color(hex: "#A8DADC"))
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .offset(x: -540, y: -620)
+                        
                 })
+                .frame(width: 190, height: 80)
+                .background(Color(hex: "#A8DADC"))
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .offset(x: -540, y: -620)
                 
                 // Past Record button
-                NavigationLink(destination: PatientView_PastRecords()) {
-                    Button(action: {
-                        _ = PatientView_PastRecords()
-                    }, label: {
-                        Text("Past\n Record")
-                            .foregroundColor(Color.black)
-                            .frame(width: 190, height: 80)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 15))
-                            .offset(x: -540, y: -590)
-                    })
-                }
+                Button(action: {
+                    mainViewController.viewState = .patientPastRecords
+                }, label: {
+                    Text("Past\n Record")
+                        .foregroundColor(Color.black)
+                })
+                .frame(width: 190, height: 80)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .offset(x: -540, y: -590)
                 
                 Rectangle()
                     .frame(width: 870, height: 230)
@@ -75,18 +82,21 @@ struct PatientView_HomePage: View {
                         Button(action: {}, label: {
                             Text("Update")
                                 .foregroundColor(Color.black)
-                                .frame(width: 130, height: 40)
-                                .background(Color.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
-                                .offset(x: 190, y: 70)
-                        })).overlay(Button(action: {}, label: {
+                                
+                        })
+                        .frame(width: 130, height: 40)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .offset(x: 190, y: 70)
+                    ).overlay(Button(action: {}, label: {
                             Text("Remove")
                                 .foregroundColor(Color.black)
-                                .frame(width: 130, height: 40)
-                                .background(Color.white)
-                                .clipShape(RoundedRectangle(cornerRadius: 15))
-                                .offset(x: 340, y: 70)
-                        })).offset(x: 130, y: -790)
+                        })
+                        .frame(width: 130, height: 40)
+                        .background(Color.white)
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .offset(x: 340, y: 70)
+                    ).offset(x: 130, y: -790)
                 
                 Circle()
                     .frame(width: 180, height: 100)
@@ -104,5 +114,6 @@ struct PatientView_HomePage: View {
 struct PatientView_HomePage_Previews: PreviewProvider {
     static var previews: some View {
         PatientView_HomePage()
+            .environmentObject(MainViewController())
     }
 }

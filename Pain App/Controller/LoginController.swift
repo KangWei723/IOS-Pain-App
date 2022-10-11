@@ -12,10 +12,14 @@ import Foundation
 enum LoginState {
     case login
     case session(user: AuthUser)
+    case signup
 }
 
 final class LoginController: ObservableObject {
     @Published var loginState: LoginState = .login
+    var email: String = ""
+    var password: String = ""
+    
     var storage = Set<AnyCancellable>()
     
     func getCurrentAuthUser() {
@@ -43,7 +47,10 @@ final class LoginController: ObservableObject {
                 }
             } receiveValue: { _ in
                 print("Signed Up")
-                self.signIn(email: username, password: password)
+//                self.signIn(email: username, password: password)
+                self.email = email
+                self.password = password
+                self.loginState = .signup
             }.store(in: &self.storage)
     }
     
@@ -56,6 +63,8 @@ final class LoginController: ObservableObject {
                 print("Sign in error: \(error)")
               }
           } receiveValue: { _ in
+              self.email = ""
+              self.password = ""
               self.getCurrentAuthUser()
           }.store(in: &self.storage)
       }

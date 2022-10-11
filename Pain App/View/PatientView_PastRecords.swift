@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PatientView_PastRecords: View {
+    @EnvironmentObject var mainViewController: MainViewController
     var body: some View {
         
         VStack {
@@ -16,14 +17,17 @@ struct PatientView_PastRecords: View {
                 .frame(width: 1400, height: 150, alignment: .leading)
                 .foregroundColor(Color(hex: "#A8DADC"))
                 .overlay(Text("\t\tWelcome User01").font(.title), alignment: .leading)
-                .overlay(Button(action: {}, label: {
-                    Text("Profile")
-                        .foregroundColor(Color.black)
-                        .frame(width: 130, height: 40)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .offset(x: 550, y: 40)
-                }))
+                .overlay(Button(action: {
+                        mainViewController.viewState = .patientProfile
+                    }, label: {
+                        Text("Profile")
+                            .foregroundColor(Color.black)
+                    })
+                    .frame(width: 130, height: 40)
+                    .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .offset(x: 550, y: 40)
+                )
                 .offset(x: 10, y: -30)
             
             Rectangle()
@@ -32,26 +36,26 @@ struct PatientView_PastRecords: View {
                 .offset(x: -550, y: -39)
             
             Button(action: {
-                
+                mainViewController.viewState = .patientHome
             }, label: {
                 Text("Active\n Record")
                     .foregroundColor(Color.black)
-                    .frame(width: 190, height: 80)
-                    .background(Color.white)
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .offset(x: -540, y: -900)
             })
+            .frame(width: 190, height: 80)
+            .background(Color.white)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .offset(x: -540, y: -900)
             
             Button(action: {
-                
+                mainViewController.viewState = .patientPastRecords
             }, label: {
                 Text("Past\n Record")
                     .foregroundColor(Color.black)
-                    .frame(width: 190, height: 80)
-                    .background(Color(hex: "#A8DADC"))
-                    .clipShape(RoundedRectangle(cornerRadius: 15))
-                    .offset(x: -540, y: -870)
             })
+            .frame(width: 190, height: 80)
+            .background(Color(hex: "#A8DADC"))
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .offset(x: -540, y: -870)
             
             Rectangle()
                 .frame(width: 860, height: 230)
@@ -109,5 +113,6 @@ struct PatientView_PastRecords: View {
 struct PatientView_PastRecords_Previews: PreviewProvider {
     static var previews: some View {
         PatientView_PastRecords()
+            .environmentObject(MainViewController())
     }
 }

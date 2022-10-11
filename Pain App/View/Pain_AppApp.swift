@@ -13,6 +13,7 @@ import AmplifyPlugins
 struct Pain_AppApp: App {
     
     @ObservedObject var loginController = LoginController()
+    @ObservedObject var mainViewController = MainViewController()
     
     init() {
         var isRunningForPreviews: Bool {
@@ -35,8 +36,15 @@ struct Pain_AppApp: App {
                     .preferredColorScheme(.light)
                     .environmentObject(loginController)
             case .session(user: _):
-                PatientView_Profile()
+                mainViewController.getView()
+                    .preferredColorScheme(.light)
+                    .environmentObject(mainViewController)
+                    .environmentObject(loginController)
                 NavigationBar()
+            case .signup:
+                Patient_Questionaire()
+                    .preferredColorScheme(.light)
+                    .environmentObject(loginController)
             }
         }
     }
