@@ -35,8 +35,7 @@ struct Pain_AppApp: App {
                     .preferredColorScheme(.light)
                     .environmentObject(loginController)
             case .session(user: _):
-                ContentView()
-                    .environmentObject(loginController)
+                PatientView_Profile()
                 NavigationBar()
             }
         }
