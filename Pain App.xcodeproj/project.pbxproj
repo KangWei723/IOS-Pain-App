@@ -138,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A39AFBE317C4BA0246B6BE6 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				A936074528EFFF71007F4BFB /* awsconfiguration.json */,
+				A936074428EFFF71007F4BFB /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
 		1F34292379B5231A7C32E0C2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +225,7 @@
 				A97F264028ED38E8004AD743 /* Products */,
 				1F34292379B5231A7C32E0C2 /* Pods */,
 				57FD36E0BEC6E6174F1143EE /* Frameworks */,
+				1A39AFBE317C4BA0246B6BE6 /* AmplifyConfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -467,7 +477,6 @@
 		};
 		A9DFB62D28ED3EC700414664 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -491,9 +500,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pain App/Pods-Pain App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pain App/Pods-Pain App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -508,9 +521,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

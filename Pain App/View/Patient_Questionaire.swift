@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct Patient_Questionaire: View {
     
     @State private var age: String = ""
@@ -59,7 +58,6 @@ struct Patient_Questionaire: View {
                                     .font(.largeTitle)
                                     .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
                                     .position(x: 190, y: 30)
-                                
                                 
                                 TextField("City", text: $city)
                                     .foregroundColor(.black)
