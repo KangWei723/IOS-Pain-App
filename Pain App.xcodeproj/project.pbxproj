@@ -34,6 +34,9 @@
 		A9BE352928F40DBC002F6E7B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936075C28F1FC4C007F4BFB /* LoginView.swift */; };
 		A9BE352A28F40DBE002F6E7B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936075C28F1FC4C007F4BFB /* LoginView.swift */; };
 		A9FE546E28F3ED7000010DF5 /* amplify in Resources */ = {isa = PBXBuildFile; fileRef = A9FE546D28F3ED7000010DF5 /* amplify */; };
+		BD44F13628F4A952007C615D /* Patient_Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44F13528F4A952007C615D /* Patient_Questionaire.swift */; };
+		BD44F13728F4F4BF007C615D /* Patient_Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44F13528F4A952007C615D /* Patient_Questionaire.swift */; };
+		BD44F13928F4F4C1007C615D /* Patient_Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44F13528F4A952007C615D /* Patient_Questionaire.swift */; };
 		BEC12C2FA8583C91F483DF33 /* Pods_Pain_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B80C822AC4E950EF9E79BC0 /* Pods_Pain_AppTests.framework */; };
 		E393ED2F6407FEB98DB2C43D /* Pods_Pain_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E00E89535EEB431DE051A1 /* Pods_Pain_App.framework */; };
 		EA05206C28F21E9B00380CD5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05206B28F21E9B00380CD5 /* HomeView.swift */; };
@@ -100,6 +103,7 @@
 		A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITests.swift; sourceTree = "<group>"; };
 		A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A9FE546D28F3ED7000010DF5 /* amplify */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amplify; sourceTree = SOURCE_ROOT; };
+		BD44F13528F4A952007C615D /* Patient_Questionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient_Questionaire.swift; sourceTree = "<group>"; };
 		E7F1AE4A47C10B737B2F162C /* Pods-Pain App-Pain AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App-Pain AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA05206B28F21E9B00380CD5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EA05207528F2547F00380CD5 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
@@ -134,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A39AFBE317C4BA0246B6BE6 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				A936074528EFFF71007F4BFB /* awsconfiguration.json */,
+				A936074428EFFF71007F4BFB /* amplifyconfiguration.json */,
+			);
+			name = AmplifyConfig;
+			sourceTree = "<group>";
+		};
 		1F34292379B5231A7C32E0C2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +202,7 @@
 				A936075C28F1FC4C007F4BFB /* LoginView.swift */,
 				EA05206B28F21E9B00380CD5 /* HomeView.swift */,
 				EA05207528F2547F00380CD5 /* NavigationBar.swift */,
+				BD44F13528F4A952007C615D /* Patient_Questionaire.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,6 +225,7 @@
 				A97F264028ED38E8004AD743 /* Products */,
 				1F34292379B5231A7C32E0C2 /* Pods */,
 				57FD36E0BEC6E6174F1143EE /* Frameworks */,
+				1A39AFBE317C4BA0246B6BE6 /* AmplifyConfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -462,7 +477,6 @@
 		};
 		A9DFB62D28ED3EC700414664 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -486,9 +500,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pain App/Pods-Pain App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pain App/Pods-Pain App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -503,9 +521,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -543,6 +565,7 @@
 			files = (
 				EA05206C28F21E9B00380CD5 /* HomeView.swift in Sources */,
 				EA05207628F2547F00380CD5 /* NavigationBar.swift in Sources */,
+				BD44F13628F4A952007C615D /* Patient_Questionaire.swift in Sources */,
 				A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */,
 				A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */,
 				A936076428F23A58007F4BFB /* ContentView.swift in Sources */,
@@ -561,6 +584,7 @@
 				EA05207D28F25EAE00380CD5 /* HomeView.swift in Sources */,
 				EA05208728F25EF000380CD5 /* Pain_AppApp.swift in Sources */,
 				EA05207B28F25EAA00380CD5 /* ColorHexHelper.swift in Sources */,
+				BD44F13728F4F4BF007C615D /* Patient_Questionaire.swift in Sources */,
 				A9BE352928F40DBC002F6E7B /* LoginView.swift in Sources */,
 				A9BE352728F40DAF002F6E7B /* LoginController.swift in Sources */,
 			);
@@ -572,6 +596,7 @@
 			files = (
 				A97F266028ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift in Sources */,
 				EA05207A28F25EA700380CD5 /* Pain_AppApp.swift in Sources */,
+				BD44F13928F4F4C1007C615D /* Patient_Questionaire.swift in Sources */,
 				A97F265E28ED38ED004AD743 /* Pain_AppUITests.swift in Sources */,
 				A9BE352A28F40DBE002F6E7B /* LoginView.swift in Sources */,
 				EA05208428F25EC000380CD5 /* NavigationBar.swift in Sources */,
