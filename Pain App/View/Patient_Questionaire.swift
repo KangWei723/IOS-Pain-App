@@ -37,116 +37,114 @@ struct Patient_Questionaire: View {
                     .frame(width: geoProxy.size.width * 0.8, height: geoProxy.size.height * 0.5)
                     .overlay(
                         GeometryReader { geoProxy2 in
-                            VStack {
-                                Text("Age")
-                                    .font(.largeTitle)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
-                                    .position(x: 190, y: 10)
-                                
-                                TextField("Age", text: $age)
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 28))
-                                    .textFieldStyle(SuperCustomTextFieldStyle())
-                                    .background(Color.init(hex: "F1FAEE"))
-                                    .cornerRadius(10)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
-                                    .shadow(color: .gray, radius: 6, x: 0, y: 0)
-                                    .accentColor(.black)
-                                    .foregroundStyle(Color.black)
-                                    .position(x: 200, y: 15)
-                                
-                                Text("City")
-                                    .font(.largeTitle)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
-                                    .position(x: 190, y: 30)
-                                
-                                TextField("City", text: $city)
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 28))
-                                    .textFieldStyle(SuperCustomTextFieldStyle())
-                                    .background(Color.init(hex: "F1FAEE"))
-                                    .cornerRadius(10)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
-                                    .shadow(color: .gray, radius: 6, x: 0, y: 0)
-                                    .accentColor(.black)
-                                    .foregroundStyle(Color.black)
-                                    .position(x: 200, y: 30)
-                                
-                                Text("Country")
-                                    .font(.largeTitle)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
-                                    .position(x: 190, y: 45)
-                                
-                                TextField("Country", text: $city)
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 28))
-                                    .textFieldStyle(SuperCustomTextFieldStyle())
-                                    .background(Color.init(hex: "F1FAEE"))
-                                    .cornerRadius(10)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
-                                    .shadow(color: .gray, radius: 6, x: 0, y: 0)
-                                    .accentColor(.black)
-                                    .foregroundStyle(Color.black)
-                                    .position(x: 200, y: 45)
-                            }
-                            VStack {
-                                Text("Date of Birth")
-                                    .font(.largeTitle)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
-                                    .position(x: 800, y: 15)
-                                
-                                TextField("Date of Birth", text: $dob)
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 28))
-                                    .textFieldStyle(SuperCustomTextFieldStyle())
-                                    .background(Color.init(hex: "F1FAEE"))
-                                    .cornerRadius(10)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
-                                    .shadow(color: .gray, radius: 6, x: 0, y: 0)
-                                    .accentColor(.black)
-                                    .foregroundStyle(Color.black)
-                                    .position(x: 800, y: 12)
-                                
-                                Text("State")
-                                    .font(.largeTitle)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
-                                    .position(x: 800, y: 28)
-                                
-                                TextField("State", text: $state)
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 28))
-                                    .textFieldStyle(SuperCustomTextFieldStyle())
-                                    .background(Color.init(hex: "F1FAEE"))
-                                    .cornerRadius(10)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
-                                    .shadow(color: .gray, radius: 6, x: 0, y: 0)
-                                    .accentColor(.black)
-                                    .foregroundStyle(Color.black)
-                                    .position(x: 800, y: 30)
                             
-                                Text("Phone Number")
-                                    .font(.largeTitle)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
-                                    .position(x: 800, y: 40)
+                            HStack {
+                                Spacer()
+                                VStack {
+                                    Text("Date of Birth")
+                                        .font(.largeTitle)
+                                    
+                                    TextField("Date of Birth", text: $dob)
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 28))
+                                        .textFieldStyle(SuperCustomTextFieldStyle())
+                                        .background(Color.init(hex: "F1FAEE"))
+                                        .cornerRadius(10)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
+                                        .shadow(color: .gray, radius: 6, x: 0, y: 0)
+                                        .accentColor(.black)
+                                        .foregroundStyle(Color.black)
+                                    
+                                    Text("State")
+                                        .font(.largeTitle)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
+                                    
+                                    TextField("State", text: $state)
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 28))
+                                        .textFieldStyle(SuperCustomTextFieldStyle())
+                                        .background(Color.init(hex: "F1FAEE"))
+                                        .cornerRadius(10)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
+                                        .shadow(color: .gray, radius: 6, x: 0, y: 0)
+                                        .accentColor(.black)
+                                        .foregroundStyle(Color.black)
+                                    
+                                    Text("Phone Number")
+                                        .font(.largeTitle)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
+                                    
+                                    // Not sure if we will want this anymore 
+                                    TextField("Phone Number", text: $pnumber)
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 28))
+                                        .textFieldStyle(SuperCustomTextFieldStyle())
+                                        .background(Color.init(hex: "F1FAEE"))
+                                        .cornerRadius(10)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
+                                        .shadow(color: .gray, radius: 6, x: 0, y: 0)
+                                        .accentColor(.black)
+                                        .foregroundStyle(Color.black)
+                                    
+                                }
                                 
-                                TextField("Phone Number", text: $pnumber)
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 28))
-                                    .textFieldStyle(SuperCustomTextFieldStyle())
-                                    .background(Color.init(hex: "F1FAEE"))
-                                    .cornerRadius(10)
-                                    .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
-                                    .shadow(color: .gray, radius: 6, x: 0, y: 0)
-                                    .accentColor(.black)
-                                    .foregroundStyle(Color.black)
-                                    .position(x: 800, y: 45)
+                                Spacer()
+                                Spacer()
+                                VStack {
+                                    Text("Age")
+                                        .font(.largeTitle)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
+                                    
+                                    TextField("Age", text: $age)
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 28))
+                                        .textFieldStyle(SuperCustomTextFieldStyle())
+                                        .background(Color.init(hex: "F1FAEE"))
+                                        .cornerRadius(10)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
+                                        .shadow(color: .gray, radius: 6, x: 0, y: 0)
+                                        .accentColor(.black)
+                                        .foregroundStyle(Color.black)
+                                    
+                                    Text("City")
+                                        .font(.largeTitle)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
+                                    
+                                    TextField("City", text: $city)
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 28))
+                                        .textFieldStyle(SuperCustomTextFieldStyle())
+                                        .background(Color.init(hex: "F1FAEE"))
+                                        .cornerRadius(10)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
+                                        .shadow(color: .gray, radius: 6, x: 0, y: 0)
+                                        .accentColor(.black)
+                                        .foregroundStyle(Color.black)
+                                    
+                                    Text("Country")
+                                        .font(.largeTitle)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
+                                    
+                                    TextField("Country", text: $city)
+                                        .foregroundColor(.black)
+                                        .font(.system(size: 28))
+                                        .textFieldStyle(SuperCustomTextFieldStyle())
+                                        .background(Color.init(hex: "F1FAEE"))
+                                        .cornerRadius(10)
+                                        .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.25)
+                                        .shadow(color: .gray, radius: 6, x: 0, y: 0)
+                                        .accentColor(.black)
+                                        .foregroundStyle(Color.black)
+                                    
+                                }
+                                Spacer()
                             }
-                            
+     
                         }
                     
                     )
-    //                .position(x: 700, y: 500)
-                Spacer()
+                // Spacer for the button
+                Spacer(minLength: 125)
                 // The button that will send them to the next view
                 Button {
                     loginController.signIn(email: loginController.email, password: loginController.password)
@@ -161,8 +159,6 @@ struct Patient_Questionaire: View {
                 .cornerRadius(10)
                 .shadow(color: .gray, radius: 6, x: 0, y: 0)
                 .padding(.bottom, geoProxy.size.height * 0.12)
-                
-//                .position(x: 700, y: 850)
                 
             }
             
