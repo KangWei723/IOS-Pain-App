@@ -52,6 +52,8 @@
 		BD44F13628F4A952007C615D /* Patient_Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44F13528F4A952007C615D /* Patient_Questionaire.swift */; };
 		BD44F13728F4F4BF007C615D /* Patient_Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44F13528F4A952007C615D /* Patient_Questionaire.swift */; };
 		BD44F13928F4F4C1007C615D /* Patient_Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44F13528F4A952007C615D /* Patient_Questionaire.swift */; };
+		BDA599E82907366000D78F8E /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA599E72907366000D78F8E /* EnterPhoneNumberView.swift */; };
+		BDA599EA2907487D00D78F8E /* EnterVerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA599E92907487D00D78F8E /* EnterVerificationCodeView.swift */; };
 		BEC12C2FA8583C91F483DF33 /* Pods_Pain_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B80C822AC4E950EF9E79BC0 /* Pods_Pain_AppTests.framework */; };
 		E393ED2F6407FEB98DB2C43D /* Pods_Pain_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E00E89535EEB431DE051A1 /* Pods_Pain_App.framework */; };
 		EA05207628F2547F00380CD5 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05207528F2547F00380CD5 /* NavigationBar.swift */; };
@@ -121,6 +123,8 @@
 		A9D730E928F5036200E40D7A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A9FE546D28F3ED7000010DF5 /* amplify */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amplify; sourceTree = SOURCE_ROOT; };
 		BD44F13528F4A952007C615D /* Patient_Questionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient_Questionaire.swift; sourceTree = "<group>"; };
+		BDA599E72907366000D78F8E /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
+		BDA599E92907487D00D78F8E /* EnterVerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterVerificationCodeView.swift; sourceTree = "<group>"; };
 		E7F1AE4A47C10B737B2F162C /* Pods-Pain App-Pain AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App-Pain AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA05207528F2547F00380CD5 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pain_App_Pain_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,6 +226,8 @@
 				106DE1F628F2951800B270F9 /* PatientView_Profile.swift */,
 				109A8D7628F48F2700D80717 /* PatientView_Security.swift */,
 				BD44F13528F4A952007C615D /* Patient_Questionaire.swift */,
+				BDA599E72907366000D78F8E /* EnterPhoneNumberView.swift */,
+				BDA599E92907487D00D78F8E /* EnterVerificationCodeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -582,6 +588,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA05207628F2547F00380CD5 /* NavigationBar.swift in Sources */,
+				BDA599E82907366000D78F8E /* EnterPhoneNumberView.swift in Sources */,
+				BDA599EA2907487D00D78F8E /* EnterVerificationCodeView.swift in Sources */,
 				BD44F13628F4A952007C615D /* Patient_Questionaire.swift in Sources */,
 				A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */,
 				A9D730EA28F5036200E40D7A /* MainViewController.swift in Sources */,
