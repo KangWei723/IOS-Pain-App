@@ -125,7 +125,7 @@ struct Patient_Questionaire: View {
                                         .font(.largeTitle)
                                         .frame(width: geoProxy2.size.width * 0.3, height: geoProxy2.size.height * 0.1)
                                     
-                                    TextField("Country", text: $city)
+                                    TextField("Country", text: $country)
                                         .foregroundColor(.black)
                                         .font(.system(size: 28))
                                         .textFieldStyle(SuperCustomTextFieldStyle())
