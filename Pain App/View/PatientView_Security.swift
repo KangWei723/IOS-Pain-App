@@ -115,6 +115,6 @@ struct PatientView_Security_Previews: PreviewProvider {
     static var previews: some View {
         PatientView_Security()
             .environmentObject(MainViewController())
-            .environmentObject(LoginController())
+            .environmentObject(LoginController(mainView: MainViewController()))
     }
 }

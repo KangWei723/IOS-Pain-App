@@ -8,19 +8,37 @@
 import Amplify
 import Combine
 import Foundation
+import SwiftUI
 
-enum LoginState {
+enum LoginState: Equatable {
+    static func == (lhs: LoginState, rhs: LoginState) -> Bool {
+        switch(lhs, rhs) {
+        case (.login, .login): return true
+        case (.signup, .signup): return true
+        case (.session(user: _), .session(user: _)): return true
+        default: return false
+        }
+    }
+    
     case login
-    case session(user: AuthUser)
+    case session(user: AuthUser? = nil)
     case signup
 }
 
 final class LoginController: ObservableObject {
-    @Published var loginState: LoginState = .login
-    var email: String = ""
-    var password: String = ""
+    @ObservedObject var mainView: MainViewController
+    @Published var loginState: LoginState
+    var email: String
+    var password: String
+    var storage: Set<AnyCancellable>
     
-    var storage = Set<AnyCancellable>()
+    init(mainView: MainViewController) {
+        self.mainView = mainView
+        self.loginState = .login
+        self.email = ""
+        self.password = ""
+        self.storage = Set<AnyCancellable>()
+    }
     
     func getCurrentAuthUser() {
         if let user = Amplify.Auth.getCurrentUser() {
@@ -43,11 +61,10 @@ final class LoginController: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink {
                 if case .failure(let error) = $0 {
-                  print("Sign in error: \(error)")
+                    print("Sign in error: \(error)")
                 }
             } receiveValue: { _ in
                 print("Signed Up")
-//                self.signIn(email: username, password: password)
                 self.email = email
                 self.password = password
                 self.loginState = .signup
@@ -63,6 +80,7 @@ final class LoginController: ObservableObject {
                 print("Sign in error: \(error)")
               }
           } receiveValue: { _ in
+              print("Signed In Succesfully")
               self.email = ""
               self.password = ""
               self.getCurrentAuthUser()
@@ -75,10 +93,11 @@ final class LoginController: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink {
                 if case .failure(let error) = $0 {
-                  print("Sign out error: \(error)")
+                    print("Sign out error: \(error)")
                 }
             } receiveValue: { _ in
                 self.getCurrentAuthUser()
+                self.mainView.viewState = .patientHome
                 print("Signed Out")
             }.store(in: &self.storage)
     }

@@ -12,10 +12,12 @@ import AmplifyPlugins
 @main
 struct Pain_AppApp: App {
     
-    @ObservedObject var loginController = LoginController()
-    @ObservedObject var mainViewController = MainViewController()
+    @ObservedObject var mainViewController: MainViewController
+    @ObservedObject var loginController: LoginController
     
     init() {
+        _mainViewController = ObservedObject(wrappedValue: MainViewController())
+        _loginController = ObservedObject(wrappedValue: LoginController(mainView: _mainViewController.wrappedValue))
         var isRunningForPreviews: Bool {
             ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] != nil
         }
