@@ -170,6 +170,6 @@ struct Patient_Questionaire: View {
 struct Patient_Questionaire_Previews: PreviewProvider {
     static var previews: some View {
         Patient_Questionaire()
-            .environmentObject(LoginController())
+            .environmentObject(LoginController(mainView: MainViewController()))
     }
 }

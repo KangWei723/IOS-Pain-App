@@ -195,6 +195,6 @@ struct PatientView_Profile_Previews: PreviewProvider {
     static var previews: some View {
         PatientView_Profile()
             .environmentObject(MainViewController())
-            .environmentObject(LoginController())
+            .environmentObject(LoginController(mainView: MainViewController()))
     }
 }
