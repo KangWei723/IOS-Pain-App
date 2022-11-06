@@ -21,6 +21,8 @@
 		10BB6E6C28F4AE7A00894CBA /* PatientView_Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A8D7628F48F2700D80717 /* PatientView_Security.swift */; };
 		77CA69F27004B58CA0EBDEF5 /* Pods_Pain_App_Pain_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */; };
 		A917D0B42917204A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
+		A917D0B529175329001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
+		A917D0B62917532A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
 		A936074628EFFF71007F4BFB /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074428EFFF71007F4BFB /* amplifyconfiguration.json */; };
 		A936074728EFFF71007F4BFB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074528EFFF71007F4BFB /* awsconfiguration.json */; };
 		A936075028F0906E007F4BFB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A936074A28F0906E007F4BFB /* README.md */; };
@@ -618,6 +620,7 @@
 				EA05208328F25EBF00380CD5 /* NavigationBar.swift in Sources */,
 				10BB6E6728F4AE7100894CBA /* PatientView_PastRecords.swift in Sources */,
 				10BB6E6928F4AE7400894CBA /* PatientView_Profile.swift in Sources */,
+				A917D0B529175329001CDD2F /* HighlightAreaPage.swift in Sources */,
 				EA05208728F25EF000380CD5 /* Pain_AppApp.swift in Sources */,
 				EA05207B28F25EAA00380CD5 /* ColorHexHelper.swift in Sources */,
 				10BB6E6B28F4AE7900894CBA /* PatientView_Security.swift in Sources */,
@@ -636,6 +639,7 @@
 				10BB6E6C28F4AE7A00894CBA /* PatientView_Security.swift in Sources */,
 				EA05207A28F25EA700380CD5 /* Pain_AppApp.swift in Sources */,
 				10BB6E6628F4AE6D00894CBA /* PatientView_HomePage.swift in Sources */,
+				A917D0B62917532A001CDD2F /* HighlightAreaPage.swift in Sources */,
 				BD44F13928F4F4C1007C615D /* Patient_Questionaire.swift in Sources */,
 				A97F265E28ED38ED004AD743 /* Pain_AppUITests.swift in Sources */,
 				10BB6E6A28F4AE7500894CBA /* PatientView_Profile.swift in Sources */,
