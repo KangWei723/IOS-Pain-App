@@ -23,6 +23,9 @@
 		A917D0B42917204A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
 		A917D0B529175329001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
 		A917D0B62917532A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
+		A917D0BE2917686C001CDD2F /* 3D Model.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A917D0BD29176714001CDD2F /* 3D Model.usdz */; };
+		A917D0BF2917686D001CDD2F /* 3D Model.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A917D0BD29176714001CDD2F /* 3D Model.usdz */; };
+		A917D0C02917686D001CDD2F /* 3D Model.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A917D0BD29176714001CDD2F /* 3D Model.usdz */; };
 		A936074628EFFF71007F4BFB /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074428EFFF71007F4BFB /* amplifyconfiguration.json */; };
 		A936074728EFFF71007F4BFB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074528EFFF71007F4BFB /* awsconfiguration.json */; };
 		A936075028F0906E007F4BFB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A936074A28F0906E007F4BFB /* README.md */; };
@@ -100,6 +103,8 @@
 		831F205E734B993F002C0FD1 /* Pods-Pain AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Pain AppTests/Pods-Pain AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89D7643FCDE6CF643D2BF448 /* Pods-Pain App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App.release.xcconfig"; path = "Target Support Files/Pods-Pain App/Pods-Pain App.release.xcconfig"; sourceTree = "<group>"; };
 		A917D0B329172049001CDD2F /* HighlightAreaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightAreaPage.swift; sourceTree = "<group>"; };
+		A917D0BC291766C2001CDD2F /* uploads-files-2087304-Basemesh.fbx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "uploads-files-2087304-Basemesh.fbx"; sourceTree = "<group>"; };
+		A917D0BD29176714001CDD2F /* 3D Model.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "3D Model.usdz"; sourceTree = "<group>"; };
 		A936074428EFFF71007F4BFB /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		A936074528EFFF71007F4BFB /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		A936074A28F0906E007F4BFB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -194,6 +199,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A917D0BB291766AD001CDD2F /* 3D Model */ = {
+			isa = PBXGroup;
+			children = (
+				A917D0BD29176714001CDD2F /* 3D Model.usdz */,
+				A917D0BC291766C2001CDD2F /* uploads-files-2087304-Basemesh.fbx */,
+			);
+			name = "3D Model";
+			sourceTree = "<group>";
+		};
 		A936074928F09057007F4BFB /* Repo Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +287,7 @@
 		A97F264128ED38E8004AD743 /* Pain App */ = {
 			isa = PBXGroup;
 			children = (
+				A917D0BB291766AD001CDD2F /* 3D Model */,
 				A9FE546C28F3ED6000010DF5 /* Amplify */,
 				A947489D28EFD3A4006D7075 /* Controller */,
 				A947489C28EFD39B006D7075 /* View */,
@@ -435,6 +450,7 @@
 				A936075228F0906E007F4BFB /* Gemfile in Resources */,
 				A936075328F0906E007F4BFB /* fastlane in Resources */,
 				A936075428F0906E007F4BFB /* amplify-conf-loader.sh in Resources */,
+				A917D0BE2917686C001CDD2F /* 3D Model.usdz in Resources */,
 				A936075528F0906E007F4BFB /* sonar-project.properties in Resources */,
 				A97F264728ED38EC004AD743 /* Assets.xcassets in Resources */,
 				A936075B28F13605007F4BFB /* .gitignore in Resources */,
@@ -447,6 +463,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A917D0BF2917686D001CDD2F /* 3D Model.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +471,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A917D0C02917686D001CDD2F /* 3D Model.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
