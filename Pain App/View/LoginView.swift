@@ -29,6 +29,7 @@ struct LoginView: View {
         case login, signup
         var id: Self { self }
     }
+    @State private var toast: ToastModel?
     @State private var selectedPicker: PickerState = .login
     @State private var email: String = ""
     @State private var password: String = ""
@@ -194,9 +195,18 @@ struct LoginView: View {
                                     
                                     Button {
                                         if selectedPicker == .signup {
+                                            if self.email.isEmpty || self.password.isEmpty
+                                                || self.confirmPassword.isEmpty || self.fname.isEmpty
+                                                || self.lname.isEmpty {
+                                                toast = ToastModel(type: .warning, title: "Warning",
+                                                        message: "Make sure you have filled out every information.")
+                                            }
                                             loginController.signUp(username: self.email, password: self.password, email: self.email)
                                         } else {
                                             loginController.signIn(email: self.email, password: self.password)
+                                            if loginController.checkAuth == false {
+                                                toast = ToastModel(type: .error, title: "Error", message: "Incorrect Email or Password entered.")
+                                            }
                                         }
                                     } label: {
                                         Text((selectedPicker == .login ) ? "Login" : "Sign Up")
@@ -208,7 +218,7 @@ struct LoginView: View {
                                     .background(Color.init(hex: "457B9D"))
                                     .cornerRadius(10)
                                     .padding(.top, 30)
-                                }
+                                }.toastView(toast: $toast)
                                 .padding(.top, geoProxy2.size.height * ((selectedPicker == .login) ? 0.12 : 0.06))
                                 Spacer()
                             }

@@ -31,6 +31,7 @@ final class LoginController: ObservableObject {
     var email: String
     var password: String
     var storage: Set<AnyCancellable>
+    var checkAuth: Bool = true
     
     init(mainView: MainViewController) {
         self.mainView = mainView
@@ -78,6 +79,7 @@ final class LoginController: ObservableObject {
           .sink {
               if case .failure(let error) = $0 {
                 print("Sign in error: \(error)")
+                  self.checkAuth = false
               }
           } receiveValue: { _ in
               print("Signed In Succesfully")
