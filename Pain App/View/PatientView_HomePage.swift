@@ -1,8 +1,8 @@
 //
-//  PatientView_HomePage.swift
+//  PatientView_HomePage_Fix.swift
 //  Pain App
 //
-//  Created by Jonathan Lim on 10/8/22.
+//  Created by Jonathan Lim on 10/28/22.
 //
 
 import SwiftUI
@@ -10,110 +10,124 @@ import SwiftUI
 struct PatientView_HomePage: View {
     @EnvironmentObject var mainViewController: MainViewController
     
+    @State private var addRecord = false
+    @State private var records = ["Test"]
+    @State private var countRecord = 0
+    
     var body: some View {
-            // Header
-        VStack {
-                Rectangle().frame(width: 1400, height: 150, alignment: .leading)
-                    .foregroundColor(Color(hex: "#A8DADC")).overlay(
-                        Text("\t\tWelcome User01").font(.title), alignment: .leading)
-                    .offset(x: 10, y: 300)
-                
-                // Profile Button
-                Button(action: {
-                    withAnimation(.default, {
-                        mainViewController.viewState = .patientProfile
-                    })
-                }, label: {
-                    Text("Profile")
-                        .foregroundColor(Color.black)
-                })
-                .frame(width: 130, height: 40)
-                .background(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .offset(x: 550, y: 220)
-                
-                // Left tab background
+        // Header
+        GeometryReader { geoProxy in
+            VStack {
                 Rectangle()
-                    .frame(width: 300, height: 900)
-                    .foregroundColor(Color(hex: "F1FAEE"))
-                    .offset(x: -550, y: 245)
-                
-                // Active Record button
-                Button(action: {
-                    mainViewController.viewState = .patientHome
-                }, label: {
-                    Text("Active\n Record")
-                        .foregroundColor(Color.black)
-                        
-                })
-                .frame(width: 190, height: 80)
-                .background(Color(hex: "#A8DADC"))
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .offset(x: -540, y: -620)
-                
-                // Past Record button
-                Button(action: {
-                    mainViewController.viewState = .patientPastRecords
-                }, label: {
-                    Text("Past\n Record")
-                        .foregroundColor(Color.black)
-                })
-                .frame(width: 190, height: 80)
-                .background(Color.white)
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .offset(x: -540, y: -590)
-                
-                Rectangle()
-                    .frame(width: 870, height: 230)
-                    .foregroundColor(Color(hex: "F1FAEE"))
+                    .fill(Color.init(hex: "A8DADC"))
+                    .frame(width: geoProxy.size.width, height: geoProxy.size.height*0.2)
                     .overlay(
-                        Text("\tDate: 07/30/2022\n")
-                            .font(.title)
-                            .offset(x: 0, y: -60), alignment: .leading)
-                    .overlay(
-                        Text("\tPain Area: Left hand")
-                            .font(.title)
-                            .offset(x: 0, y: 0), alignment: .leading)
-                    .overlay(
-                        Text("\tPain Description: Burn")
-                            .font(.title)
-                            .offset(x: 0, y: 70), alignment: .leading)
-                    .overlay(
-                        Button(action: {}, label: {
-                            Text("Update")
-                                .foregroundColor(Color.black)
-                                
+                        GeometryReader { geoProxy2 in
+                            VStack {
+                                Spacer()
+                                HStack {
+                                    Spacer().frame(width: 50)
+                                    Text("Welcome User01").font(.system(size: 45))
+                                    Spacer()
+                                    Button {
+                                        withAnimation(.default, {
+                                            mainViewController.viewState = .patientProfile
+                                        })
+                                    } label: {
+                                        HStack {
+                                            Text("Profile").font(.system(size: 30))
+                                                .foregroundColor(Color.black)
+                                        }.frame(width: geoProxy2.size.width * 0.15, height: geoProxy2.size.height * 0.25)
+                                    }.background(Color.white)
+                                        .cornerRadius(10)
+                                    Spacer().frame(width: 50)
+                                }
+                                Spacer()
+                            }
                         })
-                        .frame(width: 130, height: 40)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .offset(x: 190, y: 70)
-                    ).overlay(Button(action: {}, label: {
-                            Text("Remove")
-                                .foregroundColor(Color.black)
+                HStack {
+                    Rectangle()
+                        .fill(Color.init(hex: "F1FAEE"))
+                        .frame(width: geoProxy.size.width*0.24, height: geoProxy.size.height)
+                        .overlay(GeometryReader { geoProxy2 in
+                            VStack {
+                                Spacer().frame(height: 40)
+                                HStack {
+                                    Spacer()
+                                    Button {
+                                        withAnimation(.default, {
+                                            mainViewController.viewState = .patientHome
+                                        })
+                                    } label: {
+                                        HStack {
+                                            Text("Active\n Records").font(.system(size: 30))
+                                                .foregroundColor(Color.black)
+                                        }.frame(width: geoProxy2.size.width * 0.7, height: geoProxy2.size.height * 0.13)
+                                    }.background(Color.init(hex: "A8DADC"))
+                                        .cornerRadius(15)
+                                    Spacer()
+                                }
+                                Spacer().frame(height: 40)
+                                HStack {
+                                    Button {
+                                        withAnimation(.default, {
+                                            mainViewController.viewState = .patientPastRecords
+                                        })
+                                    } label: {
+                                        HStack {
+                                            Text("Past\n Records").font(.system(size: 30))
+                                                .foregroundColor(Color.black)
+                                        }.frame(width: geoProxy2.size.width * 0.7, height: geoProxy2.size.height * 0.13)
+                                    }.background(Color.white)
+                                        .cornerRadius(15)
+                                }
+                            }
                         })
-                        .frame(width: 130, height: 40)
-                        .background(Color.white)
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .offset(x: 340, y: 70)
-                    ).offset(x: 130, y: -790)
-                
-                Circle()
-                    .frame(width: 180, height: 100)
-                    .foregroundColor(Color(hex: "F1FAEE"))
-                    .overlay(Button(action: {
-                        mainViewController.viewState = .highlightAreaPage
-                    }, label: {
-                        Image("Plus_Icon")
-                            .resizable()
-                            .frame(width: 60, height: 60)
-                    }))
-                    .offset(x: 130, y: -750)
-        }
+                    Spacer()
+                    Rectangle().fill(Color.white)
+                        .frame(width: geoProxy.size.width*0.74, height: geoProxy.size.height)
+                        .overlay(GeometryReader { geoProxy2 in
+                            VStack {
+                                    /*List {
+                                        ForEach(records, id: \.self) { record in
+                                            Text(record)
+                                        }
+                                    }.frame(width: geoProxy.size.width*0.75, height: geoProxy.size.height*0.6)*/
+                                Spacer().frame(height: 50)
+                                HStack {
+                                    Spacer()
+                                    Button {
+                                        self.addRecord.toggle()
+                                        mainViewController.viewState = .highlightAreaPage
+                                    } label: {
+                                        HStack {
+                                            Image("Plus_Icon")
+                                                .resizable()
+                                                .frame(width: geoProxy2.size.width*0.06, height: geoProxy2.size.height*0.05)
+                                        }.padding()
+                                    }.background(Color.init(hex: "A8DADC"))
+                                        .cornerRadius(15)
+                                    Spacer()
+                                    if addRecord {
+                                       /* for record in records{
+                                            RoundedRectangle(cornerRadius: 15)
+                                                .frame(width: 50, height: 50)
+                                                .foregroundColor(Color.red)
+                                        } */
+                                    }
+                                }
+                                Spacer()
+                            }
+                        })
+                    Spacer()
+                }
+            }.ignoresSafeArea()
+                    }
+        
     }
 }
 
-struct PatientView_HomePage_Previews: PreviewProvider {
+struct PatientView_HomePage_Preview: PreviewProvider {
     static var previews: some View {
         PatientView_HomePage()
             .environmentObject(MainViewController())
