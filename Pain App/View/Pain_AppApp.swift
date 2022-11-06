@@ -42,7 +42,7 @@ struct Pain_AppApp: App {
                     .preferredColorScheme(.light)
                     .environmentObject(mainViewController)
                     .environmentObject(loginController)
-                NavigationBar()
+//                NavigationBar()
             case .signup:
                 Patient_Questionaire()
                     .preferredColorScheme(.light)

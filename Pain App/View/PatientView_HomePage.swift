@@ -101,7 +101,9 @@ struct PatientView_HomePage: View {
                 Circle()
                     .frame(width: 180, height: 100)
                     .foregroundColor(Color(hex: "F1FAEE"))
-                    .overlay(Button(action: {}, label: {
+                    .overlay(Button(action: {
+                        mainViewController.viewState = .highlightAreaPage
+                    }, label: {
                         Image("Plus_Icon")
                             .resizable()
                             .frame(width: 60, height: 60)

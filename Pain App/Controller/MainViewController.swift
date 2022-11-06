@@ -13,6 +13,7 @@ enum ViewState {
     case patientProfile
     case patientPastRecords
     case patientSecurity
+    case highlightAreaPage
 }
 
 final class MainViewController: ObservableObject {
@@ -28,6 +29,8 @@ final class MainViewController: ObservableObject {
             PatientView_PastRecords()
         case .patientSecurity:
             PatientView_Security()
+        case .highlightAreaPage:
+            HighlightAreaPage()
         }
     }
 }

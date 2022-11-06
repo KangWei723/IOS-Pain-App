@@ -20,6 +20,9 @@
 		10BB6E6B28F4AE7900894CBA /* PatientView_Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A8D7628F48F2700D80717 /* PatientView_Security.swift */; };
 		10BB6E6C28F4AE7A00894CBA /* PatientView_Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A8D7628F48F2700D80717 /* PatientView_Security.swift */; };
 		77CA69F27004B58CA0EBDEF5 /* Pods_Pain_App_Pain_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */; };
+		A917D0B42917204A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
+		A917D0B529175329001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
+		A917D0B62917532A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
 		A936074628EFFF71007F4BFB /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074428EFFF71007F4BFB /* amplifyconfiguration.json */; };
 		A936074728EFFF71007F4BFB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074528EFFF71007F4BFB /* awsconfiguration.json */; };
 		A936075028F0906E007F4BFB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A936074A28F0906E007F4BFB /* README.md */; };
@@ -96,6 +99,7 @@
 		82E00E89535EEB431DE051A1 /* Pods_Pain_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pain_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831F205E734B993F002C0FD1 /* Pods-Pain AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Pain AppTests/Pods-Pain AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89D7643FCDE6CF643D2BF448 /* Pods-Pain App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App.release.xcconfig"; path = "Target Support Files/Pods-Pain App/Pods-Pain App.release.xcconfig"; sourceTree = "<group>"; };
+		A917D0B329172049001CDD2F /* HighlightAreaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightAreaPage.swift; sourceTree = "<group>"; };
 		A936074428EFFF71007F4BFB /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		A936074528EFFF71007F4BFB /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		A936074A28F0906E007F4BFB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 				A97F264228ED38E8004AD743 /* Pain_AppApp.swift */,
 				A936076228F21492007F4BFB /* ColorHexHelper.swift */,
 				A936075C28F1FC4C007F4BFB /* LoginView.swift */,
+				A917D0B329172049001CDD2F /* HighlightAreaPage.swift */,
 				EA05207528F2547F00380CD5 /* NavigationBar.swift */,
 				106DE1F228F22EF700B270F9 /* PatientView_HomePage.swift */,
 				106DE1F428F2905200B270F9 /* PatientView_PastRecords.swift */,
@@ -591,6 +596,7 @@
 				BDA599E82907366000D78F8E /* EnterPhoneNumberView.swift in Sources */,
 				BDA599EA2907487D00D78F8E /* EnterVerificationCodeView.swift in Sources */,
 				BD44F13628F4A952007C615D /* Patient_Questionaire.swift in Sources */,
+				A917D0B42917204A001CDD2F /* HighlightAreaPage.swift in Sources */,
 				A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */,
 				A9D730EA28F5036200E40D7A /* MainViewController.swift in Sources */,
 				106DE1F328F22EF700B270F9 /* PatientView_HomePage.swift in Sources */,
@@ -614,6 +620,7 @@
 				EA05208328F25EBF00380CD5 /* NavigationBar.swift in Sources */,
 				10BB6E6728F4AE7100894CBA /* PatientView_PastRecords.swift in Sources */,
 				10BB6E6928F4AE7400894CBA /* PatientView_Profile.swift in Sources */,
+				A917D0B529175329001CDD2F /* HighlightAreaPage.swift in Sources */,
 				EA05208728F25EF000380CD5 /* Pain_AppApp.swift in Sources */,
 				EA05207B28F25EAA00380CD5 /* ColorHexHelper.swift in Sources */,
 				10BB6E6B28F4AE7900894CBA /* PatientView_Security.swift in Sources */,
@@ -632,6 +639,7 @@
 				10BB6E6C28F4AE7A00894CBA /* PatientView_Security.swift in Sources */,
 				EA05207A28F25EA700380CD5 /* Pain_AppApp.swift in Sources */,
 				10BB6E6628F4AE6D00894CBA /* PatientView_HomePage.swift in Sources */,
+				A917D0B62917532A001CDD2F /* HighlightAreaPage.swift in Sources */,
 				BD44F13928F4F4C1007C615D /* Patient_Questionaire.swift in Sources */,
 				A97F265E28ED38ED004AD743 /* Pain_AppUITests.swift in Sources */,
 				10BB6E6A28F4AE7500894CBA /* PatientView_Profile.swift in Sources */,
