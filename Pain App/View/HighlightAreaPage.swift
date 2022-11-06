@@ -8,6 +8,7 @@
 import Amplify
 import AmplifyPlugins
 import SwiftUI
+import SceneKit
 
 struct HighlightAreaPage: View {
     enum PickerState: String, CaseIterable, Identifiable {
@@ -79,11 +80,16 @@ struct HighlightAreaPage: View {
                                             .resizable()
                                             .frame(width: geoProxy.size.width * 0.03, height: geoProxy.size.height * 0.03)
                                             .padding(.trailing, 20)
-                                        Image("3D Model Image")
-                                            .resizable()
-                                            .frame(width: geoProxy.size.width * 0.25, height: geoProxy.size.height * 0.65)
-                                            .padding(.top, geoProxy.size.height * 0.05)
-    //                                        .position(x: geoProxy.frame(in: .local).midX * 0.5, y: geoProxy.frame(in: .local).midY * 0.8)
+                                        SceneView(scene: SCNScene(named: "3D Model.usdz"),
+                                                  options: [.autoenablesDefaultLighting, .allowsCameraControl])
+                                        .frame(width: geoProxy.size.width * 0.3, height: geoProxy.size.height * 0.65)
+                                        .padding(.top, geoProxy.size.height * 0.05)
+//                                        .position(x: geoProxy.frame(in: .local).midX * 0.5, y: geoProxy.frame(in: .local).midY * 0.8)
+//                                        Image("3D Model Image")
+//                                            .resizable()
+//                                            .frame(width: geoProxy.size.width * 0.25, height: geoProxy.size.height * 0.65)
+//                                            .padding(.top, geoProxy.size.height * 0.05)
+//    //                                        .position(x: geoProxy.frame(in: .local).midX * 0.5, y: geoProxy.frame(in: .local).midY * 0.8)
                                         Image("Zoom In")
                                             .resizable()
                                             .frame(width: geoProxy.size.width * 0.03, height: geoProxy.size.height * 0.03)
