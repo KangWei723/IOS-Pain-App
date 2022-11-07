@@ -14,6 +14,20 @@ final class Pain_AppUITests: XCTestCase {
 
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
+        
+        let settingsApp = XCUIApplication(bundleIdentifier: "com.apple.Preferences")
+        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+            
+        settingsApp.launch()
+        settingsApp.tables.staticTexts["PASSWORDS"].tap()
+            
+        let passcodeInput = springboard.secureTextFields["Passcode field"]
+        passcodeInput.tap()
+        passcodeInput.typeText("abc\r") // it accepts anything in simulator
+        settingsApp.tables.cells["PasswordOptionsCell"].buttons["chevron"].tap()
+        if (settingsApp.switches["AutoFill Passwords"].value as? String) == "1" {
+            settingsApp.switches["AutoFill Passwords"].tap()
+        }
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -50,7 +64,7 @@ final class Pain_AppUITests: XCTestCase {
         app.buttons["Security"].tap()
         app.buttons["Back"].tap()
         
-        app.buttons["Past\n Record"].tap()
+        app.buttons["Past\n Records"].tap()
         profileButton.tap()
         app.buttons["Back"].tap()
         
@@ -58,7 +72,7 @@ final class Pain_AppUITests: XCTestCase {
         
         element.children(matching: .button)["Back"].tap()
         profileButton.tap()
-        let signOut = app.buttons["Sign Out"]
+        let signOut = app.buttons["Sign\nOut"]
         signOut.tap()
     }
     
@@ -148,6 +162,10 @@ final class Pain_AppUITests: XCTestCase {
         }
         
         app.buttons["Complete Registration"].tap()
+        
+        app.buttons["Profile"].tap()
+        let signOut = app.buttons["Sign\nOut"]
+        signOut.tap()
     }
     
     func testExample() throws {
