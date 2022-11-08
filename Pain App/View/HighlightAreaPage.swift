@@ -59,6 +59,16 @@ struct HighlightAreaPage: View {
                                     .background(Color.white)
                             })
                             .clipShape(RoundedRectangle(cornerRadius: 15))
+                        Button(action: {
+                                mainViewController.viewState = .painSensationPage
+                            }, label: {
+                                Text("Next")
+                                    .foregroundColor(Color.black)
+                                    .padding(.horizontal, 40.0)
+                                    .padding(.vertical, 10)
+                                    .background(Color.white)
+                            })
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
                             .padding(.trailing, geoProxy.size.width * 0.05)
 //                            .position(x: geoProxy.frame(in: .local).maxX * 0.55, y: geoProxy.frame(in: .local).minY * 1)
 //                            .offset(x: 550, y: 40)
