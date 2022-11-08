@@ -137,7 +137,7 @@ struct AddNewRecordPage: View {
                                                 
                                             }
                                             .padding(.bottom, geoProxy2.size.height * 0.05)
-                                            Spacer().frame(height:geoProxy2.size.height*0.45)
+                                            Spacer().frame(height: geoProxy2.size.height*0.45)
                                             Button {
                                                 withAnimation(.default, {
                                                 })
