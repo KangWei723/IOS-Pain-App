@@ -19,6 +19,9 @@
 		10BB6E6A28F4AE7500894CBA /* PatientView_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106DE1F628F2951800B270F9 /* PatientView_Profile.swift */; };
 		10BB6E6B28F4AE7900894CBA /* PatientView_Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A8D7628F48F2700D80717 /* PatientView_Security.swift */; };
 		10BB6E6C28F4AE7A00894CBA /* PatientView_Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109A8D7628F48F2700D80717 /* PatientView_Security.swift */; };
+		10DDF5902919BFEE00EA70A1 /* AddNewRecordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DDF58F2919BFEE00EA70A1 /* AddNewRecordPage.swift */; };
+		10DDF5912919BFEE00EA70A1 /* AddNewRecordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DDF58F2919BFEE00EA70A1 /* AddNewRecordPage.swift */; };
+		10DDF5922919BFEE00EA70A1 /* AddNewRecordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10DDF58F2919BFEE00EA70A1 /* AddNewRecordPage.swift */; };
 		10EDE1A52915D0310052CC35 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EDE1A42915D0310052CC35 /* ToastView.swift */; };
 		10EDE1A62915D0310052CC35 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EDE1A42915D0310052CC35 /* ToastView.swift */; };
 		10EDE1A72915D0310052CC35 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EDE1A42915D0310052CC35 /* ToastView.swift */; };
@@ -111,6 +114,7 @@
 		106DE1F428F2905200B270F9 /* PatientView_PastRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView_PastRecords.swift; sourceTree = "<group>"; };
 		106DE1F628F2951800B270F9 /* PatientView_Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView_Profile.swift; sourceTree = "<group>"; };
 		109A8D7628F48F2700D80717 /* PatientView_Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientView_Security.swift; sourceTree = "<group>"; };
+		10DDF58F2919BFEE00EA70A1 /* AddNewRecordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewRecordPage.swift; sourceTree = "<group>"; };
 		10EDE1A42915D0310052CC35 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		10EDE1A8291707140052CC35 /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
 		10EDE1AC291709800052CC35 /* ToastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToastModel.swift; path = "Pain App/View/ToastModel.swift"; sourceTree = SOURCE_ROOT; };
@@ -271,6 +275,7 @@
 				10EDE1A42915D0310052CC35 /* ToastView.swift */,
 				10EDE1A8291707140052CC35 /* ToastModifier.swift */,
 				10EDE1B029170E670052CC35 /* ToastExtension.swift */,
+				10DDF58F2919BFEE00EA70A1 /* AddNewRecordPage.swift */,
 				EA788153291892280095AB3C /* PainSensationView.swift */,
 			);
 			path = View;
@@ -635,6 +640,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10DDF5902919BFEE00EA70A1 /* AddNewRecordPage.swift in Sources */,
 				10EDE1A9291707140052CC35 /* ToastModifier.swift in Sources */,
 				EA05207628F2547F00380CD5 /* NavigationBar.swift in Sources */,
 				BDA599E82907366000D78F8E /* EnterPhoneNumberView.swift in Sources */,
@@ -663,6 +669,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA05207728F25EA200380CD5 /* ContentView.swift in Sources */,
+				10DDF5912919BFEE00EA70A1 /* AddNewRecordPage.swift in Sources */,
 				A9D730EC28F5036700E40D7A /* MainViewController.swift in Sources */,
 				A97F265428ED38ED004AD743 /* Pain_AppTests.swift in Sources */,
 				EA05208328F25EBF00380CD5 /* NavigationBar.swift in Sources */,
@@ -688,6 +695,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10DDF5922919BFEE00EA70A1 /* AddNewRecordPage.swift in Sources */,
 				A97F266028ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift in Sources */,
 				10BB6E6C28F4AE7A00894CBA /* PatientView_Security.swift in Sources */,
 				EA05207A28F25EA700380CD5 /* Pain_AppApp.swift in Sources */,
