@@ -88,7 +88,7 @@ struct PainSensationView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 15))
                     
                     Button(action: {
-                        mainViewController.viewState = .highlightAreaPage
+                        mainViewController.viewState = .painSliderPage
                         }, label: {
                             Text("Next")
                                 .foregroundColor(Color.black)

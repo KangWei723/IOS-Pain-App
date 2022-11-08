@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PainSlidersView: View {
-    
+    @EnvironmentObject var mainViewController: MainViewController
     @State private var burning: Float = 0.0
     @State private var pinching: Float = 0.0
     @State private var shooting: Float = 0.0
@@ -30,7 +30,6 @@ struct PainSlidersView: View {
                         Text("Please Rate Your Pain On The Sliders").font(.largeTitle)
                         
                     )
-                    .padding(.bottom, geoProxy.size.height * 0.05)
                 VStack {
                     Rectangle()
                         .fill(Color.white)
@@ -38,8 +37,6 @@ struct PainSlidersView: View {
                         .overlay(
                             GeometryReader { geoProxy2 in
                                 VStack {
-                                    
-                                    Spacer()
                                     VStack {
                                         HStack {
                                             Spacer()
@@ -55,7 +52,7 @@ struct PainSlidersView: View {
                                             Spacer()
                                             Spacer()
                                             Text("Burning")
-                                                .font(.largeTitle)
+                                                .font(.title)
                                             Spacer()
                                         }
                                         Text("\(String(format: "%.0f", burning))")
@@ -76,7 +73,7 @@ struct PainSlidersView: View {
                                             Spacer()
                                             Spacer()
                                             Text("Pinching")
-                                                .font(.largeTitle)
+                                                .font(.title)
                                             Spacer()
                                         }
                                         Text("\(String(format: "%.0f", pinching))")
@@ -98,7 +95,7 @@ struct PainSlidersView: View {
                                             Spacer()
                                             Spacer()
                                             Text("Shooting")
-                                                .font(.largeTitle)
+                                                .font(.title)
                                             Spacer()
                                         }
                                         Text("\(String(format: "%.0f", shooting))")
@@ -118,7 +115,7 @@ struct PainSlidersView: View {
                                             Spacer()
                                             Spacer()
                                             Text("Throbbing")
-                                                .font(.largeTitle)
+                                                .font(.title)
                                             Spacer()
                                         }
                                         Text("\(String(format: "%.0f", throbbing))")
@@ -126,17 +123,14 @@ struct PainSlidersView: View {
                                         
                                     }
                                     Spacer()
-                                    
                                 }
-                                
                             }
-                            
                         )
                     Spacer(minLength: 200)
                     Button {
-                        
+                        mainViewController.viewState = .addNewRecordPage
                     } label: {
-                        Text("Complete Pain Report")
+                        Text("Next")
                             .font(.largeTitle)
                             .foregroundColor(Color.white)
                             .frame(width: geoProxy.size.width * 0.3, height: geoProxy.size.height * 0.075)
@@ -148,7 +142,7 @@ struct PainSlidersView: View {
                     .padding(.bottom, geoProxy.size.height * 0.12)
                     
                 }
-            }
+            }.padding(.bottom, 100)
         }
         .ignoresSafeArea()
     }
