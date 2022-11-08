@@ -58,7 +58,7 @@ struct PainSlidersView: View {
                                                 .font(.largeTitle)
                                             Spacer()
                                         }
-                                        Text("\(String(format: "%.0f",burning))")
+                                        Text("\(String(format: "%.0f", burning))")
                                             .foregroundColor(isBurningEditing ? .red : .blue)
                                         
                                         Spacer()
@@ -79,7 +79,7 @@ struct PainSlidersView: View {
                                                 .font(.largeTitle)
                                             Spacer()
                                         }
-                                        Text("\(String(format: "%.0f",pinching))")
+                                        Text("\(String(format: "%.0f", pinching))")
                                             .foregroundColor(isPinchingEditing ? .red : .blue)
                                     }
                                     
@@ -101,7 +101,7 @@ struct PainSlidersView: View {
                                                 .font(.largeTitle)
                                             Spacer()
                                         }
-                                        Text("\(String(format: "%.0f",shooting))")
+                                        Text("\(String(format: "%.0f", shooting))")
                                             .foregroundColor(isShootingEditing ? .red : .blue)
                                         
                                         HStack {
@@ -121,7 +121,7 @@ struct PainSlidersView: View {
                                                 .font(.largeTitle)
                                             Spacer()
                                         }
-                                        Text("\(String(format: "%.0f",throbbing))")
+                                        Text("\(String(format: "%.0f", throbbing))")
                                             .foregroundColor(isThrobbingEditing ? .red : .blue)
                                         
                                     }
