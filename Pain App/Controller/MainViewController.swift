@@ -15,6 +15,8 @@ enum ViewState {
     case patientSecurity
     case highlightAreaPage
     case painSensationPage
+    case painSliderPage
+    case addNewRecordPage
 }
 
 final class MainViewController: ObservableObject {
@@ -34,6 +36,10 @@ final class MainViewController: ObservableObject {
             HighlightAreaPage()
         case .painSensationPage:
             PainSensationView()
+        case .painSliderPage:
+            PainSlidersView()
+        case .addNewRecordPage:
+            AddNewRecordPage()
         }
     }
 }

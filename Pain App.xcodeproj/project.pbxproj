@@ -56,6 +56,8 @@
 		A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076228F21492007F4BFB /* ColorHexHelper.swift */; };
 		A936076428F23A58007F4BFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
 		A936076628F2A088007F4BFB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
+		A94BA870291A2ECE008BE552 /* PainSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68D4A6291987A900F1D814 /* PainSlidersView.swift */; };
+		A94BA871291A2ECE008BE552 /* PainSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68D4A6291987A900F1D814 /* PainSlidersView.swift */; };
 		A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264228ED38E8004AD743 /* Pain_AppApp.swift */; };
 		A97F264728ED38EC004AD743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97F264628ED38EC004AD743 /* Assets.xcassets */; };
 		A97F264A28ED38EC004AD743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97F264928ED38EC004AD743 /* Preview Assets.xcassets */; };
@@ -73,6 +75,7 @@
 		BD44F13628F4A952007C615D /* Patient_Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44F13528F4A952007C615D /* Patient_Questionaire.swift */; };
 		BD44F13728F4F4BF007C615D /* Patient_Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44F13528F4A952007C615D /* Patient_Questionaire.swift */; };
 		BD44F13928F4F4C1007C615D /* Patient_Questionaire.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD44F13528F4A952007C615D /* Patient_Questionaire.swift */; };
+		BD68D4A7291987A900F1D814 /* PainSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68D4A6291987A900F1D814 /* PainSlidersView.swift */; };
 		BDA599E82907366000D78F8E /* EnterPhoneNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA599E72907366000D78F8E /* EnterPhoneNumberView.swift */; };
 		BDA599EA2907487D00D78F8E /* EnterVerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA599E92907487D00D78F8E /* EnterVerificationCodeView.swift */; };
 		BEC12C2FA8583C91F483DF33 /* Pods_Pain_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B80C822AC4E950EF9E79BC0 /* Pods_Pain_AppTests.framework */; };
@@ -155,6 +158,7 @@
 		A9D730E928F5036200E40D7A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A9FE546D28F3ED7000010DF5 /* amplify */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amplify; sourceTree = SOURCE_ROOT; };
 		BD44F13528F4A952007C615D /* Patient_Questionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient_Questionaire.swift; sourceTree = "<group>"; };
+		BD68D4A6291987A900F1D814 /* PainSlidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PainSlidersView.swift; sourceTree = "<group>"; };
 		BDA599E72907366000D78F8E /* EnterPhoneNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneNumberView.swift; sourceTree = "<group>"; };
 		BDA599E92907487D00D78F8E /* EnterVerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterVerificationCodeView.swift; sourceTree = "<group>"; };
 		E7F1AE4A47C10B737B2F162C /* Pods-Pain App-Pain AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App-Pain AppUITests.debug.xcconfig"; path = "Target Support Files/Pods-Pain App-Pain AppUITests/Pods-Pain App-Pain AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 				10EDE1A42915D0310052CC35 /* ToastView.swift */,
 				10EDE1A8291707140052CC35 /* ToastModifier.swift */,
 				10EDE1B029170E670052CC35 /* ToastExtension.swift */,
+				BD68D4A6291987A900F1D814 /* PainSlidersView.swift */,
 				10DDF58F2919BFEE00EA70A1 /* AddNewRecordPage.swift */,
 				EA788153291892280095AB3C /* PainSensationView.swift */,
 			);
@@ -646,6 +651,7 @@
 				BDA599E82907366000D78F8E /* EnterPhoneNumberView.swift in Sources */,
 				BDA599EA2907487D00D78F8E /* EnterVerificationCodeView.swift in Sources */,
 				BD44F13628F4A952007C615D /* Patient_Questionaire.swift in Sources */,
+				BD68D4A7291987A900F1D814 /* PainSlidersView.swift in Sources */,
 				A917D0B42917204A001CDD2F /* HighlightAreaPage.swift in Sources */,
 				A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */,
 				A9D730EA28F5036200E40D7A /* MainViewController.swift in Sources */,
@@ -679,6 +685,7 @@
 				10EDE1B229170E670052CC35 /* ToastExtension.swift in Sources */,
 				EA05208728F25EF000380CD5 /* Pain_AppApp.swift in Sources */,
 				10EDE1AE291709800052CC35 /* ToastModel.swift in Sources */,
+				A94BA870291A2ECE008BE552 /* PainSlidersView.swift in Sources */,
 				EA05207B28F25EAA00380CD5 /* ColorHexHelper.swift in Sources */,
 				10EDE1A62915D0310052CC35 /* ToastView.swift in Sources */,
 				EA7881552918C3670095AB3C /* PainSensationView.swift in Sources */,
@@ -716,6 +723,7 @@
 				EA7881562918C3680095AB3C /* PainSensationView.swift in Sources */,
 				EA05207C28F25EAB00380CD5 /* ColorHexHelper.swift in Sources */,
 				10EDE1B329170E670052CC35 /* ToastExtension.swift in Sources */,
+				A94BA871291A2ECE008BE552 /* PainSlidersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,7 +869,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pain App/Preview Content\"";
-				DEVELOPMENT_TEAM = SGU9R83BS4;
+				DEVELOPMENT_TEAM = DM75T87M34;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -894,7 +902,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Pain App/Preview Content\"";
-				DEVELOPMENT_TEAM = SGU9R83BS4;
+				DEVELOPMENT_TEAM = DM75T87M34;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

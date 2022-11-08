@@ -118,7 +118,7 @@ struct AddNewRecordPage: View {
                                             Text("Would you like to report pain in another area?")
                                                 .font(.system(size: 30))
                                                 .padding()
-                                                .frame(height: geoProxy2.size.height * 0.10)
+                                                .frame(height: geoProxy2.size.height * 0.15)
                                                 .foregroundColor(.black)
                                             HStack {
                                                 Picker("Selector", selection: $selectedPicker) {
@@ -137,10 +137,12 @@ struct AddNewRecordPage: View {
                                                 
                                             }
                                             .padding(.bottom, geoProxy2.size.height * 0.05)
-                                            Spacer().frame(height: geoProxy2.size.height*0.45)
+                                            Spacer().frame(height: geoProxy2.size.height*0.3)
                                             Button {
-                                                withAnimation(.default, {
-                                                })
+                                                switch selectedPicker {
+                                                case .no: mainViewController.viewState = .patientHome
+                                                case .yes: mainViewController.viewState = .highlightAreaPage
+                                                }
                                             } label: {
                                                 HStack {
                                                     Text("Submit").font(.system(size: 30))
