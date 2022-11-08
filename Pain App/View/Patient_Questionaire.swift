@@ -148,6 +148,16 @@ struct Patient_Questionaire: View {
                 // The button that will send them to the next view
                 Button {
                     loginController.signIn(email: loginController.email, password: loginController.password)
+                    
+                    loginController.updateAttributes(fname: "",
+                                                     lname: "",
+                                                     dob: self.dob,
+                                                     age: self.age,
+                                                     state: self.state,
+                                                     city: self.city,
+                                                     pnumber: self.pnumber,
+                                                     country: self.country)
+                    
                 } label: {
                     Text("Complete Registration")
                         .font(.largeTitle)

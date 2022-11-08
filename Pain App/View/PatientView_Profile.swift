@@ -10,10 +10,10 @@ import SwiftUI
 struct PatientView_Profile: View {
     @EnvironmentObject var mainViewController: MainViewController
     @EnvironmentObject var loginController: LoginController
+    
     @State private var firstName: String = ""
     @State private var lastName: String = ""
     @State private var dateOfBirth: String = ""
-    @State private var sex: String = ""
     @State private var age: String = ""
     @State private var state: String = ""
     @State private var city: String = ""
@@ -33,7 +33,7 @@ struct PatientView_Profile: View {
                                 Spacer()
                                 HStack {
                                     Spacer().frame(width: 50)
-                                    Text("Welcome User01").font(.system(size: 45))
+                                    Text("Welcome \(loginController.fname)").font(.system(size: 45))
                                     Spacer()
                                     Button {
                                         withAnimation(.default, {
@@ -90,8 +90,14 @@ struct PatientView_Profile: View {
                                 Spacer()
                                 HStack {
                                     Button {
-                                        withAnimation(.default, {
-                                        })
+                                        loginController.updateAttributes(fname: self.firstName,
+                                                                         lname: self.lastName,
+                                                                         dob: self.dateOfBirth,
+                                                                         age: self.age,
+                                                                         state: self.state,
+                                                                         city: self.city,
+                                                                         pnumber: self.phNumber,
+                                                                         country: self.country)
                                     } label: {
                                         HStack {
                                             Text("Save\nChanges").font(.system(size: 30))
@@ -136,16 +142,15 @@ struct PatientView_Profile: View {
                                                     .font(.title2)
                                                     .frame(alignment: .leading)
                                                 
-                                                TextField("Jane", text: $firstName)
+                                                TextField("\(loginController.fname)", text: $firstName)
                                                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                                                    .foregroundColor(Color(hex: "F1FAEE"))
                                                     .frame(width: 500, height: 10)
                                             }
                                             HStack {
                                                 Text("Last Name:")
                                                     .font(.title2)
                                                 
-                                                TextField("Dose", text: $lastName)
+                                                TextField("\(loginController.lname)", text: $lastName)
                                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                                     .frame(width: 500, height: 10)
                                             }
@@ -153,7 +158,7 @@ struct PatientView_Profile: View {
                                                 Text("Date of Birth:")
                                                     .font(.title2).frame(alignment: .leading)
                                                 
-                                                TextField("07/30/2000", text: $dateOfBirth)
+                                                TextField("\(loginController.dob)", text: $dateOfBirth)
                                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                                     .frame(width: 500, height: 10)
                                             }
@@ -161,7 +166,7 @@ struct PatientView_Profile: View {
                                                 Text("Age:")
                                                     .font(.title2).frame(alignment: .leading)
                                                 
-                                                TextField("30", text: $age)
+                                                TextField("\(loginController.age)", text: $age)
                                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                                     .frame(width: 500, height: 10)
                                             }
@@ -177,7 +182,7 @@ struct PatientView_Profile: View {
                                                 Text("State:")
                                                     .font(.title2)
                                                 
-                                                TextField("Ohio", text: $state)
+                                                TextField("\(loginController.state)", text: $state)
                                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                                     .frame(width: 500, height: 10)
                                             }
@@ -185,7 +190,7 @@ struct PatientView_Profile: View {
                                                 Text("City:")
                                                     .font(.title2)
                                                 
-                                                TextField("Columbus", text: $city)
+                                                TextField("\(loginController.city)", text: $city)
                                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                                     .frame(width: 500, height: 10)
                                             }
@@ -193,7 +198,7 @@ struct PatientView_Profile: View {
                                                 Text("Country:")
                                                     .font(.title2)
                                                 
-                                                TextField("United States", text: $country)
+                                                TextField("\(loginController.country)", text: $country)
                                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                                     .frame(width: 500, height: 10)
                                             }
@@ -209,7 +214,7 @@ struct PatientView_Profile: View {
                                                 Text("Phone Number:")
                                                     .font(.title2)
                                                 
-                                                TextField("5132900314", text: $phNumber)
+                                                TextField("\(loginController.pnumber)", text: $phNumber)
                                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                                     .frame(width: 500, height: 10)
                                             }

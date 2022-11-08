@@ -201,7 +201,7 @@ struct LoginView: View {
                                                 toast = ToastModel(type: .warning, title: "Warning",
                                                         message: "Make sure you have filled out every information.")
                                             }
-                                            loginController.signUp(username: self.email, password: self.password, email: self.email)
+                                            loginController.signUp(password: self.password, email: self.email, fname: self.fname, lname: self.lname)
                                         } else {
                                             loginController.signIn(email: self.email, password: self.password)
                                             if loginController.checkAuth == false {

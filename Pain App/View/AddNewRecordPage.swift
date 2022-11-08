@@ -1,8 +1,8 @@
 //
-//  HighlightAreaPage.swift
+//  AddNewRecordPage.swift
 //  Pain App
 //
-//  Created by Shrey Patel on 11/5/22.
+//  Created by Jonathan Lim on 11/7/22.
 //
 
 import Amplify
@@ -10,9 +10,9 @@ import AmplifyPlugins
 import SwiftUI
 import SceneKit
 
-struct HighlightAreaPage: View {
+struct AddNewRecordPage: View {
     enum PickerState: String, CaseIterable, Identifiable {
-        case front, back
+        case yes, no
         var id: Self { self }
     }
     
@@ -25,7 +25,7 @@ struct HighlightAreaPage: View {
     }
     
     @EnvironmentObject var mainViewController: MainViewController
-    @State private var selectedPicker: PickerState = .front
+    @State private var selectedPicker: PickerState = .yes
     @State private var selectedArea: AreaState = .none
     
     init() {
@@ -50,19 +50,8 @@ struct HighlightAreaPage: View {
                             .padding(.leading, geoProxy.size.width * 0.0125)
                         Spacer()
                         Button(action: {
-                                mainViewController.viewState = .patientHome
                             }, label: {
                                 Text("Back")
-                                    .foregroundColor(Color.black)
-                                    .padding(.horizontal, 40.0)
-                                    .padding(.vertical, 10)
-                                    .background(Color.white)
-                            })
-                            .clipShape(RoundedRectangle(cornerRadius: 15))
-                        Button(action: {
-                                mainViewController.viewState = .painSensationPage
-                            }, label: {
-                                Text("Next")
                                     .foregroundColor(Color.black)
                                     .padding(.horizontal, 40.0)
                                     .padding(.vertical, 10)
@@ -126,10 +115,10 @@ struct HighlightAreaPage: View {
                                     HStack {
                                         Spacer()
                                         VStack {
-                                            Text("Quck Actions")
+                                            Text("Would you like to report pain in another area?")
                                                 .font(.system(size: 30))
                                                 .padding()
-                                                .frame(height: geoProxy2.size.height * 0.05)
+                                                .frame(height: geoProxy2.size.height * 0.10)
                                                 .foregroundColor(.black)
                                             HStack {
                                                 Picker("Selector", selection: $selectedPicker) {
@@ -145,68 +134,20 @@ struct HighlightAreaPage: View {
                                                 .padding()
                                                 .shadow(color: .gray, radius: 6, x: 0, y: 0)
                                                 .accentColor(.black)
-                                                Text("View")
-                                                    .font(.system(size: 25))
+                                                
                                             }
                                             .padding(.bottom, geoProxy2.size.height * 0.05)
-                                            Text("Zoom To Area")
-                                                .font(.system(size: 25))
-                                            
+                                            Spacer().frame(height: geoProxy2.size.height*0.45)
                                             Button {
-                                                selectedArea = .lh
+                                                withAnimation(.default, {
+                                                })
                                             } label: {
-                                                Text("Left Hand")
-                                                    .foregroundColor(.black)
-                                                    .font(.system(size: 28))
-                                                    .padding(20)
-                                            }
-                                            .frame(width: geoProxy2.size.width * 0.4, height: geoProxy2.size.height * 0.08)
-                                            .background((selectedArea == .lh) ? Color.init(hex: "A8DADC") : Color.init(hex: "F1FAEE"))
-                                            .cornerRadius(10)
-                                            .padding(.top, geoProxy2.size.height * 0.02)
-                                            .shadow(color: .gray, radius: 6, x: 0, y: 0)
-                                            
-                                            Button {
-                                                selectedArea = .rh
-                                            } label: {
-                                                Text("Right Hand")
-                                                    .foregroundColor(.black)
-                                                    .font(.system(size: 28))
-                                                    .padding(20)
-                                            }
-                                            .frame(width: geoProxy2.size.width * 0.4, height: geoProxy2.size.height * 0.08)
-                                            .background((selectedArea == .rh) ? Color.init(hex: "A8DADC") : Color.init(hex: "F1FAEE"))
-                                            .cornerRadius(10)
-                                            .padding(.top, geoProxy2.size.height * 0.02)
-                                            .shadow(color: .gray, radius: 6, x: 0, y: 0)
-                                            
-                                            Button {
-                                                selectedArea = .ll
-                                            } label: {
-                                                Text("Left Leg")
-                                                    .foregroundColor(.black)
-                                                    .font(.system(size: 28))
-                                                    .padding(20)
-                                            }
-                                            .frame(width: geoProxy2.size.width * 0.4, height: geoProxy2.size.height * 0.08)
-                                            .background((selectedArea == .ll) ? Color.init(hex: "A8DADC") : Color.init(hex: "F1FAEE"))
-                                            .cornerRadius(10)
-                                            .padding(.top, geoProxy2.size.height * 0.02)
-                                            .shadow(color: .gray, radius: 6, x: 0, y: 0)
-                                            
-                                            Button {
-                                                selectedArea = .rl
-                                            } label: {
-                                                Text("Right Leg")
-                                                    .foregroundColor(.black)
-                                                    .font(.system(size: 28))
-                                                    .padding(20)
-                                            }
-                                            .frame(width: geoProxy2.size.width * 0.4, height: geoProxy2.size.height * 0.08)
-                                            .background((selectedArea == .rl) ? Color.init(hex: "A8DADC") : Color.init(hex: "F1FAEE"))
-                                            .cornerRadius(10)
-                                            .padding(.top, geoProxy2.size.height * 0.02)
-                                            .shadow(color: .gray, radius: 6, x: 0, y: 0)
+                                                HStack {
+                                                    Text("Submit").font(.system(size: 30))
+                                                        .foregroundColor(Color.black)
+                                                }.frame(width: geoProxy2.size.width * 0.5, height: geoProxy2.size.height * 0.1)
+                                            }.background(Color.init(hex: "A8DADC"))
+                                                .cornerRadius(15)
                                         }
                                         Spacer()
                                     }
@@ -226,8 +167,8 @@ struct HighlightAreaPage: View {
     }
 }
 
-struct HighlightAreaPage_Previews: PreviewProvider {
+struct AddNewRecordPage_Previews: PreviewProvider {
     static var previews: some View {
-        HighlightAreaPage()
+        AddNewRecordPage()
     }
 }
