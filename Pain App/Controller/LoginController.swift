@@ -28,8 +28,16 @@ enum LoginState: Equatable {
 final class LoginController: ObservableObject {
     @ObservedObject var mainView: MainViewController
     @Published var loginState: LoginState
-    var email: String
+    @Published var email: String
     var password: String
+    @Published var pnumber: String
+    @Published var dob: String
+    @Published var age: String
+    @Published var city: String
+    @Published var country: String
+    @Published var fname: String
+    @Published var lname: String
+    @Published var state: String
     var storage: Set<AnyCancellable>
     var checkAuth: Bool = true
     
@@ -38,6 +46,14 @@ final class LoginController: ObservableObject {
         self.loginState = .login
         self.email = ""
         self.password = ""
+        self.pnumber = ""
+        self.dob = ""
+        self.age = ""
+        self.city = ""
+        self.country = ""
+        self.fname = ""
+        self.lname = ""
+        self.state = ""
         self.storage = Set<AnyCancellable>()
     }
     
@@ -46,6 +62,7 @@ final class LoginController: ObservableObject {
           DispatchQueue.main.async {
               print("Signed In")
               self.loginState = .session(user: user)
+              self.fetchAttributes()
           }
         } else {
             DispatchQueue.main.async {
@@ -54,10 +71,13 @@ final class LoginController: ObservableObject {
         }
       }
     
-    func signUp(username: String, password: String, email: String) {
-        let userAttributes = [AuthUserAttribute(.email, value: email)]
+    func signUp(password: String, email: String, fname: String, lname: String) {
+        let userAttributes = [AuthUserAttribute(.email, value: email),
+                              AuthUserAttribute(.name, value: fname),
+                              AuthUserAttribute(.custom("lname"), value: lname)]
+        
         let options = AuthSignUpRequest.Options(userAttributes: userAttributes)
-        Amplify.Auth.signUp(username: username, password: password, options: options)
+        Amplify.Auth.signUp(username: email, password: password, options: options)
             .resultPublisher
             .receive(on: DispatchQueue.main)
             .sink {
@@ -83,7 +103,6 @@ final class LoginController: ObservableObject {
               }
           } receiveValue: { _ in
               print("Signed In Succesfully")
-              self.email = ""
               self.password = ""
               self.getCurrentAuthUser()
           }.store(in: &self.storage)
@@ -101,6 +120,57 @@ final class LoginController: ObservableObject {
                 self.getCurrentAuthUser()
                 self.mainView.viewState = .patientHome
                 print("Signed Out")
+            }.store(in: &self.storage)
+    }
+    
+    func fetchAttributes() {
+        Amplify.Auth.fetchUserAttributes()
+            .resultPublisher
+            .receive(on: DispatchQueue.main)
+            .sink {
+                if case let .failure(authError) = $0 {
+                    print("Fetch user attributes failed with error \(authError)")
+                }
+            }
+            receiveValue: { attributes in
+                print("User attributes - \(attributes)")
+                for i in 0..<attributes.count {
+                    switch attributes[i].key {
+                    case .phoneNumber: self.pnumber = attributes[i].value
+                    case .birthDate: self.dob = attributes[i].value
+                    case .name: self.fname = attributes[i].value
+                    case .custom("age"): self.age = attributes[i].value
+                    case .custom("city"): self.city = attributes[i].value
+                    case .custom("country"): self.country = attributes[i].value
+                    case .custom("lname"): self.lname = attributes[i].value
+                    case .custom("state"): self.state = attributes[i].value
+                    case .email: self.email = attributes[i].value
+                    default:
+                        break
+                    }
+                }
+            }.store(in: &self.storage)
+    }
+    
+    func updateAttributes(fname: String, lname: String, dob: String, age: String, state: String, city: String, pnumber: String, country: String) {
+        let attributes = [AuthUserAttribute(.name, value: ((fname.isEmpty) ? self.fname : fname)),
+                          AuthUserAttribute(.custom("lname"), value: ((lname.isEmpty) ? self.lname : lname)),
+                          AuthUserAttribute(.birthDate, value: ((dob.isEmpty) ? self.dob : dob)),
+                          AuthUserAttribute(.custom("age"), value: ((age.isEmpty) ? self.age : age)),
+                          AuthUserAttribute(.custom("state"), value: ((state.isEmpty) ? self.state : state)),
+                          AuthUserAttribute(.custom("city"), value: ((city.isEmpty) ? self.city : city)),
+                          AuthUserAttribute(.phoneNumber, value: ((pnumber.isEmpty) ? self.pnumber : pnumber)),
+                          AuthUserAttribute(.custom("country"), value: ((country.isEmpty) ? self.country : country))]
+        Amplify.Auth.update(userAttributes: attributes)
+            .resultPublisher
+            .sink {
+                if case let .failure(authError) = $0 {
+                    print("Update attribute failed with error \(authError)")
+                }
+            }
+            receiveValue: { updateResult in
+                print(updateResult)
+                self.fetchAttributes()
             }.store(in: &self.storage)
     }
     
