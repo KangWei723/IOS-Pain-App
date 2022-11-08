@@ -56,6 +56,8 @@
 		A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076228F21492007F4BFB /* ColorHexHelper.swift */; };
 		A936076428F23A58007F4BFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
 		A936076628F2A088007F4BFB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
+		A94BA870291A2ECE008BE552 /* PainSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68D4A6291987A900F1D814 /* PainSlidersView.swift */; };
+		A94BA871291A2ECE008BE552 /* PainSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68D4A6291987A900F1D814 /* PainSlidersView.swift */; };
 		A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264228ED38E8004AD743 /* Pain_AppApp.swift */; };
 		A97F264728ED38EC004AD743 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97F264628ED38EC004AD743 /* Assets.xcassets */; };
 		A97F264A28ED38EC004AD743 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A97F264928ED38EC004AD743 /* Preview Assets.xcassets */; };
@@ -683,6 +685,7 @@
 				10EDE1B229170E670052CC35 /* ToastExtension.swift in Sources */,
 				EA05208728F25EF000380CD5 /* Pain_AppApp.swift in Sources */,
 				10EDE1AE291709800052CC35 /* ToastModel.swift in Sources */,
+				A94BA870291A2ECE008BE552 /* PainSlidersView.swift in Sources */,
 				EA05207B28F25EAA00380CD5 /* ColorHexHelper.swift in Sources */,
 				10EDE1A62915D0310052CC35 /* ToastView.swift in Sources */,
 				EA7881552918C3670095AB3C /* PainSensationView.swift in Sources */,
@@ -720,6 +723,7 @@
 				EA7881562918C3680095AB3C /* PainSensationView.swift in Sources */,
 				EA05207C28F25EAB00380CD5 /* ColorHexHelper.swift in Sources */,
 				10EDE1B329170E670052CC35 /* ToastExtension.swift in Sources */,
+				A94BA871291A2ECE008BE552 /* PainSlidersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
