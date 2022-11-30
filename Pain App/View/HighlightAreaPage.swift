@@ -9,6 +9,7 @@ import Amplify
 import AmplifyPlugins
 import SwiftUI
 import SceneKit
+import Metal
 
 struct HighlightAreaPage: View {
     enum PickerState: String, CaseIterable, Identifiable {
@@ -36,6 +37,42 @@ struct HighlightAreaPage: View {
                 .font: UIFont.systemFont(ofSize: 25)
             ], for: .normal)
         
+    }
+    
+    func get3DModel() -> some View {
+        
+        let myScene = SCNScene()
+        myScene.rootNode.addChildNode(SCNScene(named: "3D Model.scn")!.rootNode.childNodes[0])
+        
+        let cubeNode = SCNNode(geometry: SCNBox(width: 20, height: 20, length: 10, chamferRadius: 0))
+        cubeNode.position = SCNVector3(10, -2, -0.2)
+        myScene.rootNode.addChildNode(cubeNode)
+        
+        let outlineProgram = SCNProgram()
+        outlineProgram.vertexFunctionName = "outline_vertex"
+        outlineProgram.fragmentFunctionName = "outline_fragment"
+        
+//        myScene?.rootNode.geometry?.firstMaterial?.program = outlineProgram
+        myScene.rootNode.geometry?.firstMaterial?.multiply.contents = UIColor.red
+        myScene.rootNode.geometry?.materials.forEach { material in
+//                material.fillMode = .lines
+            material.diffuse.contents = UIColor.red
+        }
+        
+        myScene.rootNode.geometry?.removeMaterial(at: 0)
+        
+        myScene.rootNode.childNodes.forEach { child in
+//            child.geometry?.firstMaterial?.program = outlineProgram
+            child.geometry?.materials.forEach { material in
+//                material.fillMode = .lines
+                material.diffuse.contents = UIColor.red
+            }
+        }
+        
+//        myScene?.rootNode.geometry?.firstMaterial?.fillMode = .lines
+        
+        return SceneView(scene: myScene,
+                         options: [.autoenablesDefaultLighting, .allowsCameraControl])
     }
     
     var body: some View {
@@ -90,16 +127,13 @@ struct HighlightAreaPage: View {
                                             .resizable()
                                             .frame(width: geoProxy.size.width * 0.03, height: geoProxy.size.height * 0.03)
                                             .padding(.trailing, 20)
-                                        SceneView(scene: SCNScene(named: "3D Model.usdz"),
-                                                  options: [.autoenablesDefaultLighting, .allowsCameraControl])
+                                        
+//                                        SceneView(scene: SCNScene(named: "3D Model.usdz"),
+//                                                  options: [.autoenablesDefaultLighting, .allowsCameraControl])
+                                        get3DModel()
                                         .frame(width: geoProxy.size.width * 0.3, height: geoProxy.size.height * 0.65)
                                         .padding(.top, geoProxy.size.height * 0.05)
-//                                        .position(x: geoProxy.frame(in: .local).midX * 0.5, y: geoProxy.frame(in: .local).midY * 0.8)
-//                                        Image("3D Model Image")
-//                                            .resizable()
-//                                            .frame(width: geoProxy.size.width * 0.25, height: geoProxy.size.height * 0.65)
-//                                            .padding(.top, geoProxy.size.height * 0.05)
-//    //                                        .position(x: geoProxy.frame(in: .local).midX * 0.5, y: geoProxy.frame(in: .local).midY * 0.8)
+
                                         Image("Zoom In")
                                             .resizable()
                                             .frame(width: geoProxy.size.width * 0.03, height: geoProxy.size.height * 0.03)
@@ -229,5 +263,6 @@ struct HighlightAreaPage: View {
 struct HighlightAreaPage_Previews: PreviewProvider {
     static var previews: some View {
         HighlightAreaPage()
+            .previewInterfaceOrientation(.landscapeLeft)
     }
 }
