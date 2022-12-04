@@ -46,6 +46,7 @@ struct PatientView_HomePage: View {
                                 Spacer()
                             }
                         })
+                    .padding(.bottom, geoProxy.size.height * -0.006)
                 HStack {
                     Rectangle()
                         .fill(Color.init(hex: "F1FAEE"))
