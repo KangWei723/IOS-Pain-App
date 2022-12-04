@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PatientView_HomePage: View {
     @EnvironmentObject var mainViewController: MainViewController
+    @EnvironmentObject var loginController: LoginController
     
     @State private var addRecord = false
     @State private var records = ["Test"]
@@ -27,7 +28,7 @@ struct PatientView_HomePage: View {
                                 Spacer()
                                 HStack {
                                     Spacer().frame(width: 50)
-                                    Text("Welcome User01").font(.system(size: 45))
+                                    Text("Welcome \(loginController.fname)").font(.system(size: 45))
                                     Spacer()
                                     Button {
                                         withAnimation(.default, {

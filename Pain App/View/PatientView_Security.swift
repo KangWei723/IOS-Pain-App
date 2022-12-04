@@ -26,7 +26,7 @@ struct PatientView_Security: View {
                                 Spacer()
                                 HStack {
                                     Spacer().frame(width: 50)
-                                    Text("Welcome User01").font(.system(size: 45))
+                                    Text("Welcome \(loginController.fname)").font(.system(size: 45))
                                     Spacer()
                                     Button {
                                         withAnimation(.default, {
@@ -128,7 +128,7 @@ struct PatientView_Security: View {
                                             HStack {
                                                 Text("Email:")
                                                     .font(.title2)
-                                                TextField("user01@example.com", text: $email)
+                                                TextField("\(loginController.email)", text: $email)
                                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                                     .frame(width: 500, height: 10)
                                             }
@@ -138,7 +138,6 @@ struct PatientView_Security: View {
                                                 TextField("********", text: $password)
                                                     .textFieldStyle(RoundedBorderTextFieldStyle())
                                                     .frame(width: 500, height: 10)
-                                                
                                             }
                                         }
                                     }
