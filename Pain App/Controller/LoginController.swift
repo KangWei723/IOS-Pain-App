@@ -89,6 +89,8 @@ final class LoginController: ObservableObject {
                 self.email = email
                 self.password = password
                 self.loginState = .signup
+                self.fname = fname
+                self.lname = lname
             }.store(in: &self.storage)
     }
     
@@ -119,6 +121,16 @@ final class LoginController: ObservableObject {
             } receiveValue: { _ in
                 self.getCurrentAuthUser()
                 self.mainView.viewState = .patientHome
+                self.email = ""
+                self.password = ""
+                self.pnumber = ""
+                self.dob = ""
+                self.age = ""
+                self.city = ""
+                self.country = ""
+                self.fname = ""
+                self.lname = ""
+                self.state = ""
                 print("Signed Out")
             }.store(in: &self.storage)
     }

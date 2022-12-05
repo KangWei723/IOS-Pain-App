@@ -35,6 +35,9 @@
 		10EDE1B229170E670052CC35 /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EDE1B029170E670052CC35 /* ToastExtension.swift */; };
 		10EDE1B329170E670052CC35 /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EDE1B029170E670052CC35 /* ToastExtension.swift */; };
 		77CA69F27004B58CA0EBDEF5 /* Pods_Pain_App_Pain_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */; };
+		A900C61B2936CEE00072B4C1 /* 3D Model.scn in Resources */ = {isa = PBXBuildFile; fileRef = A900C61A2936CEE00072B4C1 /* 3D Model.scn */; };
+		A900C61E2936E5770072B4C1 /* 3D Model.scn in Resources */ = {isa = PBXBuildFile; fileRef = A900C61A2936CEE00072B4C1 /* 3D Model.scn */; };
+		A900C61F2936E5770072B4C1 /* 3D Model.scn in Resources */ = {isa = PBXBuildFile; fileRef = A900C61A2936CEE00072B4C1 /* 3D Model.scn */; };
 		A917D0B42917204A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
 		A917D0B529175329001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
 		A917D0B62917532A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
@@ -64,6 +67,9 @@
 		A97F265428ED38ED004AD743 /* Pain_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265328ED38ED004AD743 /* Pain_AppTests.swift */; };
 		A97F265E28ED38ED004AD743 /* Pain_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */; };
 		A97F266028ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */; };
+		A99AFD9D2937F6280091B206 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AFD9C2937F6280091B206 /* ModelView.swift */; };
+		A99AFD9E2937F6280091B206 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AFD9C2937F6280091B206 /* ModelView.swift */; };
+		A99AFD9F2937F6280091B206 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AFD9C2937F6280091B206 /* ModelView.swift */; };
 		A9BE352728F40DAF002F6E7B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
 		A9BE352828F40DB0002F6E7B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
 		A9BE352928F40DBC002F6E7B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936075C28F1FC4C007F4BFB /* LoginView.swift */; };
@@ -128,6 +134,8 @@
 		82E00E89535EEB431DE051A1 /* Pods_Pain_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pain_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		831F205E734B993F002C0FD1 /* Pods-Pain AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Pain AppTests/Pods-Pain AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89D7643FCDE6CF643D2BF448 /* Pods-Pain App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App.release.xcconfig"; path = "Target Support Files/Pods-Pain App/Pods-Pain App.release.xcconfig"; sourceTree = "<group>"; };
+		A900C61A2936CEE00072B4C1 /* 3D Model.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "3D Model.scn"; sourceTree = "<group>"; };
+		A900C6242936F2E20072B4C1 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		A917D0B329172049001CDD2F /* HighlightAreaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightAreaPage.swift; sourceTree = "<group>"; };
 		A917D0BC291766C2001CDD2F /* uploads-files-2087304-Basemesh.fbx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "uploads-files-2087304-Basemesh.fbx"; sourceTree = "<group>"; };
 		A917D0BD29176714001CDD2F /* 3D Model.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "3D Model.usdz"; sourceTree = "<group>"; };
@@ -155,6 +163,7 @@
 		A97F265928ED38ED004AD743 /* Pain AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pain AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITests.swift; sourceTree = "<group>"; };
 		A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A99AFD9C2937F6280091B206 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		A9D730E928F5036200E40D7A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A9FE546D28F3ED7000010DF5 /* amplify */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amplify; sourceTree = SOURCE_ROOT; };
 		BD44F13528F4A952007C615D /* Patient_Questionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient_Questionaire.swift; sourceTree = "<group>"; };
@@ -220,6 +229,7 @@
 		57FD36E0BEC6E6174F1143EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A900C6242936F2E20072B4C1 /* Metal.framework */,
 				82E00E89535EEB431DE051A1 /* Pods_Pain_App.framework */,
 				F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */,
 				5B80C822AC4E950EF9E79BC0 /* Pods_Pain_AppTests.framework */,
@@ -230,6 +240,7 @@
 		A917D0BB291766AD001CDD2F /* 3D Model */ = {
 			isa = PBXGroup;
 			children = (
+				A900C61A2936CEE00072B4C1 /* 3D Model.scn */,
 				A917D0BD29176714001CDD2F /* 3D Model.usdz */,
 				A917D0BC291766C2001CDD2F /* uploads-files-2087304-Basemesh.fbx */,
 			);
@@ -282,6 +293,7 @@
 				BD68D4A6291987A900F1D814 /* PainSlidersView.swift */,
 				10DDF58F2919BFEE00EA70A1 /* AddNewRecordPage.swift */,
 				EA788153291892280095AB3C /* PainSensationView.swift */,
+				A99AFD9C2937F6280091B206 /* ModelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -482,6 +494,7 @@
 				A97F264A28ED38EC004AD743 /* Preview Assets.xcassets in Resources */,
 				A936075028F0906E007F4BFB /* README.md in Resources */,
 				A936074628EFFF71007F4BFB /* amplifyconfiguration.json in Resources */,
+				A900C61B2936CEE00072B4C1 /* 3D Model.scn in Resources */,
 				A936075228F0906E007F4BFB /* Gemfile in Resources */,
 				A936075328F0906E007F4BFB /* fastlane in Resources */,
 				A936075428F0906E007F4BFB /* amplify-conf-loader.sh in Resources */,
@@ -498,6 +511,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A900C61E2936E5770072B4C1 /* 3D Model.scn in Resources */,
 				A917D0BF2917686D001CDD2F /* 3D Model.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +520,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A900C61F2936E5770072B4C1 /* 3D Model.scn in Resources */,
 				A917D0C02917686D001CDD2F /* 3D Model.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -650,6 +665,7 @@
 				EA05207628F2547F00380CD5 /* NavigationBar.swift in Sources */,
 				BDA599E82907366000D78F8E /* EnterPhoneNumberView.swift in Sources */,
 				BDA599EA2907487D00D78F8E /* EnterVerificationCodeView.swift in Sources */,
+				A99AFD9D2937F6280091B206 /* ModelView.swift in Sources */,
 				BD44F13628F4A952007C615D /* Patient_Questionaire.swift in Sources */,
 				BD68D4A7291987A900F1D814 /* PainSlidersView.swift in Sources */,
 				A917D0B42917204A001CDD2F /* HighlightAreaPage.swift in Sources */,
@@ -680,6 +696,7 @@
 				A97F265428ED38ED004AD743 /* Pain_AppTests.swift in Sources */,
 				EA05208328F25EBF00380CD5 /* NavigationBar.swift in Sources */,
 				10BB6E6728F4AE7100894CBA /* PatientView_PastRecords.swift in Sources */,
+				A99AFD9E2937F6280091B206 /* ModelView.swift in Sources */,
 				10BB6E6928F4AE7400894CBA /* PatientView_Profile.swift in Sources */,
 				A917D0B529175329001CDD2F /* HighlightAreaPage.swift in Sources */,
 				10EDE1B229170E670052CC35 /* ToastExtension.swift in Sources */,
@@ -707,6 +724,7 @@
 				10BB6E6C28F4AE7A00894CBA /* PatientView_Security.swift in Sources */,
 				EA05207A28F25EA700380CD5 /* Pain_AppApp.swift in Sources */,
 				10BB6E6628F4AE6D00894CBA /* PatientView_HomePage.swift in Sources */,
+				A99AFD9F2937F6280091B206 /* ModelView.swift in Sources */,
 				A917D0B62917532A001CDD2F /* HighlightAreaPage.swift in Sources */,
 				10EDE1A72915D0310052CC35 /* ToastView.swift in Sources */,
 				BD44F13928F4F4C1007C615D /* Patient_Questionaire.swift in Sources */,
@@ -796,6 +814,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_ENABLE_MODULES = YES;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -851,6 +870,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_MODULES = YES;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -883,6 +903,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTLLINKER_FLAGS = "";
+				MTL_ENABLE_INDEX_STORE = NO;
+				MTL_ENABLE_MODULES = STDLIB;
+				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
 				PRODUCT_BUNDLE_IDENTIFIER = "osu.Pain-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -916,6 +940,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_INDEX_STORE = NO;
+				MTL_ENABLE_MODULES = STDLIB;
+				MTL_LANGUAGE_REVISION = UseDeploymentTarget;
 				PRODUCT_BUNDLE_IDENTIFIER = "osu.Pain-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
