@@ -71,8 +71,7 @@ struct HighlightAreaPage: View {
         
 //        myScene?.rootNode.geometry?.firstMaterial?.fillMode = .lines
         
-        return SceneView(scene: myScene,
-                         options: [.autoenablesDefaultLighting, .allowsCameraControl])
+        return ModelView()
     }
     
     var body: some View {

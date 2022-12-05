@@ -70,6 +70,9 @@
 		A97F265428ED38ED004AD743 /* Pain_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265328ED38ED004AD743 /* Pain_AppTests.swift */; };
 		A97F265E28ED38ED004AD743 /* Pain_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */; };
 		A97F266028ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */; };
+		A99AFD9D2937F6280091B206 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AFD9C2937F6280091B206 /* ModelView.swift */; };
+		A99AFD9E2937F6280091B206 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AFD9C2937F6280091B206 /* ModelView.swift */; };
+		A99AFD9F2937F6280091B206 /* ModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99AFD9C2937F6280091B206 /* ModelView.swift */; };
 		A9BE352728F40DAF002F6E7B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
 		A9BE352828F40DB0002F6E7B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
 		A9BE352928F40DBC002F6E7B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936075C28F1FC4C007F4BFB /* LoginView.swift */; };
@@ -164,6 +167,7 @@
 		A97F265928ED38ED004AD743 /* Pain AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pain AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97F265D28ED38ED004AD743 /* Pain_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITests.swift; sourceTree = "<group>"; };
 		A97F265F28ED38ED004AD743 /* Pain_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A99AFD9C2937F6280091B206 /* ModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelView.swift; sourceTree = "<group>"; };
 		A9D730E928F5036200E40D7A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A9FE546D28F3ED7000010DF5 /* amplify */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = amplify; sourceTree = SOURCE_ROOT; };
 		BD44F13528F4A952007C615D /* Patient_Questionaire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Patient_Questionaire.swift; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				BD68D4A6291987A900F1D814 /* PainSlidersView.swift */,
 				10DDF58F2919BFEE00EA70A1 /* AddNewRecordPage.swift */,
 				EA788153291892280095AB3C /* PainSensationView.swift */,
+				A99AFD9C2937F6280091B206 /* ModelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -665,6 +670,7 @@
 				EA05207628F2547F00380CD5 /* NavigationBar.swift in Sources */,
 				BDA599E82907366000D78F8E /* EnterPhoneNumberView.swift in Sources */,
 				BDA599EA2907487D00D78F8E /* EnterVerificationCodeView.swift in Sources */,
+				A99AFD9D2937F6280091B206 /* ModelView.swift in Sources */,
 				BD44F13628F4A952007C615D /* Patient_Questionaire.swift in Sources */,
 				BD68D4A7291987A900F1D814 /* PainSlidersView.swift in Sources */,
 				A917D0B42917204A001CDD2F /* HighlightAreaPage.swift in Sources */,
@@ -697,6 +703,7 @@
 				A900C6202936E57B0072B4C1 /* Shader.metal in Sources */,
 				EA05208328F25EBF00380CD5 /* NavigationBar.swift in Sources */,
 				10BB6E6728F4AE7100894CBA /* PatientView_PastRecords.swift in Sources */,
+				A99AFD9E2937F6280091B206 /* ModelView.swift in Sources */,
 				10BB6E6928F4AE7400894CBA /* PatientView_Profile.swift in Sources */,
 				A917D0B529175329001CDD2F /* HighlightAreaPage.swift in Sources */,
 				10EDE1B229170E670052CC35 /* ToastExtension.swift in Sources */,
@@ -724,6 +731,7 @@
 				10BB6E6C28F4AE7A00894CBA /* PatientView_Security.swift in Sources */,
 				EA05207A28F25EA700380CD5 /* Pain_AppApp.swift in Sources */,
 				10BB6E6628F4AE6D00894CBA /* PatientView_HomePage.swift in Sources */,
+				A99AFD9F2937F6280091B206 /* ModelView.swift in Sources */,
 				A917D0B62917532A001CDD2F /* HighlightAreaPage.swift in Sources */,
 				10EDE1A72915D0310052CC35 /* ToastView.swift in Sources */,
 				BD44F13928F4F4C1007C615D /* Patient_Questionaire.swift in Sources */,
