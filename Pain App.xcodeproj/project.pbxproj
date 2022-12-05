@@ -36,11 +36,8 @@
 		10EDE1B329170E670052CC35 /* ToastExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EDE1B029170E670052CC35 /* ToastExtension.swift */; };
 		77CA69F27004B58CA0EBDEF5 /* Pods_Pain_App_Pain_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2408C6E3FD0A1513B1BAD62 /* Pods_Pain_App_Pain_AppUITests.framework */; };
 		A900C61B2936CEE00072B4C1 /* 3D Model.scn in Resources */ = {isa = PBXBuildFile; fileRef = A900C61A2936CEE00072B4C1 /* 3D Model.scn */; };
-		A900C61D2936E0570072B4C1 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = A900C61C2936E0570072B4C1 /* Shader.metal */; };
 		A900C61E2936E5770072B4C1 /* 3D Model.scn in Resources */ = {isa = PBXBuildFile; fileRef = A900C61A2936CEE00072B4C1 /* 3D Model.scn */; };
 		A900C61F2936E5770072B4C1 /* 3D Model.scn in Resources */ = {isa = PBXBuildFile; fileRef = A900C61A2936CEE00072B4C1 /* 3D Model.scn */; };
-		A900C6202936E57B0072B4C1 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = A900C61C2936E0570072B4C1 /* Shader.metal */; };
-		A900C6212936E57B0072B4C1 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = A900C61C2936E0570072B4C1 /* Shader.metal */; };
 		A917D0B42917204A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
 		A917D0B529175329001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
 		A917D0B62917532A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
@@ -138,7 +135,6 @@
 		831F205E734B993F002C0FD1 /* Pods-Pain AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain AppTests.debug.xcconfig"; path = "Target Support Files/Pods-Pain AppTests/Pods-Pain AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		89D7643FCDE6CF643D2BF448 /* Pods-Pain App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pain App.release.xcconfig"; path = "Target Support Files/Pods-Pain App/Pods-Pain App.release.xcconfig"; sourceTree = "<group>"; };
 		A900C61A2936CEE00072B4C1 /* 3D Model.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "3D Model.scn"; sourceTree = "<group>"; };
-		A900C61C2936E0570072B4C1 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
 		A900C6242936F2E20072B4C1 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		A917D0B329172049001CDD2F /* HighlightAreaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightAreaPage.swift; sourceTree = "<group>"; };
 		A917D0BC291766C2001CDD2F /* uploads-files-2087304-Basemesh.fbx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "uploads-files-2087304-Basemesh.fbx"; sourceTree = "<group>"; };
@@ -283,7 +279,6 @@
 				A936076228F21492007F4BFB /* ColorHexHelper.swift */,
 				A936075C28F1FC4C007F4BFB /* LoginView.swift */,
 				A917D0B329172049001CDD2F /* HighlightAreaPage.swift */,
-				A900C61C2936E0570072B4C1 /* Shader.metal */,
 				EA05207528F2547F00380CD5 /* NavigationBar.swift */,
 				106DE1F228F22EF700B270F9 /* PatientView_HomePage.swift */,
 				106DE1F428F2905200B270F9 /* PatientView_PastRecords.swift */,
@@ -685,7 +680,6 @@
 				A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */,
 				A936076428F23A58007F4BFB /* ContentView.swift in Sources */,
 				A936075D28F1FC4C007F4BFB /* LoginView.swift in Sources */,
-				A900C61D2936E0570072B4C1 /* Shader.metal in Sources */,
 				EA788154291892280095AB3C /* PainSensationView.swift in Sources */,
 				A936076628F2A088007F4BFB /* LoginController.swift in Sources */,
 				109A8D7728F48F2700D80717 /* PatientView_Security.swift in Sources */,
@@ -700,7 +694,6 @@
 				10DDF5912919BFEE00EA70A1 /* AddNewRecordPage.swift in Sources */,
 				A9D730EC28F5036700E40D7A /* MainViewController.swift in Sources */,
 				A97F265428ED38ED004AD743 /* Pain_AppTests.swift in Sources */,
-				A900C6202936E57B0072B4C1 /* Shader.metal in Sources */,
 				EA05208328F25EBF00380CD5 /* NavigationBar.swift in Sources */,
 				10BB6E6728F4AE7100894CBA /* PatientView_PastRecords.swift in Sources */,
 				A99AFD9E2937F6280091B206 /* ModelView.swift in Sources */,
@@ -746,7 +739,6 @@
 				A9BE352828F40DB0002F6E7B /* LoginController.swift in Sources */,
 				EA05207828F25EA300380CD5 /* ContentView.swift in Sources */,
 				EA7881562918C3680095AB3C /* PainSensationView.swift in Sources */,
-				A900C6212936E57B0072B4C1 /* Shader.metal in Sources */,
 				EA05207C28F25EAB00380CD5 /* ColorHexHelper.swift in Sources */,
 				10EDE1B329170E670052CC35 /* ToastExtension.swift in Sources */,
 				A94BA871291A2ECE008BE552 /* PainSlidersView.swift in Sources */,
