@@ -15,7 +15,7 @@ struct UISliderView: UIViewRepresentable {
     var thumbColor: UIColor = .white
     var minTrackColor: UIColor = .blue
     var maxTrackColor: UIColor = .lightGray
-    
+
     class Coordinator: NSObject {
         var value: Binding<Double>
         
@@ -69,28 +69,59 @@ struct PainSlidersView: View {
     @EnvironmentObject var mainViewController: MainViewController
     
     @State private var burning: Double = 0.0
-    @State private var pinching: Float = 0.0
-    @State private var shooting: Float = 0.0
-    @State private var throbbing: Float = 0.0
-    @State private var other: Float = 0.0
-    @State private var isBurningEditing = false
-    @State private var isPinchingEditing = false
-    @State private var isShootingEditing = false
-    @State private var isThrobbingEditing = false
+    @State private var shooting: Double = 0.0
+    @State private var other: Double = 0.0
+    @State private var throbbing: Double = 0.0
+    @State private var pain: Double = 0.0
+    @State private var pinch: Double = 0.0
+    @State private var pins_needles: Double = 0.0
+    @State private var crushing: Double = 0.0
+    @State private var stabbing: Double = 0.0
+    @State private var cramping: Double = 0.0
+    @State private var bite: Double = 0.0
+    @State private var stinging: Double = 0.0
+    @State private var tearing: Double = 0.0
+    @State private var tingling: Double = 0.0
+    @State private var movement: Double = 0.0
+    @State private var itching: Double = 0.0
+    @State private var stitching: Double = 0.0
+    @State private var flushing: Double = 0.0
+    @State private var perforating: Double = 0.0
+    @State private var tremor: Double = 0.0
+    @State private var cooling: Double = 0.0
+    @State private var pressure: Double = 0.0
+    @State private var spasm: Double = 0.0
+    @State private var pulling: Double = 0.0
     
-    @State private var currentValue = 6.0
+    @State private var isEditing = false
     
     var body: some View {
         GeometryReader { geoProxy in
             VStack {
-                // Rectangle holding the prompt for users rate their pain
-                Rectangle()
-                    .fill(Color.init(hex: "A8DADC"))
-                    .frame(width: geoProxy.size.width, height: geoProxy.size.height * 0.15)
-                    .overlay(
-                        Text("Please Rate Your Pain On The Sliders").font(.largeTitle)
-                        
-                    )
+                HStack {
+                    VStack {
+                        Text("Please rate your pain level using the sliders for the selected sensations")
+                            .font(.system(size: 30))
+                            .padding()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                    
+                    Button(action: {
+                            mainViewController.viewState = .painSensationPage
+                        }, label: {
+                            Text("Back")
+                                .foregroundColor(Color.black)
+                                .padding(.horizontal, 40.0)
+                                .padding(.vertical, 10)
+                                .background(Color.white)
+                        })
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                    
+                    Spacer()
+                }
+                .padding(30)
+                .background(Color.init(hex: "A8DADC"))
+                
                 VStack {
                     Rectangle()
                         .fill(Color.white)
@@ -98,101 +129,190 @@ struct PainSlidersView: View {
                         .overlay(
                             GeometryReader { geoProxy2 in
                                 VStack {
-                                    VStack {
-                                    
-                                        HStack {
-                                            Spacer()
-                                            UISliderView(value: $burning,
-                                                         minValue: 1.0,
-                                                         maxValue: 100.0,
-                                                         thumbColor: .black,
-                                                         minTrackColor: .red,
-                                                         maxTrackColor: .blue
-                                                         
-                                                        )
-                                            
-                                                            .frame(width: geoProxy2.size.width * 0.8, height: geoProxy2.size.height * 0.25)
-                                            
-                                          //  .frame(width: geoProxy2.size.width * 0.8, height: geoProxy2.size.height * 0.25)
-                                            Spacer()
-                                            Spacer()
-                                            Text("Burning")
-                                                .font(.title)
-                                            Spacer()
-                                        }
-                                        Text("\(String(format: "%.0f", burning))")
-                                            .foregroundColor(isBurningEditing ? .red : .blue)
-                                        
-                                        Spacer()
-                                        HStack {
-                                            Spacer()
-                                            Slider(
-                                                value: $pinching,
-                                                in: 0...100,
-                                                step: 1,
-                                                onEditingChanged: { editing in
-                                                    isPinchingEditing = editing
+                                    ScrollView(.vertical) {
+                                        VStack {
+                                            ForEach(mainViewController.sensations) { sensation in
+                                                if sensation.isSelected {
+                                                    HStack {
+                                                        Spacer()
+                                                        UISliderView(value:
+                                                                    sensation.name == "Burning" ?
+                                                                     $burning : sensation.name == "Shooting" ?
+                                                                     $shooting : sensation.name == "Other" ?
+                                                                     $other : sensation.name == "Throbbing" ?
+                                                                     $throbbing: sensation.name == "Pain" ?
+                                                                     $pain : sensation.name == "Pinch" ?
+                                                                     $pinch : sensation.name == "Pinch&Needles" ?
+                                                                     $pins_needles: sensation.name == "Crushing" ?
+                                                                     $crushing : sensation.name == "Stabbing" ?
+                                                                     $stabbing : sensation.name == "Cramping" ?
+                                                                     $cramping : sensation.name == "Bite" ?
+                                                                     $bite : sensation.name == "Stinging" ?
+                                                                     $stabbing : sensation.name == "Tearing" ?
+                                                                     $tearing : sensation.name == "Tingling" ?
+                                                                     $tingling: sensation.name == "Movement" ?
+                                                                     $movement: sensation.name == "Itching" ?
+                                                                     $itching : sensation.name == "Stitching" ?
+                                                                     $stitching : sensation.name == "Flushing" ?
+                                                                     $flushing : sensation.name == "Perforating" ?
+                                                                     $perforating : sensation.name == "Tremor" ?
+                                                                     $tremor : sensation.name == "Cooling" ?
+                                                                     $cooling : sensation.name == "Pressure" ?
+                                                                     $pressure : sensation.name == "Spasm" ? $spasm : $pulling,
+                                                                     minValue: 1.0,
+                                                                     maxValue: 100.0,
+                                                                     thumbColor: .black,
+                                                                     minTrackColor: .red,
+                                                                     maxTrackColor: .blue
+                                                                    )
+                                                        .frame(width: geoProxy2.size.width * 0.8, height: geoProxy2.size.height * 0.25)
+                                                        Spacer()
+                                                        Spacer()
+                                                        Text(sensation.img)
+                                                            .font(.title)
+                                                            .padding(.leading, -15)
+                                                        Spacer()
+                                                    }
+                                                    
+                                                    switch sensation.name {
+                                                    case "Burning":
+                                                      Text("\(String(format: "%.0f", burning))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Shooting":
+                                                      Text("\(String(format: "%.0f", shooting))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Other":
+                                                      Text("\(String(format: "%.0f", other))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Throbbing":
+                                                      Text("\(String(format: "%.0f", throbbing))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Pain":
+                                                      Text("\(String(format: "%.0f", pain))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Pinch":
+                                                      Text("\(String(format: "%.0f", pinch))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Pins&Needles":
+                                                      Text("\(String(format: "%.0f", pins_needles))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Crushing":
+                                                      Text("\(String(format: "%.0f", crushing))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Stabbing":
+                                                      Text("\(String(format: "%.0f", stabbing))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Cramping":
+                                                      Text("\(String(format: "%.0f", cramping))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Bite":
+                                                      Text("\(String(format: "%.0f", bite))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Stinging":
+                                                    Text("\(String(format: "%.0f", stinging))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Tearing":
+                                                      Text("\(String(format: "%.0f", tearing))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Tingling":
+                                                    Text("\(String(format: "%.0f", tingling))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Movement":
+                                                      Text("\(String(format: "%.0f", movement))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Itching":
+                                                      Text("\(String(format: "%.0f", itching))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Stitching":
+                                                      Text("\(String(format: "%.0f", stitching))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Flushing":
+                                                      Text("\(String(format: "%.0f", flushing))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Perforating":
+                                                      Text("\(String(format: "%.0f", perforating))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Tremor":
+                                                      Text("\(String(format: "%.0f", tremor))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Cooling":
+                                                      Text("\(String(format: "%.0f", cooling))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Pressure":
+                                                      Text("\(String(format: "%.0f", pressure))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Spasm":
+                                                      Text("\(String(format: "%.0f", spasm))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    case "Pulling":
+                                                      Text("\(String(format: "%.0f", pulling))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    default:
+                                                      Text("\(String(format: "%.0f"))")
+                                                            .foregroundColor(isEditing ? .red : .blue)
+                                                            .padding(.trailing, 150)
+                                                            Spacer()
+                                                    }
+
                                                 }
-                                            )
-                                    
-                                            .frame(width: geoProxy2.size.width * 0.8, height: geoProxy2.size.height * 0.25)
-                                            Spacer()
-                                            Spacer()
-                                            Text("Pinching")
-                                                .font(.title)
-                                            Spacer()
+                                            }
                                         }
-                                        Text("\(String(format: "%.0f", pinching))")
-                                            .foregroundColor(isPinchingEditing ? .red : .blue)
+                                        
                                     }
-                                    
-                                    VStack {
-                                        HStack {
-                                            Spacer()
-                                            Slider(
-                                                value: $shooting,
-                                                in: 0...100,
-                                                step: 1,
-                                                onEditingChanged: { editing in
-                                                    isShootingEditing = editing
-                                                }
-                                            )
-                                            .frame(width: geoProxy2.size.width * 0.8, height: geoProxy2.size.height * 0.25)
-                                            Spacer()
-                                            Spacer()
-                                            Text("Shooting")
-                                                .font(.title)
-                                            Spacer()
-                                        }
-                                        Text("\(String(format: "%.0f", shooting))")
-                                            .foregroundColor(isShootingEditing ? .red : .blue)
-                                        
-                                        HStack {
-                                            Spacer()
-                                            Slider(
-                                                value: $throbbing,
-                                                in: 0...100,
-                                                step: 1,
-                                                onEditingChanged: { editing in
-                                                    isThrobbingEditing = editing
-                                                }
-                                            )
-                                            .frame(width: geoProxy2.size.width * 0.8, height: geoProxy2.size.height * 0.25)
-                                            Spacer()
-                                            Spacer()
-                                            Text("Throbbing")
-                                                .font(.title)
-                                            Spacer()
-                                        }
-                                        Text("\(String(format: "%.0f", throbbing))")
-                                            .foregroundColor(isThrobbingEditing ? .red : .blue)
-                                        
-                                    }
-                                    Spacer()
+                                    .padding(.top, 70)
+                                   Spacer()
                                 }
                             }
                         )
-                    Spacer(minLength: 200)
+                    Spacer(minLength: 150)
                     Button {
                         mainViewController.viewState = .addNewRecordPage
                     } label: {
@@ -213,9 +333,10 @@ struct PainSlidersView: View {
         .ignoresSafeArea()
     }
 }
-
+    
 struct PainSlidersView_Previews: PreviewProvider {
     static var previews: some View {
         PainSlidersView()
+            .environmentObject(MainViewController())
     }
 }
