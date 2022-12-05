@@ -12,14 +12,14 @@ struct ToastModifier: ViewModifier {
         @State private var item: DispatchWorkItem?
         
         func body(content: Content) -> some View {
-            content
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .overlay(
-                    ZStack {
-                        toastView()
-                            .offset(y: -30)
-                    }.animation(.spring(), value: toast)
-                )
+                content
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .overlay(
+                        VStack {
+                            toastView().offset(y: -30)
+                        }.animation(.spring(), value: toast)
+
+                    )
                 .onChange(of: toast) {_ in
                     showToast()
                 }
