@@ -184,7 +184,56 @@ struct ModelView: UIViewRepresentable {
     }
         
     func updateUIView(_ uiView: SCNView, context: UIViewRepresentableContext<ModelView>) {
+        
+        var myScene = uiView.scene
+        var cameraNode = self.scnView.scene?.rootNode.camera
+        if selectedPicker == .front {
+            let xAngle = SCNMatrix4MakeRotation(GLKMathDegreesToRadians(0), 0, 0, 0)
+            let yAngle = SCNMatrix4MakeRotation(GLKMathDegreesToRadians(0), 0, 1, 0)
+            let zAngle = SCNMatrix4MakeRotation(GLKMathDegreesToRadians(0), 0, 0, 0)
+            
+            let rotationMatrix = SCNMatrix4Mult(SCNMatrix4Mult(xAngle, yAngle), zAngle)
+            SCNTransaction.begin()
+            SCNTransaction.animationDuration = 2
 
+            myScene!.rootNode.transform = SCNMatrix4Mult(rotationMatrix, myScene!.rootNode.transform)
+            SCNTransaction.commit()
+        } else if selectedPicker == .back {
+            let xAngle = SCNMatrix4MakeRotation(GLKMathDegreesToRadians(0), 0, 0, 0)
+            let yAngle = SCNMatrix4MakeRotation(GLKMathDegreesToRadians(180), 0, 1, 0)
+            let zAngle = SCNMatrix4MakeRotation(GLKMathDegreesToRadians(0), 0, 0, 0)
+            
+            let rotationMatrix = SCNMatrix4Mult(SCNMatrix4Mult(xAngle, yAngle), zAngle)
+            SCNTransaction.begin()
+            SCNTransaction.animationDuration = 2
+
+            myScene!.rootNode.transform = SCNMatrix4Mult(rotationMatrix, myScene!.rootNode.transform)
+            SCNTransaction.commit()
+        }
+        
+        if selectedArea == .lh {
+            cameraNode = SCNVector3Make(-40, 130, 100)
+        } else if selectedArea == .rh {
+            cameraNode.position = SCNVector3Make(40, 130, 100)
+            myScene!.rootNode.addChildNode(cameraNode)
+        } else if selectedArea == .ll {
+            cameraNode.position = SCNVector3Make(-40, 50, 100)
+            myScene!.rootNode.addChildNode(cameraNode)
+        } else if selectedArea == .rl {
+            cameraNode.position = SCNVector3Make(40, 50, 100)
+            myScene!.rootNode.addChildNode(cameraNode)
+        } else if selectedArea == .none {
+            let xAngle = SCNMatrix4MakeRotation(GLKMathDegreesToRadians(0), 0, 0, 0)
+            let yAngle = SCNMatrix4MakeRotation(GLKMathDegreesToRadians(0), 0, 1, 0)
+            let zAngle = SCNMatrix4MakeRotation(GLKMathDegreesToRadians(0), 0, 0, 0)
+            
+            let rotationMatrix = SCNMatrix4Mult(SCNMatrix4Mult(xAngle, yAngle), zAngle)
+            SCNTransaction.begin()
+            SCNTransaction.animationDuration = 2
+
+            myScene.rootNode.transform = SCNMatrix4Mult(rotationMatrix, myScene.rootNode.transform)
+            SCNTransaction.commit()
+        }
     }
 }
 
