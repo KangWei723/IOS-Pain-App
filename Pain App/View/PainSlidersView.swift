@@ -92,6 +92,7 @@ struct PainSlidersView: View {
     @State private var pressure: Double = 0.0
     @State private var spasm: Double = 0.0
     @State private var pulling: Double = 0.0
+    @State private var temp: Double = 0.0
     
     @State private var isEditing = false
     
@@ -142,13 +143,13 @@ struct PainSlidersView: View {
                                                                      $other : sensation.name == "Throbbing" ?
                                                                      $throbbing: sensation.name == "Pain" ?
                                                                      $pain : sensation.name == "Pinch" ?
-                                                                     $pinch : sensation.name == "Pinch&Needles" ?
+                                                                     $pinch : sensation.name == "Pins&Needles" ?
                                                                      $pins_needles: sensation.name == "Crushing" ?
                                                                      $crushing : sensation.name == "Stabbing" ?
                                                                      $stabbing : sensation.name == "Cramping" ?
                                                                      $cramping : sensation.name == "Bite" ?
                                                                      $bite : sensation.name == "Stinging" ?
-                                                                     $stabbing : sensation.name == "Tearing" ?
+                                                                     $stinging : sensation.name == "Tearing" ?
                                                                      $tearing : sensation.name == "Tingling" ?
                                                                      $tingling: sensation.name == "Movement" ?
                                                                      $movement: sensation.name == "Itching" ?
@@ -158,7 +159,9 @@ struct PainSlidersView: View {
                                                                      $perforating : sensation.name == "Tremor" ?
                                                                      $tremor : sensation.name == "Cooling" ?
                                                                      $cooling : sensation.name == "Pressure" ?
-                                                                     $pressure : sensation.name == "Spasm" ? $spasm : $pulling,
+                                                                     $pressure : sensation.name == "Spasm" ?
+                                                                     $spasm : sensation.name == "Pulling" ?
+                                                                     $pulling : $temp,
                                                                      minValue: 1.0,
                                                                      maxValue: 100.0,
                                                                      thumbColor: .black,
