@@ -159,7 +159,9 @@ struct PainSlidersView: View {
                                                                      $perforating : sensation.name == "Tremor" ?
                                                                      $tremor : sensation.name == "Cooling" ?
                                                                      $cooling : sensation.name == "Pressure" ?
-                                                                     $pressure : sensation.name == "Spasm" ? $spasm : sensation.name == "Pulling" ? $pulling : $temp,
+                                                                     $pressure : sensation.name == "Spasm" ?
+                                                                     $spasm : sensation.name == "Pulling" ?
+                                                                     $pulling : $temp,
                                                                      minValue: 1.0,
                                                                      maxValue: 100.0,
                                                                      thumbColor: .black,
