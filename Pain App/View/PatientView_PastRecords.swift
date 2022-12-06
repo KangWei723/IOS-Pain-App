@@ -80,6 +80,7 @@ struct PatientView_PastRecords: View {
                                 }
                             }
                         })
+                        .padding(.bottom, geoProxy.size.height * -0.006)
                     Spacer()
                     Rectangle().fill(Color.white)
                         .frame(width: geoProxy.size.width*0.74, height: geoProxy.size.height)

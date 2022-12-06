@@ -46,10 +46,10 @@ struct AddNewRecordPage: View {
                         Text("Highlight the Painful Area")
                             .font(.system(size: 40))
                             .padding(20)
-//                            .position(x: geoProxy.frame(in: .local).midX * 0.6, y: geoProxy.frame(in: .local).midY * 1)
                             .padding(.leading, geoProxy.size.width * 0.0125)
                         Spacer()
                         Button(action: {
+                                mainViewController.viewState = .painSliderPage
                             }, label: {
                                 Text("Back")
                                     .foregroundColor(Color.black)
@@ -59,8 +59,6 @@ struct AddNewRecordPage: View {
                             })
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                             .padding(.trailing, geoProxy.size.width * 0.05)
-//                            .position(x: geoProxy.frame(in: .local).maxX * 0.55, y: geoProxy.frame(in: .local).minY * 1)
-//                            .offset(x: 550, y: 40)
                     }
                     .padding(0)
                     .padding(.top, geoProxy.size.height * 0.05)
@@ -83,12 +81,7 @@ struct AddNewRecordPage: View {
                                                   options: [.autoenablesDefaultLighting, .allowsCameraControl])
                                         .frame(width: geoProxy.size.width * 0.3, height: geoProxy.size.height * 0.65)
                                         .padding(.top, geoProxy.size.height * 0.05)
-//                                        .position(x: geoProxy.frame(in: .local).midX * 0.5, y: geoProxy.frame(in: .local).midY * 0.8)
-//                                        Image("3D Model Image")
-//                                            .resizable()
-//                                            .frame(width: geoProxy.size.width * 0.25, height: geoProxy.size.height * 0.65)
-//                                            .padding(.top, geoProxy.size.height * 0.05)
-//    //                                        .position(x: geoProxy.frame(in: .local).midX * 0.5, y: geoProxy.frame(in: .local).midY * 0.8)
+
                                         Image("Zoom In")
                                             .resizable()
                                             .frame(width: geoProxy.size.width * 0.03, height: geoProxy.size.height * 0.03)
@@ -148,7 +141,7 @@ struct AddNewRecordPage: View {
                                                     Text("Submit").font(.system(size: 30))
                                                         .foregroundColor(Color.black)
                                                 }.frame(width: geoProxy2.size.width * 0.5, height: geoProxy2.size.height * 0.1)
-                                            }.background(Color.init(hex: "A8DADC"))
+                                            }.background(Color.init(hex: "457B9D"))
                                                 .cornerRadius(15)
                                         }
                                         Spacer()

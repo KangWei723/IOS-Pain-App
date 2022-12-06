@@ -11,30 +11,7 @@ struct PainSensationView: View {
 
     @EnvironmentObject var mainViewController: MainViewController
     @State private var selectedPicker: PickerState = .surface
-    @State var sensations: [Sensations] = [Sensations(name: Image("Burning") ),
-                                            Sensations(name: Image("Shooting")),
-                                            Sensations(name: Image("Other")),
-                                            Sensations(name: Image("Throbbing")),
-                                            Sensations(name: Image("Pain")),
-                                            Sensations(name: Image("Pinch")),
-                                            Sensations(name: Image("Pins&Needles")),
-                                            Sensations(name: Image("Crushing")),
-                                            Sensations(name: Image("Stabbing")),
-                                            Sensations(name: Image("Cramping")),
-                                            Sensations(name: Image("Bite")),
-                                            Sensations(name: Image("Stinging")),
-                                            Sensations(name: Image("Tearing")),
-                                            Sensations(name: Image("Tingling")),
-                                            Sensations(name: Image("Movement")),
-                                            Sensations(name: Image("Itching")),
-                                            Sensations(name: Image("Stitching")),
-                                            Sensations(name: Image("Flushing")),
-                                            Sensations(name: Image("Perforating")),
-                                            Sensations(name: Image("Tremor")),
-                                            Sensations(name: Image("Cooling")),
-                                            Sensations(name: Image("Pressure")),
-                                            Sensations(name: Image("Spasm")),
-                                            Sensations(name: Image("Pulling"))]
+
     init() {
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.init(hex: "A8DADC"))
         UISegmentedControl.appearance().backgroundColor = UIColor(Color.init(hex: "F1FAEE"))
@@ -139,16 +116,20 @@ struct PainSensationView: View {
                                     HStack {
                                         ScrollView(.vertical) {
                                             VStack {
-                                                ForEach(0..<(Int(sensations.count/3))+1, id: \.self) { index in
+                                                ForEach(0..<(Int(mainViewController.sensations.count/3))+1, id: \.self) { index in
                                                     HStack {
-                                                        ForEach(0..<(3-getLeft(index: index*3, total: sensations.count)), id: \.self) { i in
+                                                        ForEach(0..<(3-getLeft(index: index*3,
+                                                                               total: mainViewController.sensations.count)),
+                                                                id: \.self) { i in
                                                             Button {
-                                                                sensations[index*3+i].isSelected = sensations[index*3+i].isSelected ? false : true
+                                                                mainViewController.sensations[index*3+i].isSelected
+                                                                = mainViewController.sensations[index*3+i].isSelected
+                                                                ? false : true
                                                             } label: {
-                                                                Text(sensations[index*3+i].name)
+                                                                Text(mainViewController.sensations[index*3+i].img)
                                                                     .padding()
                                                                     .background(.white)
-                                                                    .colorMultiply((sensations[index*3+i].isSelected)
+                                                                    .colorMultiply((mainViewController.sensations[index*3+i].isSelected)
                                                                                    ? Color.init(hex: "F1FAEE") : .white)
                                                             }.buttonStyle(BorderlessButtonStyle())
                                                             .padding()
@@ -177,16 +158,12 @@ struct PainSensationView: View {
         .foregroundStyle(Color.black)
         .accentColor(.black)
     }
-    struct Sensations {
-        var id = UUID()
-        var name: Image
-        var isSelected: Bool = false
-    }
 }
 
 struct PainSensationView_Previews: PreviewProvider {
     static var previews: some View {
         PainSensationView()
+            .environmentObject(MainViewController())
     }
 
 }
