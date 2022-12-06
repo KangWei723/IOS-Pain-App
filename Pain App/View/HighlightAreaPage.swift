@@ -92,7 +92,7 @@ struct HighlightAreaPage: View {
                                             .frame(width: geoProxy.size.width * 0.03, height: geoProxy.size.height * 0.03)
                                             .padding(.trailing, 20)
                                         
-                                        ModelView()
+                                        ModelView(selectedPicker: $selectedPicker, selectedArea: $selectedArea)
                                         .frame(width: geoProxy.size.width * 0.3, height: geoProxy.size.height * 0.65)
                                         .padding(.top, geoProxy.size.height * 0.05)
 
@@ -200,6 +200,20 @@ struct HighlightAreaPage: View {
                                             }
                                             .frame(width: geoProxy2.size.width * 0.4, height: geoProxy2.size.height * 0.08)
                                             .background((selectedArea == .rl) ? Color.init(hex: "A8DADC") : Color.init(hex: "F1FAEE"))
+                                            .cornerRadius(10)
+                                            .padding(.top, geoProxy2.size.height * 0.02)
+                                            .shadow(color: .gray, radius: 6, x: 0, y: 0)
+                                            
+                                            Button {
+                                                selectedArea = .none
+                                            } label: {
+                                                Text("Clear Selection")
+                                                    .foregroundColor(.black)
+                                                    .font(.system(size: 28))
+                                                    .padding(20)
+                                            }
+                                            .frame(width: geoProxy2.size.width * 0.4, height: geoProxy2.size.height * 0.08)
+                                            .background((selectedArea == .none) ? Color.init(hex: "A8DADC") : Color.init(hex: "F1FAEE"))
                                             .cornerRadius(10)
                                             .padding(.top, geoProxy2.size.height * 0.02)
                                             .shadow(color: .gray, radius: 6, x: 0, y: 0)
