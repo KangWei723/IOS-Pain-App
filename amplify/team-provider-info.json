@@ -1,19 +1,19 @@
 {
-  "dev": {
+  "staging": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-painapp-dev-23000-authRole",
-      "UnauthRoleArn": "arn:aws:iam::351005374048:role/amplify-painapp-dev-23000-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::351005374048:role/amplify-painapp-dev-23000-authRole",
+      "AuthRoleName": "amplify-painapp-staging-25451-authRole",
+      "UnauthRoleArn": "arn:aws:iam::789679041017:role/amplify-painapp-staging-25451-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::789679041017:role/amplify-painapp-staging-25451-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-painapp-dev-23000-deployment",
-      "UnauthRoleName": "amplify-painapp-dev-23000-unauthRole",
-      "StackName": "amplify-painapp-dev-23000",
-      "StackId": "arn:aws:cloudformation:us-east-2:351005374048:stack/amplify-painapp-dev-23000/7aefa890-4609-11ed-ae6a-0250dcf75976",
-      "AmplifyAppId": "dn7dpyl2syq1a"
+      "DeploymentBucketName": "amplify-painapp-staging-25451-deployment",
+      "UnauthRoleName": "amplify-painapp-staging-25451-unauthRole",
+      "StackName": "amplify-painapp-staging-25451",
+      "StackId": "arn:aws:cloudformation:us-east-2:789679041017:stack/amplify-painapp-staging-25451/856ae950-75da-11ed-9ab7-0ad43c377902",
+      "AmplifyAppId": "d2rh3ve16ykmrx"
     },
     "categories": {
       "auth": {
-        "painapp0df5b708": {}
+        "PainApp": {}
       }
     }
   }

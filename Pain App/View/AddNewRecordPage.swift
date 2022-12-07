@@ -77,7 +77,7 @@ struct AddNewRecordPage: View {
                                             .resizable()
                                             .frame(width: geoProxy.size.width * 0.03, height: geoProxy.size.height * 0.03)
                                             .padding(.trailing, 20)
-                                        SceneView(scene: SCNScene(named: "3D Model.usdz"),
+                                        SceneView(scene: SCNScene(named: "3D Model.scn"),
                                                   options: [.autoenablesDefaultLighting, .allowsCameraControl])
                                         .frame(width: geoProxy.size.width * 0.3, height: geoProxy.size.height * 0.65)
                                         .padding(.top, geoProxy.size.height * 0.05)

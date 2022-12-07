@@ -212,11 +212,3 @@ struct ModelView: UIViewRepresentable {
         }
     }
 }
-
-// struct ModelView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        var picker: PickerState = .front
-//        ModelView(selectedPicker: Binding<picker>, selectedArea: <#Binding<AreaState>#>)
-//            .previewInterfaceOrientation(.landscapeLeft)
-//    }
-// }
