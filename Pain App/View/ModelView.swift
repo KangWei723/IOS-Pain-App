@@ -155,6 +155,13 @@ extension ModelView {
 struct ModelView: UIViewRepresentable {
     
     private var scnView = SCNView(frame: .zero, options: ["preferredRenderingAPI": "metal"])
+    @Binding var selectedPicker: HighlightAreaPage.PickerState
+    @Binding var selectedArea: HighlightAreaPage.AreaState
+    
+    init(selectedPicker: Binding<HighlightAreaPage.PickerState>, selectedArea: Binding<HighlightAreaPage.AreaState>) {
+        _selectedArea = selectedArea
+        _selectedPicker = selectedPicker
+    }
     
     func makeCoordinator() -> Coordinator {
         Coordinator()
@@ -184,13 +191,32 @@ struct ModelView: UIViewRepresentable {
     }
         
     func updateUIView(_ uiView: SCNView, context: UIViewRepresentableContext<ModelView>) {
-
+        
+        let myScene = uiView.scene
+        if selectedPicker == .front {
+            myScene!.rootNode.runAction(SCNAction.rotateTo(x: 0, y: 0, z: 0, duration: 1))
+        } else if selectedPicker == .back {
+            myScene!.rootNode.runAction(SCNAction.rotateTo(x: 0, y: 3.15, z: 0, duration: 1))
+        }
+        
+        if selectedArea == .lh {
+            myScene!.rootNode.runAction(SCNAction.move(to: SCNVector3(x: 35, y: -25, z: 140), duration: 1))
+        } else if selectedArea == .rh {
+            myScene!.rootNode.runAction(SCNAction.move(to: SCNVector3(x: -35, y: -25, z: 140), duration: 1))
+        } else if selectedArea == .ll {
+            myScene!.rootNode.runAction(SCNAction.move(to: SCNVector3(x: 30, y: 45, z: 110), duration: 1))
+        } else if selectedArea == .rl {
+            myScene!.rootNode.runAction(SCNAction.move(to: SCNVector3(x: -30, y: 45, z: 110), duration: 1))
+        } else if selectedArea == .none {
+            myScene!.rootNode.runAction(SCNAction.move(to: SCNVector3(x: 0, y: 0, z: 0), duration: 1))
+        }
     }
 }
 
-struct ModelView_Previews: PreviewProvider {
-    static var previews: some View {
-        ModelView()
-            .previewInterfaceOrientation(.landscapeLeft)
-    }
-}
+// struct ModelView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        var picker: PickerState = .front
+//        ModelView(selectedPicker: Binding<picker>, selectedArea: <#Binding<AreaState>#>)
+//            .previewInterfaceOrientation(.landscapeLeft)
+//    }
+// }
