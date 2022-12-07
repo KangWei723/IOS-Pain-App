@@ -41,9 +41,6 @@
 		A917D0B42917204A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
 		A917D0B529175329001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
 		A917D0B62917532A001CDD2F /* HighlightAreaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A917D0B329172049001CDD2F /* HighlightAreaPage.swift */; };
-		A917D0BE2917686C001CDD2F /* 3D Model.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A917D0BD29176714001CDD2F /* 3D Model.usdz */; };
-		A917D0BF2917686D001CDD2F /* 3D Model.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A917D0BD29176714001CDD2F /* 3D Model.usdz */; };
-		A917D0C02917686D001CDD2F /* 3D Model.usdz in Resources */ = {isa = PBXBuildFile; fileRef = A917D0BD29176714001CDD2F /* 3D Model.usdz */; };
 		A936074628EFFF71007F4BFB /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074428EFFF71007F4BFB /* amplifyconfiguration.json */; };
 		A936074728EFFF71007F4BFB /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = A936074528EFFF71007F4BFB /* awsconfiguration.json */; };
 		A936075028F0906E007F4BFB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A936074A28F0906E007F4BFB /* README.md */; };
@@ -51,13 +48,11 @@
 		A936075228F0906E007F4BFB /* Gemfile in Resources */ = {isa = PBXBuildFile; fileRef = A936074C28F0906E007F4BFB /* Gemfile */; };
 		A936075328F0906E007F4BFB /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = A936074D28F0906E007F4BFB /* fastlane */; };
 		A936075428F0906E007F4BFB /* amplify-conf-loader.sh in Resources */ = {isa = PBXBuildFile; fileRef = A936074E28F0906E007F4BFB /* amplify-conf-loader.sh */; };
-		A936075528F0906E007F4BFB /* sonar-project.properties in Resources */ = {isa = PBXBuildFile; fileRef = A936074F28F0906E007F4BFB /* sonar-project.properties */; };
 		A936075928F13605007F4BFB /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A936075628F13605007F4BFB /* .swiftlint.yml */; };
 		A936075A28F13605007F4BFB /* .xcovignore in Resources */ = {isa = PBXBuildFile; fileRef = A936075728F13605007F4BFB /* .xcovignore */; };
 		A936075B28F13605007F4BFB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A936075828F13605007F4BFB /* .gitignore */; };
 		A936075D28F1FC4C007F4BFB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936075C28F1FC4C007F4BFB /* LoginView.swift */; };
 		A936076328F21492007F4BFB /* ColorHexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076228F21492007F4BFB /* ColorHexHelper.swift */; };
-		A936076428F23A58007F4BFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
 		A936076628F2A088007F4BFB /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076528F2A087007F4BFB /* LoginController.swift */; };
 		A94BA870291A2ECE008BE552 /* PainSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68D4A6291987A900F1D814 /* PainSlidersView.swift */; };
 		A94BA871291A2ECE008BE552 /* PainSlidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68D4A6291987A900F1D814 /* PainSlidersView.swift */; };
@@ -87,8 +82,6 @@
 		BEC12C2FA8583C91F483DF33 /* Pods_Pain_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B80C822AC4E950EF9E79BC0 /* Pods_Pain_AppTests.framework */; };
 		E393ED2F6407FEB98DB2C43D /* Pods_Pain_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E00E89535EEB431DE051A1 /* Pods_Pain_App.framework */; };
 		EA05207628F2547F00380CD5 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA05207528F2547F00380CD5 /* NavigationBar.swift */; };
-		EA05207728F25EA200380CD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
-		EA05207828F25EA300380CD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264428ED38E8004AD743 /* ContentView.swift */; };
 		EA05207A28F25EA700380CD5 /* Pain_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97F264228ED38E8004AD743 /* Pain_AppApp.swift */; };
 		EA05207B28F25EAA00380CD5 /* ColorHexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076228F21492007F4BFB /* ColorHexHelper.swift */; };
 		EA05207C28F25EAB00380CD5 /* ColorHexHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A936076228F21492007F4BFB /* ColorHexHelper.swift */; };
@@ -137,8 +130,6 @@
 		A900C61A2936CEE00072B4C1 /* 3D Model.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "3D Model.scn"; sourceTree = "<group>"; };
 		A900C6242936F2E20072B4C1 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		A917D0B329172049001CDD2F /* HighlightAreaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightAreaPage.swift; sourceTree = "<group>"; };
-		A917D0BC291766C2001CDD2F /* uploads-files-2087304-Basemesh.fbx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "uploads-files-2087304-Basemesh.fbx"; sourceTree = "<group>"; };
-		A917D0BD29176714001CDD2F /* 3D Model.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = "3D Model.usdz"; sourceTree = "<group>"; };
 		A936074428EFFF71007F4BFB /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
 		A936074528EFFF71007F4BFB /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		A936074A28F0906E007F4BFB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -146,7 +137,6 @@
 		A936074C28F0906E007F4BFB /* Gemfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = Gemfile; sourceTree = "<group>"; };
 		A936074D28F0906E007F4BFB /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 		A936074E28F0906E007F4BFB /* amplify-conf-loader.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "amplify-conf-loader.sh"; sourceTree = "<group>"; };
-		A936074F28F0906E007F4BFB /* sonar-project.properties */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "sonar-project.properties"; sourceTree = "<group>"; };
 		A936075628F13605007F4BFB /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A936075728F13605007F4BFB /* .xcovignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .xcovignore; sourceTree = "<group>"; };
 		A936075828F13605007F4BFB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -155,7 +145,6 @@
 		A936076528F2A087007F4BFB /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		A97F263F28ED38E8004AD743 /* Pain App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pain App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97F264228ED38E8004AD743 /* Pain_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pain_AppApp.swift; sourceTree = "<group>"; };
-		A97F264428ED38E8004AD743 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A97F264628ED38EC004AD743 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A97F264928ED38EC004AD743 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A97F264F28ED38ED004AD743 /* Pain AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pain AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -241,8 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				A900C61A2936CEE00072B4C1 /* 3D Model.scn */,
-				A917D0BD29176714001CDD2F /* 3D Model.usdz */,
-				A917D0BC291766C2001CDD2F /* uploads-files-2087304-Basemesh.fbx */,
 			);
 			name = "3D Model";
 			sourceTree = "<group>";
@@ -258,7 +245,6 @@
 				A936074C28F0906E007F4BFB /* Gemfile */,
 				A936074B28F0906E007F4BFB /* Gemfile.lock */,
 				A936074A28F0906E007F4BFB /* README.md */,
-				A936074F28F0906E007F4BFB /* sonar-project.properties */,
 			);
 			name = "Repo Files";
 			sourceTree = "<group>";
@@ -274,7 +260,6 @@
 		A947489C28EFD39B006D7075 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A97F264428ED38E8004AD743 /* ContentView.swift */,
 				A97F264228ED38E8004AD743 /* Pain_AppApp.swift */,
 				A936076228F21492007F4BFB /* ColorHexHelper.swift */,
 				A936075C28F1FC4C007F4BFB /* LoginView.swift */,
@@ -498,8 +483,6 @@
 				A936075228F0906E007F4BFB /* Gemfile in Resources */,
 				A936075328F0906E007F4BFB /* fastlane in Resources */,
 				A936075428F0906E007F4BFB /* amplify-conf-loader.sh in Resources */,
-				A917D0BE2917686C001CDD2F /* 3D Model.usdz in Resources */,
-				A936075528F0906E007F4BFB /* sonar-project.properties in Resources */,
 				A97F264728ED38EC004AD743 /* Assets.xcassets in Resources */,
 				A936075B28F13605007F4BFB /* .gitignore in Resources */,
 				A936075928F13605007F4BFB /* .swiftlint.yml in Resources */,
@@ -512,7 +495,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A900C61E2936E5770072B4C1 /* 3D Model.scn in Resources */,
-				A917D0BF2917686D001CDD2F /* 3D Model.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,7 +503,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A900C61F2936E5770072B4C1 /* 3D Model.scn in Resources */,
-				A917D0C02917686D001CDD2F /* 3D Model.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,7 +659,6 @@
 				106DE1F728F2951800B270F9 /* PatientView_Profile.swift in Sources */,
 				10EDE1A52915D0310052CC35 /* ToastView.swift in Sources */,
 				A97F264328ED38E8004AD743 /* Pain_AppApp.swift in Sources */,
-				A936076428F23A58007F4BFB /* ContentView.swift in Sources */,
 				A936075D28F1FC4C007F4BFB /* LoginView.swift in Sources */,
 				EA788154291892280095AB3C /* PainSensationView.swift in Sources */,
 				A936076628F2A088007F4BFB /* LoginController.swift in Sources */,
@@ -690,7 +670,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA05207728F25EA200380CD5 /* ContentView.swift in Sources */,
 				10DDF5912919BFEE00EA70A1 /* AddNewRecordPage.swift in Sources */,
 				A9D730EC28F5036700E40D7A /* MainViewController.swift in Sources */,
 				A97F265428ED38ED004AD743 /* Pain_AppTests.swift in Sources */,
@@ -737,7 +716,6 @@
 				A9BE352A28F40DBE002F6E7B /* LoginView.swift in Sources */,
 				EA05208428F25EC000380CD5 /* NavigationBar.swift in Sources */,
 				A9BE352828F40DB0002F6E7B /* LoginController.swift in Sources */,
-				EA05207828F25EA300380CD5 /* ContentView.swift in Sources */,
 				EA7881562918C3680095AB3C /* PainSensationView.swift in Sources */,
 				EA05207C28F25EAB00380CD5 /* ColorHexHelper.swift in Sources */,
 				10EDE1B329170E670052CC35 /* ToastExtension.swift in Sources */,

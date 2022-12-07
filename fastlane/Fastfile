@@ -26,24 +26,13 @@ platform :ios do
   end
 
   desc  "Test the application"
-  private_lane :test_app do |options|
-    # run tests
-    # get the publish_reports option
-    publish_reports = options[:publish_reports]
+  private_lane :test_app do
     # run tests
     scan
     trainer(
       path:"results/"
     )
-    # check if it must publish reports
-    if publish_reports
-      publish_reports_to_sonar
-    end 
-  end
-
-  desc "Publish the application reports to sonar"
-  private_lane :publish_reports_to_sonar do
-    # Run slather to generate code coverage
+    
     xcov(project: project,
       scheme: scheme,
       configuration: "Debug",
@@ -52,52 +41,14 @@ platform :ios do
       ignore_file_path: "../.xcovignore",
       include_targets: "Pain App.app"
     )
-
-    #Run slather to generate code coverage
-    slather(
-      proj: project, 
-      scheme: scheme,
-      configuration: "Debug",
-      jenkins: true,
-      html: true,
-      output_directory: "./reports"
-    )
-
-    #Run slather to generate code coverage
-    slather(
-      proj: project, 
-      scheme: scheme,
-      configuration: "Debug",
-      jenkins: true,
-      sonarqube_xml: true,
-      output_directory: "./reports"
-    )
-
-
-    # Run swiftlint to detect code smells (you might need to specify the executable path
-    swiftlint(reporter: "sonarqube", output_file: "./reports/swiftlint.txt", ignore_exit_status: true)
-    
     # Run swiftlint to detect code smells (you might need to specify the executable path
     swiftlint(reporter: "junit", output_file: "./reports/swiftlint.xml", ignore_exit_status: true)
-
-    # Run lizard to check code complexity
-    lizard(source_folder: scheme,
-      export_type: 'xml',
-      report_file: './reports/lizard-report.xml')
-    # Run sonar
-    sonar
-  end
-
-  desc "Test a merge request"
-  lane :test_merge_request do
-    # test the app without publishing the reports
-    test_app(publish_reports: false)
   end
 
   desc "Run tests"
   lane :run_tests do
     # Test the app and publish the reports
-    test_app(publish_reports: true)
+    test_app
   end
 
 end

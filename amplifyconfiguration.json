@@ -12,15 +12,15 @@
                 "CredentialsProvider": {
                     "CognitoIdentity": {
                         "Default": {
-                            "PoolId": "us-east-2:9786f72d-913b-4f19-b2c5-0d965158200e",
+                            "PoolId": "us-east-2:ea4f6346-2ffd-4cca-9cf9-360a3cd7c583",
                             "Region": "us-east-2"
                         }
                     }
                 },
                 "CognitoUserPool": {
                     "Default": {
-                        "PoolId": "us-east-2_RilM9pb1O",
-                        "AppClientId": "27pakea7gtgvphtlmqqtu59p15",
+                        "PoolId": "us-east-2_P0NfZdGrI",
+                        "AppClientId": "2vu6c5at284ralff4cs1fdeipf",
                         "Region": "us-east-2"
                     }
                 },
@@ -31,12 +31,15 @@
                         "usernameAttributes": [
                             "EMAIL"
                         ],
-                        "signupAttributes": [
-                            "EMAIL"
-                        ],
+                        "signupAttributes": [],
                         "passwordProtectionSettings": {
                             "passwordPolicyMinLength": 8,
-                            "passwordPolicyCharacters": []
+                            "passwordPolicyCharacters": [
+                                "REQUIRES_LOWERCASE",
+                                "REQUIRES_NUMBERS",
+                                "REQUIRES_SYMBOLS",
+                                "REQUIRES_UPPERCASE"
+                            ]
                         },
                         "mfaConfiguration": "OFF",
                         "mfaTypes": [

@@ -4,7 +4,6 @@ gem 'fastlane'
 gem 'xcode-install'
 gem 'cocoapods'
 gem 'CFPropertyList'
-gem 'slather'
 gem 'xcov'
 
 plugins_path = File.join(File.dirname(__FILE__), 'fastlane', 'Pluginfile')
